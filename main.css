@@ -81,7 +81,7 @@ main {
   z-index: 5;
 }
 
-.livestream-chat {
+#livestream-chat {
   box-sizing: border-box;
   height: 90%;
   width: 90%;

@@ -10,13 +10,8 @@ state = {
   currentEpisode: 0,
   isLoading: true,
   popularity: 0,
-  suspicion: 0,
+  suspicion: 0
 };
-
-ghostAudio = new Audio();
-ghostAudio.loop = true;
-staticAudio = new Audio("./assets/sounds/radio-static-placeholder.mp3");
-staticAudio.loop = true;
 
 function donePreloading() {
   if (state.isLoading) {
@@ -37,10 +32,7 @@ function startEpisode() {
   state.gameStage = DIALOGUE;
   showGameStage();
   showTextNode(1);
-  console.log(
-    "all_episodes[state.currentEpisode].backgroundImg: ",
-    all_episodes[state.currentEpisode].backgroundImg
-  );
+  updateViews();
   $(".dialogue-main").css(
     "background-image",
     "url(" + all_episodes[state.currentEpisode].backgroundImg + ")"
@@ -64,7 +56,7 @@ function showTextNode(textNodeIndex) {
       const button = document.createElement("button");
       button.innerText = option.text;
       button.addEventListener("click", () =>
-        selectOption(option.nextText, option.popularity, option.suspicion)
+        selectOption(option)
       );
       $("#responses").append(button);
     });
@@ -80,23 +72,39 @@ function showTextNode(textNodeIndex) {
   }
 }
 
-function selectOption(optionIndex, popularity, suspicion) {
-  if (popularity) {
-    state.popularity += popularity;
+function selectOption(option) {
+  if (option.popularity) {
+    state.popularity += option.popularity;
   }
-  if (suspicion) {
-    state.suspicion += suspicion;
+  if (option.suspicion) {
+    state.suspicion += option.suspicion;
   }
-  // TODO: update views based on the updated popularity
+  updateViews();
+  if (option.chatMood) {
+   $("#livestream-chat").empty();
+    // TODO: update this to be a random selection. How many show each time? Add incrementally?
+    option.chatMood.forEach((chatText) => {
+      const chatSegment = document.createElement("p");
+      chatSegment.innerText = chatText;
+      $("#livestream-chat").append(chatSegment);
+    });
+  
+  }
 
-  if (optionIndex == START_PUZZLE) {
+  if (option.nextText == START_PUZZLE) {
     // state.gameStage = AUDIO;
     // showGameStage();
     // startAudioPuzzle();
     showTextNode(1); // THIS IS JUST FOR TESTING, LOOP UNTIL DIALOGUE DEV IS FINISHED
   } else {
-    showTextNode(optionIndex);
+    showTextNode(option.nextText);
   }
+}
+
+function updateViews() {
+  // TODO: finalize how this updates. 
+  const newViews = 1000 + (state.popularity * 100);
+  $("#view-number").text(newViews);
 }
 
 function showGameStage() {

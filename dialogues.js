@@ -5,7 +5,7 @@ const EMOJI_HAPPY = "./assets/emoji/emoji-smiling.png";
 const EMOJI_SAD = "./assets/emoji/emoji-sad.png";
 const START_PUZZLE = "AUDIOGAME";
 const EXCITED = [
-  "user123: the house moves??",
+  "user123: the house moves?? 😅",
   "user123: that's crazy",
   "user123: so special!!"
 ]
@@ -26,6 +26,7 @@ const textNodes1 = [
     options: [
       {
         text: "Let's go meet that ghost!",
+        chatMood: EXCITED,
         nextText: 3,
       },
       {
@@ -37,6 +38,7 @@ const textNodes1 = [
       },
       {
         text: "How is that house special, you ask me? Well, let's go and see! (Popularity+)",
+        chatMood: EXCITED,
         popularity: 1,
         nextText: 3,
       },

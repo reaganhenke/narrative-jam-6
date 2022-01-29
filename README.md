@@ -18,8 +18,8 @@ Created by
 - [x] add dialogue functionality to progress story by selecting a response
 - [x] add dialogue functionality to progress story by clicking next
 - [x] add dialogue functionality to progress story with space or click
-- [ ] add livestream chat functionality to reflect a mood
-- [ ] reflect livestream popularity in views
+- [x] add livestream chat functionality to reflect a mood
+- [x] reflect livestream popularity in views
 - [x] add dialogue functionality to show character with different emotions
 - [ ] add audio puzzle screen
 - [ ] add audio puzzle slider functionality
@@ -28,7 +28,6 @@ Created by
 - [ ] create epilogue screen
 - [ ] play background music
 - [ ] fix preloading assets, there's a delay in displaying background images
-
 
 #### stretch goals
 - [ ] make dialogue text appear incrementally
@@ -60,16 +59,17 @@ Created by
 - [ ] possible background art?
 - [ ] possible illustrated title, or just use a font? 
 - [ ] start button (either just background, or background plus words and i can add discernible text with an aria label)
-#### episode intro screen (for each)
+#### episode intro screen (for each episode)
 - [ ] possible background art?
 - [ ] possible illustrated title, or just use a font? 
 - [ ] start button (either just background, or background plus words and i can add discernible text with an aria label)
+#### dialogue screen (for each episode)
+- [ ] background art
+- [ ] "next" button or icon
+- [ ] character art (including emotion variants)
+- [ ] livestream overlay background?
+- [ ] response/dialogue background? how should the speaker name render?
+#### audio puzzle screen
 
 
-
-
-- [ ] background art for each episode 
-- [ ] character art
-- [ ] response selection button backgrounds
-- [ ] dialogue next button
 - [ ] translator art

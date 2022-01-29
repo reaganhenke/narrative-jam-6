@@ -1,8 +1,12 @@
-
 // maybe break out the audio controls into a separate js file?
 
 var volumeSweetSpot;
 var speedSweetSpot;
+
+ghostAudio = new Audio();
+ghostAudio.loop = true;
+staticAudio = new Audio("./assets/sounds/radio-static-placeholder.mp3");
+staticAudio.loop = true;
 
 function startAudioPuzzle() {
   console.log("startin");
