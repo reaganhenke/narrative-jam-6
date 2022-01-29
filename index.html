@@ -62,26 +62,41 @@
       </div>
       </div>
       <div id="audio-container" class="hidden">
-        <p>this is the audio puzzle screen</p>
-
-        <button onclick="pauseAudio()">pause</button>
-        <button onclick="playAudio()">play</button>
-        <!-- add aria labels -->
-        <input
-          type="range"
-          min="0"
-          max="10"
-          step="0.1"
-          oninput="updateVolumeSlider(this.value)"
-        />
-        <input
-          type="range"
-          min="0"
-          max="10"
-          step="0.1"
-          oninput="updateSpeedSlider(this.value)"
-        />
-        <div id="caption">i would like to eat some pizza one last time</div>
+        <div class="audio-screen">
+          <div class="buttons">
+            <button onclick="pauseAudio()">pause</button>
+            <button onclick="playAudio()">play</button>
+          </div>
+          <div>
+            <img src="assets/soundwave.gif" alt>
+            <div id="caption"></div>
+          </div>
+        </div>
+        <div class="sliders">
+          <!-- add aria labels -->
+          <input
+            type="range"
+            min="0"
+            max="10"
+            step="0.1"
+            oninput="updateVolumeSlider(this.value)"
+          />
+            <input
+            type="range"
+            min="0"
+            max="10"
+            step="0.1"
+            oninput="updateSpeedSlider(this.value)"
+          />
+          <input
+            type="range"
+            min="0"
+            max="10"
+            step="0.1"
+            oninput="updateStaticSlider(this.value)"
+          />
+        </div>
+        <button onclick="finishAudioPuzzle()">continue</button>
       </div>
     </main>
   </body>

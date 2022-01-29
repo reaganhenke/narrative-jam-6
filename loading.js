@@ -6,14 +6,16 @@ img2 = "./assets/emoji/emoji-sad.png";
 img3 = "./assets/emoji/emoji-smiling.png";
 img4 = "./assets/emoji/emoji-tongue.png";
 img5 = "./assets/backgrounds/placeholder.jpg";
-const imageSrcs = [img1, img2, img3, img4, img5];
+img6 = "./assets/soundwave.gif";
+const imageSrcs = [img1, img2, img3, img4, img5, img6];
 imagesLoaded = false;
 
 // sound assets
 snd1 = "./assets/sounds/ghost-request-placeholder.mp3";
 snd2 = "./assets/sounds/radio-static-placeholder.mp3";
-snd3 = "./assets/sounds/music-placeholder.wav";
-const soundSrcs = [snd1, snd2, snd3];
+snd3 = "./assets/sounds/radio-static-placeholder-two.wav";
+snd4 = "./assets/sounds/music-placeholder.wav";
+const soundSrcs = [snd1, snd2, snd3, snd4];
 soundsLoaded = false;
 
 allAssetsLoaded = false;

@@ -9,7 +9,9 @@ const all_episodes = [
     backgroundImg: FIELD_BACKGROUND,
     music: CREEPY_MUSIC,
     audio: PIZZA_AUDIO,
-    textNodes: textNodes1
+    caption: "i would like to eat some pizza one last time",
+    textNodesBeforeAudio: textNodes1,
+    textNodesAfterAudio: textNodes2
     // dialogue:
     // epilogue image
   }

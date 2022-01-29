@@ -21,10 +21,10 @@ Created by
 - [x] add livestream chat functionality to reflect a mood
 - [x] reflect livestream popularity in views
 - [x] add dialogue functionality to show character with different emotions
-- [ ] add audio puzzle screen
-- [ ] add audio puzzle slider functionality
-- [ ] add audio puzzle visual feedback
-- [ ] add audio puzzle caption
+- [x] add audio puzzle screen
+- [x] add audio puzzle slider functionality
+- [ ] add audio puzzle dynamic visual feedback
+- [x] add audio puzzle caption
 - [ ] create epilogue screen
 - [ ] play background music
 - [ ] fix preloading assets, there's a delay in displaying background images
@@ -70,6 +70,8 @@ Created by
 - [ ] livestream overlay background?
 - [ ] response/dialogue background? how should the speaker name render?
 #### audio puzzle screen
-
-
 - [ ] translator art
+- [ ] button backgrounds
+- [ ] slider design? unsure how much control we have
+- [ ] soundwave art for paused, bad, ok, and good
+- [ ] continue button

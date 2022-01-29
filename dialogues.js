@@ -81,3 +81,20 @@ const textNodes1 = [
     ],
   }
 ];
+
+const textNodes2 = [
+  {
+    id: 1,
+    text: "this is after the audio puzzle",
+    speakerName: "Greg",
+    characterImg: EMOJI_HAPPY,
+    next: 2
+  },
+  {
+    id: 2,
+    text: "time to read the epilogue",
+    speakerName: "Greg",
+    characterImg: EMOJI_HAPPY,
+    next: '???'
+  }
+]

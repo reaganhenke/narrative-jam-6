@@ -10,7 +10,8 @@ state = {
   currentEpisode: 0,
   isLoading: true,
   popularity: 0,
-  suspicion: 0
+  suspicion: 0,
+  finishedAudioPuzzle: false // remember to unset this
 };
 
 function donePreloading() {
@@ -29,19 +30,26 @@ function startGame() {
 }
 
 function startEpisode() {
-  state.gameStage = DIALOGUE;
+  state.gameStage = AUDIO;
   showGameStage();
-  showTextNode(1);
-  updateViews();
-  $(".dialogue-main").css(
-    "background-image",
-    "url(" + all_episodes[state.currentEpisode].backgroundImg + ")"
-  );
+  startAudioPuzzle();// TEMPORARY, FOR TESTING. REPLACE WITH BELOW. 
+
+  // state.gameStage = DIALOGUE;
+  // showGameStage();
+  // showTextNode(1);
+  // updateViews();
+  // $(".dialogue-main").css(
+  //   "background-image",
+  //   "url(" + all_episodes[state.currentEpisode].backgroundImg + ")"
+  // );
 }
 
 function showTextNode(textNodeIndex) {
   document.body.onkeyup = {}; // clear keyup listener in case it was set previously
-  const dialogue = all_episodes[state.currentEpisode].textNodes;
+  console.log("state.finishedAudioPuzzle:", state.finishedAudioPuzzle);
+  console.log('all_episodes[state.currentEpisode]', all_episodes[state.currentEpisode]);
+
+  const dialogue = state.finishedAudioPuzzle ? all_episodes[state.currentEpisode].textNodesAfterAudio: all_episodes[state.currentEpisode].textNodesBeforeAudio;
   const textNode = dialogue.find((textNode) => textNode.id === textNodeIndex);
   $("#character-portrait").css(
     "background-image",
@@ -92,10 +100,9 @@ function selectOption(option) {
   }
 
   if (option.nextText == START_PUZZLE) {
-    // state.gameStage = AUDIO;
-    // showGameStage();
-    // startAudioPuzzle();
-    showTextNode(1); // THIS IS JUST FOR TESTING, LOOP UNTIL DIALOGUE DEV IS FINISHED
+    state.gameStage = AUDIO;
+    showGameStage();
+    startAudioPuzzle();
   } else {
     showTextNode(option.nextText);
   }
