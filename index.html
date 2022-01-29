@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="main.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="main.js"></script>
+    <script src="loading.js"></script>
+    <script src="dialogues.js"></script>
+    <script src="episodes.js"></script>
+    <script src="audiopuzzle.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Handlee&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preload" as="image" href="./assets/backgrounds/placeholder.jpg">
+    <title>NarrativeDrivenJam6</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <main>
+      <div id="loading">
+        <p>loading...</p>
+      </div>
+      <div id="titlescreen" class="hidden">
+        <h1>GHOST INTERPRETER</h1>
+        <p>
+          You have a meeting with a potential sponsor in a few weeks, and the outcomes depends 
+          on how much you've increased your popularity and viewer base before then.
+        </p>
+        <button onclick="startGame()">start</button>
+      </div>
+      <div id="episode-intro" class="hidden">
+        <h2 id="episode-title"></h2>
+        <button onclick="startEpisode()">start</button>
+      </div>
+      <div id="dialogue-container" class="hidden">
+        <div class="dialogue-main">
+          <div id="character-portrait"></div>
+          <div class="dialogue-overlay">
+            <div>LIVESTREAM</div>
+            <!-- TODO: update views to reflect popularity -->
+            <div>1000 VIEWS</div> 
+          </div>
+          <div class="dialogue-responses-wrapper" id="responses">
+          </div>
+          <div class="dialogue-wrapper">
+            <div id="speaker-name"></div>
+            <div class="text">
+              <p id="character-dialogue"></p>
+              <button id="progress-dialogue" class="hidden">next</button>
+            </div>
+          </div>
+        </div>
+        <div class="livestream">
+          <div class="livestream-chat">
+            <!-- TODO: update chat to reflect mood -->
+            <p>user123: omg this is crazy</p>
+            <p>dramaqueen86: i need more drama</p>
+            <p>catfish54: this guy is a liar</p>
+          </div>
+        </div>
+      </div>
+      </div>
+      <div id="audio-container" class="hidden">
+        <p>this is the audio puzzle screen</p>
+
+        <button onclick="pauseAudio()">pause</button>
+        <button onclick="playAudio()">play</button>
+        <!-- add aria labels -->
+        <input
+          type="range"
+          min="0"
+          max="10"
+          step="0.1"
+          oninput="updateVolumeSlider(this.value)"
+        />
+        <input
+          type="range"
+          min="0"
+          max="10"
+          step="0.1"
+          oninput="updateSpeedSlider(this.value)"
+        />
+        <div id="caption">i would like to eat some pizza one last time</div>
+      </div>
+    </main>
+  </body>
+</html>
