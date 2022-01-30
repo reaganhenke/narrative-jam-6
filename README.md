@@ -41,6 +41,7 @@ Created by
 - [ ] add visual assets to dialogue screen
 - [ ] add visual aseets to audio puzzle screen
 - [ ] add episode content
+- [ ] epilogue screens
 
 ### audio needed
 - [ ] ghost tracks for each episode
@@ -49,30 +50,54 @@ Created by
 - [ ] background music for each episode 
 
 ### art assets needed
+
 #### general
-- [ ] cover photo
-- [ ] favicon
+- [ ] cover photo (for itch.io page)
+- [ ] favicon (for itch.io page)
+
 #### loading screen
+![loading](./screenshots/loading.png)
 - [ ] logo for loading screen (or decide on animation)
+- should also decide on a background color here
+
 #### title screen
-- [ ] possible background art?
+![title](./screenshots/title.png)
+- [ ] possible background art? this screen is 960x640px
 - [ ] possible illustrated title, or just use a font? 
-- [ ] start button (either just background, or background plus words and i can add discernible text with an aria label)
+- [ ] start button (either just background, or background plus words and i can add discernible text with an aria label) any size
+- also should add content warning here
+
 #### episode intro screen (for each episode)
-- [ ] possible background art?
+![episode intro](./screenshots/epintro.png)
+- [ ] possible background art, (960x640px) or just pick background color
 - [ ] possible illustrated title, or just use a font? 
 - [ ] start button (either just background, or background plus words and i can add discernible text with an aria label)
+
 #### dialogue screen (for each episode)
-- [ ] background art
-- [ ] "next" button or icon
-- [ ] character art (including emotion variants)
-- [ ] livestream overlay background?
-- [ ] response/dialogue background? how should the speaker name render?
+![dialogue](./screenshots/dialogue.png)
+- I'm just using placeholders for the character and the background, ignore those. 
+- [ ] episode background art (660x640px, could be adjusted if we shrink livestream section)
+- [ ] "next" button or icon for user to click to progress (any size or shape)
+- [ ] character art (including emotion variants) (less than 660px wide and 490px tall, that's the absolute max of the space minus the dialogue space at the bottom)
+- [ ] livestream overlay background? unsure if you want to draw the part on the right, it's (300 x 640px, and the inner white chat part can be whatever size, currently 270x576px)
+- [ ] do you want to add a background for the dialogue box at the bottom? how should the speaker name render?
+
+![dialogue2](./screenshots/dialogueresponses.png)
+- [ ] possibly backgrounds for these response options? Tricky because they may vary in size, or we pick a max and limit them all. 
+
 #### audio puzzle screen
-- [ ] translator art
-- [ ] button backgrounds
+![audiopuzzle](./screenshots/audiopuzzle.png)
+- [ ] background art/translator art. this page can look however you want, should fit into the screen size of (960x640px). might vary per episode if we want to show the ghosts?
+- [ ] play/pause buttons
+- [ ] soundwave art for paused, bad, ok, and good. can be any size, but variants for showing how accurate the sliders are would be helpful.
 - [ ] slider design? unsure how much control we have
-- [ ] soundwave art for paused, bad, ok, and good
 - [ ] continue button
+
 #### epilogue screens
-- [ ] is there any art here? I'm not sure
+![epilogue](./screenshots/epilogue.png)
+- [ ] I think we'll show a different illustration for each of the 4 episode endings?
+- [ ] continue button
+- there's also the game over screen for raising too much suspicion, and the final game ending. Unsure what those look like. 
+
+
+NOTE: for all buttons with custom art, unsure if you want to draw the words on them, or leave the text to be written on top. Let me know.
