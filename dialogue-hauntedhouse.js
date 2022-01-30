@@ -1,12 +1,36 @@
 const START_PUZZLE = "AUDIOGAME";
 const FINISHEPISODE = "FINISHEPISODE";
+const LOW = "LOW";
+const MED = "MED";
+const HIGH = "HIGH";
 
 const GREG_GRUMPY = "./assets/characters/greg_grumpy.png"
 
-const EXCITED = [
-  "user123: the house moves?? 😅",
-  "user123: that's crazy",
-  "user123: so special!!"
+const HAUNTEDHOUSE_EXCITED = [
+  {
+    suspicion: LOW,
+    segments: [
+      "noclue: i'm so excited 😅",
+      "user123: that's crazy",
+      "user123: so special!!"
+    ]
+  },
+  {
+    suspicion: MED,
+    segments: [
+      "curious: huh... alright if you say so! ",
+      "user123: that's kinda crazy, if you're telling the truth🤔 ",
+      "start2doubt: if you say so"
+    ]
+  },
+  {
+    suspicion: HIGH,
+    segments: [
+      "hateu: u r such a liar 🤬 ",
+      "user123: stop lying! ",
+      "overit: this show sucks"
+    ]
+  }
 ]
 
 const possible_epilogues = [
@@ -44,19 +68,19 @@ const hauntedHouseDialogue1 = [
     options: [
       {
         text: "Let's go meet that ghost!",
-        chatMood: EXCITED,
+        chatMood: HAUNTEDHOUSE_EXCITED,
         nextText: 3,
       },
       {
-        text: "A very special house indeed, for it has legs to move around! (Popularity+, SUS-)",
+        text: "A very special house indeed, for it has legs to move around! (Popularity+, SUS+)",
         popularity: 5,
-        suspicion: 4,
+        suspicion: 3,
         nextText: 3,
-        chatMood: EXCITED
+        chatMood: HAUNTEDHOUSE_EXCITED
       },
       {
         text: "How is that house special, you ask me? Well, let's go and see! (Popularity+)",
-        chatMood: EXCITED,
+        chatMood: HAUNTEDHOUSE_EXCITED,
         popularity: 1,
         nextText: 3,
       },

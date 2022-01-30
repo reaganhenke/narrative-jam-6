@@ -80,14 +80,23 @@ main {
   z-index: 5;
 }
 
-#livestream-chat {
-  box-sizing: border-box;
-  margin-top: 11px;
+.livestream-wrapper {
   height: 90%;
   width: 90%;
+  margin-top: 11px;
+  position: relative;
+  overflow: hidden;
+}
+
+#livestream-chat {
+  box-sizing: border-box;
+  min-height: 575px;
+  width: 100%;
   padding: 12px;
   font-family: sans-serif;
   font-size: 18px;
+  bottom: 0;
+  position: absolute;
 }
 
 .dialogue-main {

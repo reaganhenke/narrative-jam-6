@@ -98,7 +98,7 @@ function selectOption(option) {
   }
   if (option.suspicion) {
     state.suspicion += option.suspicion;
-    if (state.suspicion > 5) { // TODO: determine actual threshold
+    if (state.suspicion > 10) { // TODO: determine actual threshold
       gameOver();
       return;
     }
@@ -108,14 +108,19 @@ function selectOption(option) {
   }
   updateViews();
   if (option.chatMood) {
-   $("#livestream-chat").empty();
-    // TODO: update this to be a random selection. How many show each time? Add incrementally?
-    option.chatMood.forEach((chatText) => {
-      const chatSegment = document.createElement("p");
-      chatSegment.innerText = chatText;
-      $("#livestream-chat").append(chatSegment);
-    });
-  
+    var chatOptions = [];
+    if (state.suspicion < 3) { // TODO: adjust thresholds for suspicion
+      chatOptions = option.chatMood.find((segments) => segments.suspicion == LOW);
+    } else if (state.suspicion >= 3 && state.suspicion < 5) {
+      chatOptions = option.chatMood.find((segments) => segments.suspicion == MED);
+    } else if (state.suspicion >= 5) {
+      chatOptions = option.chatMood.find((segments) => segments.suspicion == HIGH);
+    } 
+    const newSegmentText = chatOptions.segments[Math.floor((Math.random() * chatOptions.segments.length))];
+    const chatSegment = document.createElement("p");
+    chatSegment.innerText = newSegmentText;
+    $("#livestream-chat").append(chatSegment);
+    $("#livestream-chat").scrollTop = 0;
   }
 
   if (option.nextText == START_PUZZLE) {
@@ -171,6 +176,7 @@ function showEpilogue() {
 }
 
 function nextEpisode() {
+  $("#livestream-chat").empty();
   if (state.currentEpisode == all_episodes.length - 1) {
     $("#epilogue-result").text('game over'); // TODO: customize final ending based on suspicion and popularity
     $("#next-episode").addClass("hidden");
