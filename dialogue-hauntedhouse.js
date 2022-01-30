@@ -1,8 +1,8 @@
-const EMOJI_DEFAULT = "./assets/emoji/emoji-neutral.png";
-const EMOJI_HAPPY = "./assets/emoji/emoji-smiling.png";
-const EMOJI_SAD = "./assets/emoji/emoji-sad.png";
 const START_PUZZLE = "AUDIOGAME";
 const FINISHEPISODE = "FINISHEPISODE";
+
+const GREG_GRUMPY = "./assets/characters/greg_grumpy.png"
+
 const EXCITED = [
   "user123: the house moves?? 😅",
   "user123: that's crazy",
@@ -33,14 +33,14 @@ const hauntedHouseDialogue1 = [
     id: 1,
     text: "Hello lovelies, today we've got a call from Greg, from Lovely Homes Real Estate!",
     speakerName: "MC",
-    characterImg: EMOJI_HAPPY,
+    characterImg: GREG_GRUMPY,
     next: 2
   },
   {
     id: 2,
     text: "Greg is trying to sell a very special house, but the previous owner isn't too happy about visitors...",
     speakerName: "MC",
-    characterImg: EMOJI_DEFAULT,
+    characterImg: GREG_GRUMPY,
     options: [
       {
         text: "Let's go meet that ghost!",
@@ -66,21 +66,21 @@ const hauntedHouseDialogue1 = [
     id: 3,
     text: "Hello Greg, so we're in the famed \"four-leg house\".",
     speakerName: "MC",
-    characterImg: EMOJI_DEFAULT,
+    characterImg: GREG_GRUMPY,
     next: 4
   },
   {
     id: 4,
     text: "Yes, and it would be a perfect deal if not for that wailing ghost inside.",
     speakerName: "Greg",
-    characterImg: EMOJI_SAD,
+    characterImg: GREG_GRUMPY,
     next: 5
   },
   {
     id: 5,
     text: "Please convince her to move on...",
     speakerName: "Greg",
-    characterImg: EMOJI_DEFAULT,
+    characterImg: GREG_GRUMPY,
     options: [
       {
         text: "Let's meet her then...",
@@ -105,14 +105,14 @@ const hauntedHouseDialogue2 = [
     id: 1,
     text: "this is after the audio puzzle",
     speakerName: "Greg",
-    characterImg: EMOJI_HAPPY,
+    characterImg: GREG_GRUMPY,
     next: 2
   },
   {
     id: 2,
     text: "time to pick an epilogue",
     speakerName: "Greg",
-    characterImg: EMOJI_DEFAULT,
+    characterImg: GREG_GRUMPY,
     options: [
       {
         text: "another success",
@@ -131,7 +131,7 @@ const hauntedHouseDialogue2 = [
     id: 3,
     text: "time to read the epilogue",
     speakerName: "Greg",
-    characterImg: EMOJI_HAPPY,
+    characterImg: GREG_GRUMPY,
     next: FINISHEPISODE
   }
 ]

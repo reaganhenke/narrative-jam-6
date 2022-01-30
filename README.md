@@ -75,15 +75,14 @@ Created by
 - [ ] start button (either just background, or background plus words and i can add discernible text with an aria label)
 
 #### dialogue screen (for each episode)
-![dialogue](./screenshots/dialogue.png)
-- I'm just using placeholders for the character and the background, ignore those. 
+![dialogue](./screenshots/dialogue1.png)
 - [ ] episode background art (660x640px, could be adjusted if we shrink livestream section)
-- [ ] "next" button or icon for user to click to progress (any size or shape)
+- [x] "next" button or icon for user to click to progress (any size or shape)
 - [ ] character art (including emotion variants) (less than 660px wide and 490px tall, that's the absolute max of the space minus the dialogue space at the bottom)
-- [ ] livestream overlay background? unsure if you want to draw the part on the right, it's (300 x 640px, and the inner white chat part can be whatever size, currently 270x576px)
-- [ ] do you want to add a background for the dialogue box at the bottom? how should the speaker name render?
+- [x] livestream overlay background? unsure if you want to draw the part on the right, it's (300 x 640px, and the inner white chat part can be whatever size, currently 270x576px)
+- [x] background for the dialogue box at the bottom - I'm concerned the speaker name won't have enough contrast
 
-![dialogue2](./screenshots/dialogueresponses.png)
+![dialogue2](./screenshots/dialogue2.png)
 - [ ] possibly backgrounds for these response options? Tricky because they may vary in size, or we pick a max and limit them all. 
 
 #### audio puzzle screen

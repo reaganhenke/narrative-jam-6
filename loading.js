@@ -1,10 +1,10 @@
 /*~~ Declare assets to load behind loading screen ~~*/
 
 // image assets
-img1 = "./assets/emoji/emoji-neutral.png";
-img2 = "./assets/emoji/emoji-sad.png";
-img3 = "./assets/emoji/emoji-smiling.png";
-img4 = "./assets/emoji/emoji-tongue.png";
+img1 = "./assets/UI/dialogbox.png"
+img2 = "./assets/UI/livestream.png"
+img3 = "./assets/UI/nextbutton.png"
+img4 = "./assets/characters/greg_grumpy.png"
 img5 = "./assets/backgrounds/placeholder.jpg";
 img6 = "./assets/soundwave.gif";
 const imageSrcs = [img1, img2, img3, img4, img5, img6];
