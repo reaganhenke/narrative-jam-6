@@ -130,17 +130,19 @@ main {
   background-size: 100%;
   background-repeat: no-repeat;
   padding: 13px;
+  padding-top: 55px;
   position: relative;
   z-index: 5;
-  min-height: 170px;
+  min-height: 202px;
   box-sizing: border-box;
 }
 
 #speaker-name {
   position: absolute;
   text-align: center;
-  width: 100%;
-  bottom: 100%;
+  bottom: 143px;
+  left: 18px;
+  width: 108px;
 }
 
 #responses button {
