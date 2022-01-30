@@ -26,17 +26,12 @@ $(window).load(function () {
   imagesLoaded = 0;
   totalImages = imageSrcs.length;
   imageSrcs.forEach((imgUrl) => {
-    console.log("loading img: ", imgUrl);
     var img = new Image();
     img.src = imgUrl;
 
     img.onload = (e) => {
-      console.log("loaded image: ", img, "e:", e);
       imagesLoaded++;
       window.preloadedImages.push(img);
-
-      console.log("imagesLoaded: ", imagesLoaded);
-      console.log("totalImages: ", totalImages);
       if (imagesLoaded === totalImages) {
         this.imagesLoaded = true;
         if (this.imagesLoaded && this.soundsLoaded) {
@@ -49,11 +44,9 @@ $(window).load(function () {
   soundsLoaded = 0;
   totalSounds = soundSrcs.length;
   soundSrcs.forEach((filename) => {
-    console.log("loading sound: ", filename);
     var audio = new Audio(filename);
 
     audio.addEventListener("canplaythrough", () => {
-      console.log("loaded audio: ", audio);
       soundsLoaded++;
       if (soundsLoaded === totalSounds) {
         this.soundsLoaded = true;

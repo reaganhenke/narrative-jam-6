@@ -23,10 +23,11 @@ Created by
 - [x] add dialogue functionality to show character with different emotions
 - [x] add audio puzzle screen
 - [x] add audio puzzle slider functionality
-- [ ] add audio puzzle dynamic visual feedback
 - [x] add audio puzzle caption
-- [ ] create epilogue screen
+- [x] create epilogue screens
+- [x] make epilogue screen dynamic
 - [ ] play background music
+- [ ] add audio puzzle dynamic visual feedback
 - [ ] fix preloading assets, there's a delay in displaying background images
 
 #### stretch goals
@@ -37,11 +38,9 @@ Created by
 - [x] pick font and sizing to determine max text length
 - [ ] finalize what loading screen should look like (add logo or animation)
 - [ ] finalize what title screen should look like (add credits and illustrations)
-
-- [ ] get feedback on dialogue screen
-- [ ] get feedback on audio puzzle screen
-- [ ] determine how livestream views vary
-- [ ] add episode writing
+- [ ] add visual assets to dialogue screen
+- [ ] add visual aseets to audio puzzle screen
+- [ ] add episode content
 
 ### audio needed
 - [ ] ghost tracks for each episode
@@ -75,3 +74,5 @@ Created by
 - [ ] slider design? unsure how much control we have
 - [ ] soundwave art for paused, bad, ok, and good
 - [ ] continue button
+#### epilogue screens
+- [ ] is there any art here? I'm not sure

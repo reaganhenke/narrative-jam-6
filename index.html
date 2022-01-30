@@ -43,7 +43,6 @@
           <div id="character-portrait"></div>
           <div class="dialogue-overlay">
             <div>LIVESTREAM</div>
-            <!-- TODO: update views to reflect popularity -->
             <div><span id="view-number"></span> VIEWS</div> 
           </div>
           <div class="dialogue-responses-wrapper" id="responses">
@@ -97,6 +96,10 @@
           />
         </div>
         <button onclick="finishAudioPuzzle()">continue</button>
+      </div>
+      <div id="episode-epilogue" class="hidden">
+        <h2 id="epilogue-result"></h2>
+        <button id="next-episode" onclick="nextEpisode()">next episode</button>
       </div>
     </main>
   </body>

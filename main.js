@@ -4,6 +4,7 @@ const TITLE = 1;
 const EPISODE_INTRO = 2;
 const DIALOGUE = 3;
 const AUDIO = 4;
+const EPILOGUE = 5;
 
 state = {
   gameStage: LOADING,
@@ -11,7 +12,8 @@ state = {
   isLoading: true,
   popularity: 0,
   suspicion: 0,
-  finishedAudioPuzzle: false // remember to unset this
+  finishedAudioPuzzle: false,
+  episode_ending: null
 };
 
 function donePreloading() {
@@ -30,27 +32,23 @@ function startGame() {
 }
 
 function startEpisode() {
-  state.gameStage = AUDIO;
+  state.gameStage = DIALOGUE;
   showGameStage();
-  startAudioPuzzle();// TEMPORARY, FOR TESTING. REPLACE WITH BELOW. 
-
-  // state.gameStage = DIALOGUE;
-  // showGameStage();
-  // showTextNode(1);
-  // updateViews();
-  // $(".dialogue-main").css(
-  //   "background-image",
-  //   "url(" + all_episodes[state.currentEpisode].backgroundImg + ")"
-  // );
+  showTextNode(1);
+  updateViews();
+  $(".dialogue-main").css(
+    "background-image",
+    "url(" + all_episodes[state.currentEpisode].backgroundImg + ")"
+  );
 }
 
 function showTextNode(textNodeIndex) {
   document.body.onkeyup = {}; // clear keyup listener in case it was set previously
-  console.log("state.finishedAudioPuzzle:", state.finishedAudioPuzzle);
-  console.log('all_episodes[state.currentEpisode]', all_episodes[state.currentEpisode]);
+  $("#progress-dialogue").off("click");
 
   const dialogue = state.finishedAudioPuzzle ? all_episodes[state.currentEpisode].textNodesAfterAudio: all_episodes[state.currentEpisode].textNodesBeforeAudio;
   const textNode = dialogue.find((textNode) => textNode.id === textNodeIndex);
+
   $("#character-portrait").css(
     "background-image",
     "url(" + textNode.characterImg + ")"
@@ -73,10 +71,20 @@ function showTextNode(textNodeIndex) {
     // Allow player to increment the story by pressing 'enter' or 'space'
     document.body.onkeyup = function (e) {
       if (e.code == "Space" || e.code == "Enter") {
-        showTextNode(textNode.next);
+        if (textNode.next == "FINISHEPISODE") {
+          showEpilogue();
+        } else {
+          showTextNode(textNode.next);
+        }
       }
     };
-    $("#progress-dialogue").click(() => showTextNode(textNode.next));
+    $("#progress-dialogue").click(function() {
+      if (textNode.next == "FINISHEPISODE") {
+        showEpilogue();
+      } else {
+        showTextNode(textNode.next);
+      }
+    });
   }
 }
 
@@ -86,6 +94,14 @@ function selectOption(option) {
   }
   if (option.suspicion) {
     state.suspicion += option.suspicion;
+    if (state.suspicion > 5) { // TODO: determine actual threshold
+      gameOver();
+      return;
+    }
+  }
+  if (option.setEpilogue) {
+    console.log('setting epilogue to: ');
+    state.episode_ending = option.setEpilogue
   }
   updateViews();
   if (option.chatMood) {
@@ -120,6 +136,7 @@ function showGameStage() {
   $("#episode-intro").addClass("hidden");
   $("#dialogue-container").addClass("hidden");
   $("#audio-container").addClass("hidden");
+  $("#episode-epilogue").addClass("hidden");
   switch (state.gameStage) {
     case LOADING:
       $("#loading").removeClass("hidden");
@@ -136,6 +153,35 @@ function showGameStage() {
     case AUDIO:
       $("#audio-container").removeClass("hidden");
       break;
+    case EPILOGUE:
+      $("#episode-epilogue").removeClass("hidden");
+      break;
   }
   console.log("showing stage: ", state.gameStage);
+}
+
+function showEpilogue() {
+  state.gameStage = EPILOGUE;
+  showGameStage();
+  // NOTE: there's currently no error handling here. If an epilogue isn't set, there will be a blank screen.
+  $("#epilogue-result").text(possible_epilogues.find((epilogue) => epilogue.id === state.episode_ending).text);
+}
+
+function nextEpisode() {
+  if (state.currentEpisode == all_episodes.length - 1) {
+    $("#epilogue-result").text('game over'); // TODO: customize final ending based on suspicion and popularity
+    $("#next-episode").addClass("hidden");
+  } else {
+    state.finishedAudioPuzzle = false;
+    console.log("starting next episode")
+    state.currentEpisode++;
+    startGame();
+  }
+}
+
+function gameOver() {
+  state.gameStage = EPILOGUE;
+  showGameStage();
+  $("#epilogue-result").text("You raised suspicion too much! You lose!");
+  $("#next-episode").addClass("hidden");
 }

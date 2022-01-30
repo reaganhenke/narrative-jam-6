@@ -4,10 +4,30 @@ const EMOJI_DEFAULT = "./assets/emoji/emoji-neutral.png";
 const EMOJI_HAPPY = "./assets/emoji/emoji-smiling.png";
 const EMOJI_SAD = "./assets/emoji/emoji-sad.png";
 const START_PUZZLE = "AUDIOGAME";
+const FINISHEPISODE = "FINISHEPISODE";
 const EXCITED = [
   "user123: the house moves?? 😅",
   "user123: that's crazy",
   "user123: so special!!"
+]
+
+const possible_epilogues = [
+  {
+    id: 1,
+    text: "Another great success!"
+  },
+  {
+    id: 2,
+    text: "Not your best..."
+  },
+  {
+    id: 3,
+    text: "What a lucky coincidence!"
+  },
+  {
+    id: 4,
+    text: "Oopsie!"
+  },
 ]
 
 const textNodes1 = [
@@ -30,9 +50,9 @@ const textNodes1 = [
         nextText: 3,
       },
       {
-        text: "A very special house indeed, for it has legs to move around! (Popularity+)",
+        text: "A very special house indeed, for it has legs to move around! (Popularity+, SUS-)",
         popularity: 5,
-        suspicion: -3,
+        suspicion: 4,
         nextText: 3,
         chatMood: EXCITED
       },
@@ -71,7 +91,7 @@ const textNodes1 = [
       {
         text: "A dead hag in a witchy house, I love that!(Popularity+ Suspicion+)",
         popularity: 1,
-        suspicion: 1,
+        suspicion: 2,
         nextText: START_PUZZLE,
       },
       {
@@ -92,9 +112,28 @@ const textNodes2 = [
   },
   {
     id: 2,
+    text: "time to pick an epilogue",
+    speakerName: "Greg",
+    characterImg: EMOJI_DEFAULT,
+    options: [
+      {
+        text: "another success",
+        popularity: 5,
+        setEpilogue: 1,
+        nextText: 3,
+      },
+      {
+        text: "oopsie",
+        setEpilogue: 4,
+        nextText: 3,
+      }
+    ],
+  },
+  {
+    id: 3,
     text: "time to read the epilogue",
     speakerName: "Greg",
     characterImg: EMOJI_HAPPY,
-    next: '???'
+    next: FINISHEPISODE
   }
 ]

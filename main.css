@@ -21,7 +21,8 @@ main {
 
 #loading:not(.hidden),
 #titlescreen:not(.hidden),
-#episode-intro:not(.hidden) {
+#episode-intro:not(.hidden),
+#episode-epilogue:not(.hidden) {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -189,3 +190,14 @@ main {
 }
 
 /******* END AUDIO PUZZLE SCREEN STYLING *******/
+
+/******* START EPILOGUE SCREEN STYLING *******/
+
+#episode-epilogue button {
+  padding: 20px;
+  font: inherit;
+  letter-spacing: inherit;
+  cursor: pointer;
+}
+
+/******* END EPILOGUE SCREEN STYLING *******/
