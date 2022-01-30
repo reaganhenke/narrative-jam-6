@@ -90,7 +90,7 @@ Created by
 - [ ] background art/translator art. this page can look however you want, should fit into the screen size of (960x640px). might vary per episode if we want to show the ghosts?
 - [ ] play/pause buttons
 - [ ] soundwave art for paused, bad, ok, and good. can be any size, but variants for showing how accurate the sliders are would be helpful.
-- [ ] slider design? unsure how much control we have
+- [ ] slider design
 - [ ] continue button
 
 #### epilogue screens
