@@ -26,6 +26,7 @@ Created by
 - [x] add audio puzzle caption
 - [x] create epilogue screens
 - [x] make epilogue screen dynamic
+- [ ] increment chat one at a time, based on mood and suspicion 
 - [ ] play background music
 - [ ] add audio puzzle dynamic visual feedback
 - [ ] fix preloading assets, there's a delay in displaying background images
@@ -98,6 +99,5 @@ Created by
 - [ ] I think we'll show a different illustration for each of the 4 episode endings?
 - [ ] continue button
 - there's also the game over screen for raising too much suspicion, and the final game ending. Unsure what those look like. 
-
 
 NOTE: for all buttons with custom art, unsure if you want to draw the words on them, or leave the text to be written on top. Let me know.

@@ -1,5 +1,3 @@
-// referencing https://github.com/WebDevSimplified/JavaScript-Text-Adventure/blob/master/game.js
-
 const EMOJI_DEFAULT = "./assets/emoji/emoji-neutral.png";
 const EMOJI_HAPPY = "./assets/emoji/emoji-smiling.png";
 const EMOJI_SAD = "./assets/emoji/emoji-sad.png";
@@ -30,7 +28,7 @@ const possible_epilogues = [
   },
 ]
 
-const textNodes1 = [
+const hauntedHouseDialogue1 = [
   {
     id: 1,
     text: "Hello lovelies, today we've got a call from Greg, from Lovely Homes Real Estate!",
@@ -102,7 +100,7 @@ const textNodes1 = [
   }
 ];
 
-const textNodes2 = [
+const hauntedHouseDialogue2 = [
   {
     id: 1,
     text: "this is after the audio puzzle",

@@ -28,7 +28,7 @@ function donePreloading() {
 function startGame() {
   state.gameStage = EPISODE_INTRO;
   showGameStage();
-  $("#episode-title").text(all_episodes[state.currentEpisode].title);
+  $("#episode-title").text(all_episodes[state.currentEpisode].episodeTitle);
 }
 
 function startEpisode() {

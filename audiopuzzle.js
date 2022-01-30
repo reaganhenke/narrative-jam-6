@@ -10,8 +10,8 @@ staticAudio2 = new Audio("./assets/sounds/radio-static-placeholder-two.wav");
 staticAudio2.loop = true;
 
 function startAudioPuzzle() {
-  $("#caption").text(all_episodes[state.currentEpisode].caption);
-  ghostAudio.src = all_episodes[state.currentEpisode].audio;
+  $("#caption").text(all_episodes[state.currentEpisode].ghostAudioaption);
+  ghostAudio.src = all_episodes[state.currentEpisode].ghostAudio;
   ghostAudio.volume = 0;
   ghostAudio.playbackRate = 4;
   playAudio();
