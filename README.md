@@ -26,8 +26,8 @@ Created by
 - [x] add audio puzzle caption
 - [x] create epilogue screens
 - [x] make epilogue screen dynamic
+- [x] play background music
 - [ ] increment chat one at a time, based on mood and suspicion 
-- [ ] play background music
 - [ ] add audio puzzle dynamic visual feedback
 - [ ] fix preloading assets, there's a delay in displaying background images
 

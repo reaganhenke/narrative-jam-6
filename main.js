@@ -13,7 +13,8 @@ state = {
   popularity: 0,
   suspicion: 0,
   finishedAudioPuzzle: false,
-  episode_ending: null
+  episode_ending: null,
+  episode_music: new Audio()
 };
 
 function donePreloading() {
@@ -33,6 +34,9 @@ function startGame() {
 
 function startEpisode() {
   state.gameStage = DIALOGUE;
+  state.episode_music.src = all_episodes[state.currentEpisode].episodeMusic;
+  state.episode_music.loop = true;
+  state.episode_music.play();
   showGameStage();
   showTextNode(1);
   updateViews();
@@ -159,6 +163,7 @@ function showGameStage() {
 }
 
 function showEpilogue() {
+  state.episode_music.pause();
   state.gameStage = EPILOGUE;
   showGameStage();
   // NOTE: there's currently no error handling here. If an epilogue isn't set, there will be a blank screen.

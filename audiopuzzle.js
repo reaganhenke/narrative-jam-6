@@ -10,7 +10,8 @@ staticAudio2 = new Audio("./assets/sounds/radio-static-placeholder-two.wav");
 staticAudio2.loop = true;
 
 function startAudioPuzzle() {
-  $("#caption").text(all_episodes[state.currentEpisode].ghostAudioaption);
+  state.episode_music.volume = 0.25; // Turn down episode music in the background
+  $("#caption").text(all_episodes[state.currentEpisode].ghostAudioCaption);
   ghostAudio.src = all_episodes[state.currentEpisode].ghostAudio;
   ghostAudio.volume = 0;
   ghostAudio.playbackRate = 4;
@@ -88,6 +89,7 @@ function checkIfSolved() {
 }
 
 function finishAudioPuzzle() {
+  state.episode_music.volume = 1;
   pauseAudio();
   state.gameStage = DIALOGUE;
   state.finishedAudioPuzzle = true;
