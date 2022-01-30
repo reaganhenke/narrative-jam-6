@@ -100,7 +100,6 @@ function selectOption(option) {
     }
   }
   if (option.setEpilogue) {
-    console.log('setting epilogue to: ');
     state.episode_ending = option.setEpilogue
   }
   updateViews();
@@ -157,7 +156,6 @@ function showGameStage() {
       $("#episode-epilogue").removeClass("hidden");
       break;
   }
-  console.log("showing stage: ", state.gameStage);
 }
 
 function showEpilogue() {
@@ -173,7 +171,6 @@ function nextEpisode() {
     $("#next-episode").addClass("hidden");
   } else {
     state.finishedAudioPuzzle = false;
-    console.log("starting next episode")
     state.currentEpisode++;
     startGame();
   }
