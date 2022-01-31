@@ -55,7 +55,7 @@ const possible_epilogues = [
 const hauntedHouseDialogue1 = [
   {
     id: 1,
-    text: "Hello lovelies, today we've got a call from Greg, from Lovely Homes Real Estate!",
+    text: "Hello <b>lovelies</b>, today we've got a call from Greg, from Lovely Homes Real Estate!",
     speakerName: "MC",
     characterImg: GREG_GRUMPY,
     next: 2
@@ -146,6 +146,8 @@ const hauntedHouseDialogue2 = [
       },
       {
         text: "oopsie",
+        popularity: 1,
+        suspicion: -10,
         setEpilogue: 4,
         nextText: 3,
       }

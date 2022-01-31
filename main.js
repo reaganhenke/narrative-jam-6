@@ -10,7 +10,7 @@ state = {
   gameStage: LOADING,
   currentEpisode: 0,
   isLoading: true,
-  popularity: 0,
+  popularity: 10,
   suspicion: 0,
   finishedAudioPuzzle: false,
   episode_ending: null,
@@ -40,7 +40,7 @@ function startEpisode() {
   showGameStage();
   showTextNode(1);
   updateViews();
-  $(".dialogue-main").css(
+  $("#dialogue-container").css(
     "background-image",
     "url(" + all_episodes[state.currentEpisode].backgroundImg + ")"
   );
@@ -57,7 +57,7 @@ function showTextNode(textNodeIndex) {
     "background-image",
     "url(" + textNode.characterImg + ")"
   );
-  $("#character-dialogue").text(textNode.text);
+  $("#character-dialogue").html(textNode.text);
   $("#speaker-name").text(textNode.speakerName);
   $("#responses").empty();
   if (textNode.options) {
@@ -75,6 +75,7 @@ function showTextNode(textNodeIndex) {
     // Allow player to increment the story by pressing 'enter' or 'space'
     document.body.onkeyup = function (e) {
       if (e.code == "Space" || e.code == "Enter") {
+        handlePopularityAndSuspicion(textNode.popularity, textNode.suspicion);
         if (textNode.next == "FINISHEPISODE") {
           showEpilogue();
         } else {
@@ -83,6 +84,7 @@ function showTextNode(textNodeIndex) {
       }
     };
     $("#progress-dialogue").click(function() {
+      handlePopularityAndSuspicion(textNode.popularity, textNode.suspicion);
       if (textNode.next == "FINISHEPISODE") {
         showEpilogue();
       } else {
@@ -92,17 +94,22 @@ function showTextNode(textNodeIndex) {
   }
 }
 
-function selectOption(option) {
-  if (option.popularity) {
-    state.popularity += option.popularity;
+function handlePopularityAndSuspicion(popularityAdjustment, suspicionAdjustment) {
+  if (popularityAdjustment) {
+    const newPopularity = state.popularity + popularityAdjustment; 
+    state.popularity = newPopularity >= 0 ? newPopularity : 0;
   }
-  if (option.suspicion) {
-    state.suspicion += option.suspicion;
-    if (state.suspicion > 10) { // TODO: determine actual threshold
+  if (suspicionAdjustment) {
+    const newSuspicion = state.suspicion + suspicionAdjustment; 
+    state.suspicion = newSuspicion >= 0 ? newSuspicion : 0;
+    if (state.suspicion > 20) { // TODO: determine actual threshold
       gameOver();
-      return;
     }
   }
+}
+
+function selectOption(option) {
+  handlePopularityAndSuspicion(option.popularity, option.suspicion);
   if (option.setEpilogue) {
     state.episode_ending = option.setEpilogue
   }
@@ -123,7 +130,7 @@ function selectOption(option) {
     $("#livestream-chat").scrollTop = 0;
   }
 
-  if (option.nextText == START_PUZZLE) {
+  if (option.nextText == START_PUZZLE && state.gameStage == DIALOGUE) {
     state.gameStage = AUDIO;
     showGameStage();
     startAudioPuzzle();
@@ -133,8 +140,7 @@ function selectOption(option) {
 }
 
 function updateViews() {
-  // TODO: finalize how this updates. 
-  const newViews = 1000 + (state.popularity * 100);
+  const newViews = state.popularity * 100;
   $("#view-number").text(newViews);
 }
 

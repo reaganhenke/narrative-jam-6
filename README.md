@@ -8,6 +8,13 @@ Created by
 - Emma (LaChapeliere) narrative designer
 - Anni (Nightsparrow) graphics artist
 
+From Trello feedback 
+- [x] allow increase/decrease popularity and suspicion when the epilogue happens
+- [x] replace cathouse background to full screen
+- [ ] add ability to bold text in dialogue - responded on trello about this
+- [ ] some text dialogue gets covered - responded on trello about this
+- [ ] no dialogue when options are being shown
+
 # EPISODE WRITING:
 
 <p>There are two files that writing needs to be added to. <p>
