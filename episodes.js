@@ -9,7 +9,7 @@ const all_episodes = [
     backgroundImg: FIELD_BACKGROUND,
     episodeMusic: CREEPY_MUSIC,
     ghostAudio: PIZZA_AUDIO,
-    ghostAudioCaption: "i would like to eat some pizza one last time",
+    ghostAudioCaption: "Find a loving owner for my house.",
     textNodesBeforeAudio: hauntedHouseDialogue1,
     textNodesAfterAudio: hauntedHouseDialogue2
   }
