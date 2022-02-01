@@ -228,7 +228,7 @@ const pizzaDialogue2 = [
   },
   {
     id: 10,
-    text: "**wet chuckle**",
+    text: "*wet chuckle*",
     speakerName: "Maria",
     characterImg: MARIA_BITTERSWEET,
     next: FINISHEPISODE
@@ -368,7 +368,7 @@ const pizzaDialogue2 = [
   },
   {
     id: 24,
-    text: "**sob**",
+    text: "*sob*",
     speakerName: "Maria",
     characterImg: MARIA_CRYING,
     next: 25,
