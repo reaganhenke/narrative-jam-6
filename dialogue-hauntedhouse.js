@@ -1,21 +1,13 @@
-const START_PUZZLE = "AUDIOGAME";
-const FINISHEPISODE = "FINISHEPISODE";
-const LOW = "LOW";
-const MED = "MED";
-const HIGH = "HIGH";
-
-const MC_EXCITED = "./assets/characters/greg_grumpy.png"
-
+const GREG_ANGRY = "./assets/characters/greg_angry.png"
+const GREG_DISGUSTED = "./assets/characters/greg_disgusted.png"
 const GREG_GRUMPY = "./assets/characters/greg_grumpy.png"
-const GREG_ANGRY = "./assets/characters/greg_grumpy.png"
-const GREG_DISGUSTED = "./assets/characters/greg_grumpy.png"
 
 const CATGRANDMA_SAD = "./assets/characters/greg_grumpy.png"
 const CATGRANDMA_ANGRY = "./assets/characters/greg_grumpy.png"
 
 const HAUNTEDHOUSE_EXCITED = [
   {
-    suspicion: LOW,
+    suspicion: LOWSUS,
     segments: [
       "noclue: i'm so excited 😅",
       "user123: that's crazy",
@@ -23,7 +15,7 @@ const HAUNTEDHOUSE_EXCITED = [
     ]
   },
   {
-    suspicion: MED,
+    suspicion: MEDSUS,
     segments: [
       "curious: huh... alright if you say so! ",
       "user123: that's kinda crazy, if you're telling the truth🤔 ",
@@ -31,7 +23,7 @@ const HAUNTEDHOUSE_EXCITED = [
     ]
   },
   {
-    suspicion: HIGH,
+    suspicion: HIGHSUS,
     segments: [
       "hateu: u r such a liar 🤬 ",
       "user123: stop lying! ",
@@ -40,7 +32,7 @@ const HAUNTEDHOUSE_EXCITED = [
   }
 ]
 
-const possible_epilogues = [
+const HAUNTEDHOUSE_EPILOGUES = [
   {
     id: 1,
     text: "Another great success!"

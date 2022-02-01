@@ -37,7 +37,7 @@ Each episode has a js file to hold its dialogue, epilogues, and possible chat se
 
 - Constant `GREG_GRUMPY` with the url to the greg grumpy image. There should be one of these for each possible mood/image of the character. 
 - Array `HAUNTEDHOUSE_EXCITED`, which is an array to represent chat moods. 
-- Array `possible_epilogues`, the possible endings for the episode (currently, just the text to show. This could expand to have a final illustration)
+- Array `HAUNTEDHOUSE_EPILOGUES`, the possible endings for the episode (currently, just the text to show. This could expand to have a final illustration)
 - Array `hauntedHouseDialogue1`, this is the dialogue before the audio puzzle
 - Array `hauntedHouseDialogue2`, this is the dialogue after the audio puzzle
 
@@ -71,7 +71,7 @@ For a text node with options on screen:
   options: [
     {
       text: "Let's go meet that ghost!",
-      chatMood: HAUNTEDHOUSE_EXCITED,
+      chatMoods: HAUNTEDHOUSE_EXCITED,
       nextText: 3,
     },
     {
@@ -79,11 +79,11 @@ For a text node with options on screen:
       popularity: 5,
       suspicion: 3,
       nextText: 3,
-      chatMood: HAUNTEDHOUSE_EXCITED
+      chatMoods: HAUNTEDHOUSE_EXCITED
     },
     {
       text: "How is that house special, you ask me? Well, let's go and see! (Popularity+)",
-      chatMood: HAUNTEDHOUSE_EXCITED,
+      chatMoods: HAUNTEDHOUSE_EXCITED,
       popularity: 1,
       nextText: 3,
       setEpilogue: 4
@@ -94,7 +94,7 @@ For a text node with options on screen:
 These nodes have an `options` section instead of a `next`. The options array can have the following fields: 
 
 - _text_: the test displayed in the response option box
-- _chatMood_ (optional): the chatMood array (defined above) to pull from. If this is present, one chat segment will be selected depending on the suspicion
+- _chatMoods_ (optional): the chatMood arrays (defined above) to pull from. If this is present, one chat segment will be selected for each mood defined, depending on the suspicion
 - _popularity_ (optional): If this is present, the popularity will change by this amount when it's selected. Can be positive or negative. 
 - _suspicion_ (optional): If this is present, the suspicion will change by this amount when it's selected. Can be positive or negative. 
 - _nextText_: the next text node id, where clicking the response will take you to
@@ -173,8 +173,18 @@ NOTE: for all buttons with custom art, unsure if you want to draw the words on t
 - [x] make epilogue screen dynamic
 - [x] play background music
 - [x] increment chat one at a time, based on mood and suspicion 
+- [x] allow increase/decrease popularity and suspicion when the epilogue happens
+- [x] replace cathouse background to full screen
+- [x] allow chat to be called without an option choice
+- [x] add blank episode files
+- [x] add shared chat moods
+- [x] add ANY suspicion to chat moods
+- [x] allow calling multiple chat segments
+- [ ] some text dialogue gets covered - responded on trello about this
+- [ ] no dialogue when options are being shown - responded on doc about this
 - [ ] add audio puzzle dynamic visual feedback
 - [ ] fix preloading assets, there's a delay in displaying background images
+- [ ] only trigger high suspicion ending at the end of an episode
 
 #### stretch goals
 - [ ] make dialogue text appear incrementally

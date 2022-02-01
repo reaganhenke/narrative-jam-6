@@ -10,11 +10,11 @@ state = {
   gameStage: LOADING,
   currentEpisode: 0,
   isLoading: true,
-  popularity: 0,
+  popularity: 10,
   suspicion: 0,
   finishedAudioPuzzle: false,
   episode_ending: null,
-  episode_music: new Audio()
+  episode_music: new Audio(),
 };
 
 function donePreloading() {
@@ -40,7 +40,7 @@ function startEpisode() {
   showGameStage();
   showTextNode(1);
   updateViews();
-  $(".dialogue-main").css(
+  $("#dialogue-container").css(
     "background-image",
     "url(" + all_episodes[state.currentEpisode].backgroundImg + ")"
   );
@@ -50,14 +50,16 @@ function showTextNode(textNodeIndex) {
   document.body.onkeyup = {}; // clear keyup listener in case it was set previously
   $("#progress-dialogue").off("click");
 
-  const dialogue = state.finishedAudioPuzzle ? all_episodes[state.currentEpisode].textNodesAfterAudio: all_episodes[state.currentEpisode].textNodesBeforeAudio;
+  const dialogue = state.finishedAudioPuzzle
+    ? all_episodes[state.currentEpisode].textNodesAfterAudio
+    : all_episodes[state.currentEpisode].textNodesBeforeAudio;
   const textNode = dialogue.find((textNode) => textNode.id === textNodeIndex);
 
   $("#character-portrait").css(
     "background-image",
     "url(" + textNode.characterImg + ")"
   );
-  $("#character-dialogue").text(textNode.text);
+  $("#character-dialogue").html(textNode.text);
   $("#speaker-name").text(textNode.speakerName);
   $("#responses").empty();
   if (textNode.options) {
@@ -65,16 +67,18 @@ function showTextNode(textNodeIndex) {
     textNode.options.forEach((option) => {
       const button = document.createElement("button");
       button.innerText = option.text;
-      button.addEventListener("click", () =>
-        selectOption(option)
-      );
+      button.addEventListener("click", () => selectOption(option));
       $("#responses").append(button);
     });
   } else {
     $("#progress-dialogue").removeClass("hidden");
+    textNode.chatMoods?.forEach((chatMood) => {
+      showChat(chatMood);
+    });
     // Allow player to increment the story by pressing 'enter' or 'space'
     document.body.onkeyup = function (e) {
       if (e.code == "Space" || e.code == "Enter") {
+        handlePopularityAndSuspicion(textNode.popularity, textNode.suspicion);
         if (textNode.next == "FINISHEPISODE") {
           showEpilogue();
         } else {
@@ -82,7 +86,8 @@ function showTextNode(textNodeIndex) {
         }
       }
     };
-    $("#progress-dialogue").click(function() {
+    $("#progress-dialogue").click(function () {
+      handlePopularityAndSuspicion(textNode.popularity, textNode.suspicion);
       if (textNode.next == "FINISHEPISODE") {
         showEpilogue();
       } else {
@@ -92,38 +97,34 @@ function showTextNode(textNodeIndex) {
   }
 }
 
-function selectOption(option) {
-  if (option.popularity) {
-    state.popularity += option.popularity;
+function handlePopularityAndSuspicion(
+  popularityAdjustment,
+  suspicionAdjustment
+) {
+  if (popularityAdjustment) {
+    const newPopularity = state.popularity + popularityAdjustment;
+    state.popularity = newPopularity >= 0 ? newPopularity : 0;
   }
-  if (option.suspicion) {
-    state.suspicion += option.suspicion;
-    if (state.suspicion > 10) { // TODO: determine actual threshold
+  if (suspicionAdjustment) {
+    const newSuspicion = state.suspicion + suspicionAdjustment;
+    state.suspicion = newSuspicion >= 0 ? newSuspicion : 0;
+    if (state.suspicion > 20) {
+      // TODO: determine actual threshold
       gameOver();
-      return;
     }
   }
+}
+
+function selectOption(option) {
+  handlePopularityAndSuspicion(option.popularity, option.suspicion);
   if (option.setEpilogue) {
-    state.episode_ending = option.setEpilogue
+    state.episode_ending = option.setEpilogue;
   }
   updateViews();
-  if (option.chatMood) {
-    var chatOptions = [];
-    if (state.suspicion < 3) { // TODO: adjust thresholds for suspicion
-      chatOptions = option.chatMood.find((segments) => segments.suspicion == LOW);
-    } else if (state.suspicion >= 3 && state.suspicion < 5) {
-      chatOptions = option.chatMood.find((segments) => segments.suspicion == MED);
-    } else if (state.suspicion >= 5) {
-      chatOptions = option.chatMood.find((segments) => segments.suspicion == HIGH);
-    } 
-    const newSegmentText = chatOptions.segments[Math.floor((Math.random() * chatOptions.segments.length))];
-    const chatSegment = document.createElement("p");
-    chatSegment.innerText = newSegmentText;
-    $("#livestream-chat").append(chatSegment);
-    $("#livestream-chat").scrollTop = 0;
-  }
-
-  if (option.nextText == START_PUZZLE) {
+  option.chatMoods?.forEach((chatMood) => {
+    showChat(chatMood);
+  });
+  if (option.nextText == START_PUZZLE && state.gameStage == DIALOGUE) {
     state.gameStage = AUDIO;
     showGameStage();
     startAudioPuzzle();
@@ -132,9 +133,32 @@ function selectOption(option) {
   }
 }
 
+function showChat(chatMood) {
+  var chatOptions = [];
+  if (chatMood[0].suspicion == ANYSUS) {
+    chatOptions = chatMood[0];
+  } else {
+    if (state.suspicion < 3) {
+      // TODO: adjust thresholds for suspicion
+      chatOptions = chatMood.find((segments) => segments.suspicion == LOWSUS);
+    } else if (state.suspicion >= 3 && state.suspicion < 5) {
+      chatOptions = chatMood.find((segments) => segments.suspicion == MEDSUS);
+    } else if (state.suspicion >= 5) {
+      chatOptions = chatMood.find((segments) => segments.suspicion == HIGHSUS);
+    }
+  }
+
+  const newSegmentText =
+    chatOptions.segments[
+      Math.floor(Math.random() * chatOptions.segments.length)
+    ];
+  const chatSegment = document.createElement("p");
+  chatSegment.innerText = newSegmentText;
+  $("#livestream-chat").append(chatSegment);
+}
+
 function updateViews() {
-  // TODO: finalize how this updates. 
-  const newViews = 1000 + (state.popularity * 100);
+  const newViews = state.popularity * 100;
   $("#view-number").text(newViews);
 }
 
@@ -172,13 +196,17 @@ function showEpilogue() {
   state.gameStage = EPILOGUE;
   showGameStage();
   // NOTE: there's currently no error handling here. If an epilogue isn't set, there will be a blank screen.
-  $("#epilogue-result").text(possible_epilogues.find((epilogue) => epilogue.id === state.episode_ending).text);
+  $("#epilogue-result").text(
+    all_episodes[state.currentEpisode].possibleEpilogues.find(
+      (epilogue) => epilogue.id === state.episode_ending
+    ).text
+  );
 }
 
 function nextEpisode() {
   $("#livestream-chat").empty();
   if (state.currentEpisode == all_episodes.length - 1) {
-    $("#epilogue-result").text('game over'); // TODO: customize final ending based on suspicion and popularity
+    $("#epilogue-result").text("game over"); // TODO: customize final ending based on suspicion and popularity
     $("#next-episode").addClass("hidden");
   } else {
     state.finishedAudioPuzzle = false;
