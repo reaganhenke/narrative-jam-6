@@ -1,14 +1,10 @@
-const START_PUZZLE = "AUDIOGAME";
-const FINISHEPISODE = "FINISHEPISODE";
-const LOW = "LOW";
-const MED = "MED";
-const HIGH = "HIGH";
-
+const GREG_ANGRY = "./assets/characters/greg_angry.png"
+const GREG_DISGUSTED = "./assets/characters/greg_disgusted.png"
 const GREG_GRUMPY = "./assets/characters/greg_grumpy.png"
 
 const HAUNTEDHOUSE_EXCITED = [
   {
-    suspicion: LOW,
+    suspicion: LOWSUS,
     segments: [
       "noclue: i'm so excited 😅",
       "user123: that's crazy",
@@ -16,7 +12,7 @@ const HAUNTEDHOUSE_EXCITED = [
     ]
   },
   {
-    suspicion: MED,
+    suspicion: MEDSUS,
     segments: [
       "curious: huh... alright if you say so! ",
       "user123: that's kinda crazy, if you're telling the truth🤔 ",
@@ -24,7 +20,7 @@ const HAUNTEDHOUSE_EXCITED = [
     ]
   },
   {
-    suspicion: HIGH,
+    suspicion: HIGHSUS,
     segments: [
       "hateu: u r such a liar 🤬 ",
       "user123: stop lying! ",
@@ -33,7 +29,7 @@ const HAUNTEDHOUSE_EXCITED = [
   }
 ]
 
-const possible_epilogues = [
+const HAUNTEDHOUSE_EPILOGUES = [
   {
     id: 1,
     text: "Another great success!"
@@ -55,20 +51,21 @@ const possible_epilogues = [
 const hauntedHouseDialogue1 = [
   {
     id: 1,
-    text: "Hello <b>lovelies</b>, today we've got a call from Greg, from Lovely Homes Real Estate!",
+    text: "Hello lovelies, today we've got a call from Greg, from Lovely Homes Real Estate!",
     speakerName: "MC",
     characterImg: GREG_GRUMPY,
+    chatMoods: [HAUNTEDHOUSE_EXCITED, GENERALMOOD_CUTE, GENERALMOOD_CUTE, GENERALMOOD_CUTE, GENERALMOOD_CUTE, HAUNTEDHOUSE_EXCITED,HAUNTEDHOUSE_EXCITED],
     next: 2
   },
   {
     id: 2,
     text: "Greg is trying to sell a very special house, but the previous owner isn't too happy about visitors...",
     speakerName: "MC",
-    characterImg: GREG_GRUMPY,
+    characterImg: GREG_ANGRY,
     options: [
       {
         text: "Let's go meet that ghost!",
-        chatMood: HAUNTEDHOUSE_EXCITED,
+        chatMoods: [HAUNTEDHOUSE_EXCITED],
         nextText: 3,
       },
       {
@@ -76,11 +73,11 @@ const hauntedHouseDialogue1 = [
         popularity: 5,
         suspicion: 3,
         nextText: 3,
-        chatMood: HAUNTEDHOUSE_EXCITED
+        chatMoods: [HAUNTEDHOUSE_EXCITED, GENERALMOOD_CUTE, GENERALMOOD_CUTE, GENERALMOOD_CUTE, GENERALMOOD_CUTE, GENERALMOOD_CUTE, GENERALMOOD_CUTE]
       },
       {
         text: "How is that house special, you ask me? Well, let's go and see! (Popularity+)",
-        chatMood: HAUNTEDHOUSE_EXCITED,
+        chatMoods: [HAUNTEDHOUSE_EXCITED],
         popularity: 1,
         nextText: 3,
       },
@@ -90,7 +87,7 @@ const hauntedHouseDialogue1 = [
     id: 3,
     text: "Hello Greg, so we're in the famed \"four-leg house\".",
     speakerName: "MC",
-    characterImg: GREG_GRUMPY,
+    characterImg: GREG_DISGUSTED,
     next: 4
   },
   {
