@@ -3,7 +3,7 @@
 // image assets
 img1 = "./assets/UI/dialogbox.png"
 img2 = "./assets/UI/livestream.png"
-img3 = "./assets/UI/nextbutton.png"
+img3 = "./assets/UI/nextarrow.png"
 img4 = "./assets/characters/greg_grumpy.png"
 img5 = "./assets/backgrounds/placeholder.jpg";
 img6 = "./assets/soundwave.gif";

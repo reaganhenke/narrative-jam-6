@@ -49,6 +49,7 @@ function startEpisode() {
 function showTextNode(textNodeIndex) {
   document.body.onkeyup = {}; // clear keyup listener in case it was set previously
   $("#progress-dialogue").off("click");
+  $(".dialogue-wrapper").off("click");
 
   const dialogue = state.finishedAudioPuzzle
     ? all_episodes[state.currentEpisode].textNodesAfterAudio
@@ -78,22 +79,25 @@ function showTextNode(textNodeIndex) {
     // Allow player to increment the story by pressing 'enter' or 'space'
     document.body.onkeyup = function (e) {
       if (e.code == "Space" || e.code == "Enter") {
-        handlePopularityAndSuspicion(textNode.popularity, textNode.suspicion);
-        if (textNode.next == "FINISHEPISODE") {
-          showEpilogue();
-        } else {
-          showTextNode(textNode.next);
-        }
+        advance(textNode);
       }
     };
-    $("#progress-dialogue").click(function () {
-      handlePopularityAndSuspicion(textNode.popularity, textNode.suspicion);
-      if (textNode.next == "FINISHEPISODE") {
-        showEpilogue();
-      } else {
-        showTextNode(textNode.next);
-      }
+    $("#progress-dialogue").click(function (event) {
+      event.stopPropagation();
+      advance(textNode);
     });
+    $(".dialogue-wrapper").click(function () {
+      advance(textNode);
+    });
+  }
+}
+
+function advance(textNode) {
+  handlePopularityAndSuspicion(textNode.popularity, textNode.suspicion);
+  if (textNode.next == "FINISHEPISODE") {
+    showEpilogue();
+  } else {
+    showTextNode(textNode.next);
   }
 }
 

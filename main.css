@@ -34,7 +34,7 @@ main {
 #titlescreen button,
 #episode-intro button,
 #episode-epilogue button {
-  background-image: url(./assets/UI/nextbutton.png);
+  background-image: url(./assets/UI/smallbutton.png);
   background-repeat: no-repeat;
   width: 100px;
   height: 60px;
@@ -164,10 +164,12 @@ main {
 }
 
 #progress-dialogue {
-  background-image: url(./assets/UI/nextbutton.png);
+  background-image: url(./assets/UI/nextarrow.png);
   background-repeat: no-repeat;
-  width: 100px;
-  height: 60px;
+  background-size: 100%;
+  background-color: transparent;
+  width: 40px;
+  height: 35px;
   border: none;
   position: absolute;
   right: 15px;
