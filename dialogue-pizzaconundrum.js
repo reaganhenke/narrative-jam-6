@@ -46,7 +46,7 @@ const pizzaDialogue1 = [
   },
   {
     id: 2,
-    text: "It's always a heartbreak when your loved one cannot move on, and you cannot understand what tether them to our living world.",
+    text: "It's always a heartbreak when your loved one cannot move on, and you cannot understand what tethers them to our living world.",
     speakerName: "Me",
     characterImg: MC_SAD,
     next: 3,
@@ -58,13 +58,13 @@ const pizzaDialogue1 = [
     characterImg: MC_SAD,
     options: [
       {
-        text: "And that's why GHOST WHISPERER exists, dear viewers! To wrap up all unfinished business and mend those broken hearts!",
+        text: "Ghost Whisperer wraps up all unfinished business and mends those broken hearts!",
         popularity: 1,
         suspicion: 1,
         nextText: 4,
       },
       {
-        text: "I don't think I could stand my dead partner hanging around. But I'm not really into the all partner thing in the first place, so...",
+        text: "I don't think I could stand my dead partner hanging around. If I had a partner, that is...",
         nextText: 4,
       },
       {
@@ -84,7 +84,7 @@ const pizzaDialogue1 = [
   {
     id: 5,
     text: "Don't worry about it, that's what I do. Why don't you tell me a little bit about the situation before I go meet with Amal.",
-    speakerName: "MC",
+    speakerName: "Me",
     characterImg: MARIA_SAD,
     next: 6,
   },
@@ -97,7 +97,7 @@ const pizzaDialogue1 = [
   },
   {
     id: 7,
-    text: "I can't, I can't deal with them being gone but not really. So I called you. Please, I need them to move one.",
+    text: "I can't, I can't deal with them being gone but not really. So I called you. Please, I need them to move on.",
     speakerName: "Maria",
     characterImg: MARIA_CRYING,
     next: 8,
@@ -113,7 +113,7 @@ const pizzaDialogue1 = [
         nextText: START_PUZZLE,
       },
       {
-        text: "My dear, it's awful that you have to live through that! But I'm for you now, and everything is going to be okay.",
+        text: "My dear, it's awful that you have to live through that! But I'm here for you now, and everything is going to be okay.",
         popularity: 1,
         nextText: START_PUZZLE,
       },
@@ -188,17 +188,17 @@ const pizzaDialogue2 = [
     characterImg: MARIA_CONFUSED,
     options: [
       {
-        text: "You're right, it doesn't make much sense... Even ghosts have unrealistic desires sometimes.",
+        text: "Even ghosts have unrealistic desires sometimes.",
         setEpilogue: 2,
         nextText: 11,
       },
       {
-        text: "Maybe the pizza has some special significance for them, and it's not really about eating it?",
+        text: "Maybe the pizza has some special significance for them?",
         setEpilogue: 1,
         nextText: 7,
       },
       {
-        text: "Can't hurt to try it, though. They'll probably be satisfied just being offered a pizza.",
+        text: "They'll probably be satisfied just being offered a pizza.",
         setEpilogue: 1,
         nextText: 7,
       },
@@ -250,7 +250,14 @@ const pizzaDialogue2 = [
   },
   {
     id: 13,
-    text: "I guess you could move to a new place? Ghosts are usually tied up to a relatively small location, they wouldn't be able to follow you.",
+    text: "I guess you could move to a new place?",
+    speakerName: "Me",
+    characterImg: MARIA_SAD,
+    next: 1300,
+  },
+  {
+    id: 1300,
+    text: "Ghosts are usually tied up to a relatively small location, they wouldn't be able to follow you.",
     speakerName: "Me",
     characterImg: MARIA_SAD,
     next: 14,
@@ -310,7 +317,7 @@ const pizzaDialogue2 = [
         nextText: 20,
       },
       {
-        text: "I can take care of the pizza, but I feel like you might regret it, later, if you're not the one to do it.",
+        text: "I can order the pizza, but I feel like you might regret not doing it yourself, later.",
         setEpilogue: 1,
         nextText: 20,
       },
@@ -333,17 +340,31 @@ const pizzaDialogue2 = [
   },
   {
     id: 22,
-    text: "And then it took a lot of time for us to get together, to find what was right for us. Because we didn't feel like a couple, but not like friends either.",
+    text: "And then it took a lot of time for us to get together, to find what was right for us.",
+    speakerName: "Maria",
+    characterImg: MARIA_SAD,
+    next: 2200,
+  },
+  {
+    id: 2200,
+    text: "Because we didn't feel like a couple, but not like friends either.",
     speakerName: "Maria",
     characterImg: MARIA_SAD,
     next: 23,
   },
   {
     id: 23,
-    text: "But all that time, all those years it took us before we learnt about queerplatonic relationships, and felt like what we had was valid, in all that time we never missed Friday pizza night...",
+    text: "But all that time, all those years before we learnt about queerplatonic relationships...",
+    speakerName: "Maria",
+    characterImg: MARIA_SAD,
+    next: 2300,
+  },
+  {
+    id: 2300,
+    text: "... before we felt like what we had was valid... In all that time we never missed Friday pizza night.",
     speakerName: "Maria",
     characterImg: MARIA_CRYING,
-    next: 24,
+    next: 24
   },
   {
     id: 24,
@@ -450,13 +471,14 @@ const pizzaDialogue2 = [
         nextText: 38,
       },
       {
-        text: "That's what it sounded like... The reception can be a bit scrambled sometimes, even with the best interpeter machine.",
+        text: "That's what it sounded like... The reception can be a bit scrambled sometimes.",
         popularity: -1,
         suspicion: 1,
         nextText: 70,
+        setEpilogue: 2,
       },
       {
-        text: "Ghosts sometimes think in mysterious ways. There's probably some symbolic meaning hidden in there, but you're better placed than me to guess what.",
+        text: "There's probably some symbolic meaning hidden in there... Any idea?",
         nextText: 38,
       },
     ],
@@ -524,7 +546,7 @@ const pizzaDialogue2 = [
     characterImg: MARIA_CONFUSED,
     options: [
       {
-        text: "Maybe it was so important to them that they don't want you to share it with anyone else? Like some kind of post-mortem pizza exclusivity?",
+        text: "Maybe it's so important to them, they don't want you to share it with anyone else?",
         setEpilogue: 4,
         nextText: 47,
       },
@@ -677,7 +699,7 @@ const pizzaDialogue2 = [
   },
   {
     id: 66,
-    text: "Oh,right...",
+    text: "Oh, right...",
     speakerName: "Maria",
     characterImg: MARIA_SAD,
     next: 67,
