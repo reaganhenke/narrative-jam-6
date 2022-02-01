@@ -518,7 +518,7 @@ const hauntedHouseDialogue2 = [
   },
   {
     id: 33,
-    text: "**She**. And how would that be any easier?",
+    text: "She! She'd want! And how would that be any easier?",
     speakerName: "Me",
     characterImg: GREG_DISGUSTED,
     next: 34,
@@ -542,7 +542,7 @@ const hauntedHouseDialogue2 = [
         nextText: 36,
       },
       {
-        text: "Selling the house is **your** job, isn't it?",
+        text: "Selling the house is your job, isn't it?",
         setEpilogue: 1,
         nextText: 39,
       },
