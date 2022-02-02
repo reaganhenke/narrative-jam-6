@@ -138,7 +138,7 @@ NOTE: if the "nextText" is "AUDIOGAME" (represented by the `START_PUZZLE` consta
 - [ ] possibly backgrounds for these response options? Tricky because they may vary in size, or we pick a max and limit them all. 
 
 #### audio puzzle screen
-![audiopuzzle](./screenshots/audiopuzzle.png)
+![audiopuzzle](./screenshots/audiopuzzleupdate.png)
 - [x] background art/translator art. this page can look however you want, should fit into the screen size of (960x640px). 
 - [x] play/pause buttons
 - [ ] soundwave art for paused, bad, ok, and good. can be any size, but variants for showing how accurate the sliders are would be helpful.
