@@ -224,12 +224,9 @@ function nextEpisode() {
   $(".dialogue-wrapper").removeClass("hidden");
   $("#episode-epilogue-result").addClass("hidden");
   $("#next-episode").addClass("hidden");
-
   $("#livestream-chat").empty();
-  console.log(all_episodes.length - 1)
   
   if (state.currentEpisode == all_episodes.length - 1) {
-    console.log('game over')
     gameEpilogue();
   } else {
     state.finishedAudioPuzzle = false;
