@@ -94,8 +94,12 @@ function showTextNode(textNodeIndex) {
 
 function advance(textNode) {
   handlePopularityAndSuspicion(textNode.popularity, textNode.suspicion);
-  if (textNode.next == "FINISHEPISODE") {
+  if (textNode.next == FINISHEPISODE) {
     showEpilogue();
+  } else if (textNode.next == START_PUZZLE) {
+    state.gameStage = AUDIO;
+    showGameStage();
+    startAudioPuzzle();
   } else {
     showTextNode(textNode.next);
   }
