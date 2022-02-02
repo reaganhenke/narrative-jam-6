@@ -2,9 +2,6 @@ const GREG_ANGRY = "./assets/characters/greg_angry.png"
 const GREG_DISGUSTED = "./assets/characters/greg_disgusted.png"
 const GREG_GRUMPY = "./assets/characters/greg_grumpy.png"
 
-const MARIA_SAD1 = "./assets/characters/maria_sad.png"
-const ANGEL_EXCITED1 = "./assets/characters/angel_excited.png"
-
 const HAUNTEDHOUSE_EXCITED = [
   {
     suspicion: LOWSUS,
@@ -56,7 +53,7 @@ const hauntedHouseDialogue1 = [
     id: 1,
     text: "Hello lovelies, today we've got a call from Greg, from Lovely Homes Real Estate!",
     speakerName: "MC",
-    characterImg: MARIA_SAD1,
+    characterImg: GREG_DISGUSTED,
     chatMoods: [HAUNTEDHOUSE_EXCITED, GENERALMOOD_CUTE, GENERALMOOD_CUTE, GENERALMOOD_CUTE, GENERALMOOD_CUTE, HAUNTEDHOUSE_EXCITED,HAUNTEDHOUSE_EXCITED],
     next: 2
   },
@@ -64,7 +61,7 @@ const hauntedHouseDialogue1 = [
     id: 2,
     text: "Greg is trying to sell a very special house, but the previous owner isn't too happy about visitors...",
     speakerName: "MC",
-    characterImg: ANGEL_EXCITED1,
+    characterImg: GREG_DISGUSTED,
     options: [
       {
         text: "Let's go meet that ghost!",
