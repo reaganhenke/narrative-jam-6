@@ -1,6 +1,6 @@
 const ANGEL_ANGRY = "./assets/characters/angel_angry.png"
 const ANGEL_DETERMINED = "./assets/characters/angel_determined.png"
-const ANGEL_EXCITED = "./assets/characters/angel_excited.png"
+const ANGEL_HAPPY = "./assets/characters/angel_excited.png"
 const ANGEL_LAUGHING = "./assets/characters/angel_laughing.png"
 const ANGEL_SAD = "./assets/characters/angel_sad.png"
 
@@ -206,27 +206,7 @@ const starsDialogue1 = [
     text: "Shall we, then?",
     speakerName: "Me",
     characterImg: ANGEL_DETERMINED,
-    next: 2000
-  },
-  {
-    id: 2000,
-    text: "What should I say?",
-    speakerName: "Me",
-    characterImg: ANGEL_DETERMINED,
-    options: [
-      {
-        text: "Shall we then?",
-        nextText: START_PUZZLE,
-      },
-      {
-        text: "Shall we then?",
-        nextText: START_PUZZLE,
-      },
-      {
-        text: "Shall we then?",
-        nextText: START_PUZZLE,
-      },
-    ],
+    next: START_PUZZLE
   },
 ];
 

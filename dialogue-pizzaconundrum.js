@@ -1,7 +1,7 @@
 const MARIA_ANGRY = "./assets/characters/maria_angry.png"
 const MARIA_CONFUSED = "./assets/characters/maria_confused.png"
-const MARIA_CRY = "./assets/characters/maria_cry.png"
-const MARIA_HAPPYCRY = "./assets/characters/maria_happycry.png"
+const MARIA_CRYING = "./assets/characters/maria_cry.png"
+const MARIA_BITTERSWEET = "./assets/characters/maria_happycry.png"
 const MARIA_SAD = "./assets/characters/maria_sad.png"
 
 const AMAL_SAD = "./assets/characters/greg_grumpy.png"
