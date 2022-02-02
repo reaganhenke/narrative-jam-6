@@ -12,6 +12,14 @@ staticAudio2.loop = true;
 function startAudioPuzzle() {
   state.episode_music.volume = 0.25; // Turn down episode music in the background
   $("#caption").text(all_episodes[state.currentEpisode].ghostAudioCaption);
+  $("#ghost-portrait").css(
+    "background-image",
+    "url(" + all_episodes[state.currentEpisode].ghostImg + ")"
+  );
+  $("#audio-container").css(
+    "background-image",
+    "url(" + all_episodes[state.currentEpisode].backgroundImg + ")"
+  );
   ghostAudio.src = all_episodes[state.currentEpisode].ghostAudio;
   ghostAudio.volume = 0;
   ghostAudio.playbackRate = 4;
@@ -25,12 +33,16 @@ function pauseAudio() {
   ghostAudio.pause();
   staticAudio.pause();
   staticAudio2.pause();
+  $("#play-button").removeClass("pressed");
+  $("#pause-button").addClass("pressed");
 }
 
 function playAudio() {
   ghostAudio.play();
   staticAudio.play();
   staticAudio2.play();
+  $("#play-button").addClass("pressed");
+  $("#pause-button").removeClass("pressed");
 }
 
 function updateVolumeSlider(current) {
@@ -51,10 +63,13 @@ function updateSpeedSlider(current) {
   if (current == speedSweetSpot) {
     ghostAudio.playbackRate = 1;
   } else {
-    const closenessToSweetSpot =
+    var closenessToSweetSpot =
       current > speedSweetSpot
         ? ((current - speedSweetSpot) / (10 - speedSweetSpot)) * 3 + 1
         : current / speedSweetSpot;
+    if (closenessToSweetSpot < 0.1) {
+      closenessToSweetSpot = 0.1;
+    }
     ghostAudio.playbackRate = closenessToSweetSpot;
   }
   checkIfSolved();

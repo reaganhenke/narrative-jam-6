@@ -140,8 +140,8 @@ const hauntedHouseDialogue1 = [
         nextText: START_PUZZLE,
       },
       {
-        text: "Now, now, you shouldn't speak bad of the dead!",
-        nextText: START_PUZZLE,
+        text: "REPEAT",
+        nextText: 1,
       },
     ],
   },
