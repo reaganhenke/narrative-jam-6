@@ -35,7 +35,7 @@ Created by
 
 Each episode has a js file to hold its dialogue, epilogues, and possible chat segments. [dialogue-hauntedhouse.js](./dialogue-hauntedhouse.js) is the file for the Haunted House episode. The file contains the following:
 
-- Constant `GREG_GRUMPY` with the url to the greg grumpy image. There should be one of these for each possible mood/image of the character. 
+- Constant `GREG_GRUMPY` with the url to the greg_grumpy image. There should be one of these for each possible mood/image of the character. 
 - Array `HAUNTEDHOUSE_EXCITED`, which is an array to represent chat moods. 
 - Array `HAUNTEDHOUSE_EPILOGUES`, the possible endings for the episode (currently, just the text to show. This could expand to have a final illustration)
 - Array `hauntedHouseDialogue1`, this is the dialogue before the audio puzzle
@@ -185,6 +185,9 @@ NOTE: for all buttons with custom art, unsure if you want to draw the words on t
 - [ ] add audio puzzle dynamic visual feedback
 - [ ] fix preloading assets, there's a delay in displaying background images
 - [ ] only trigger high suspicion ending at the end of an episode
+- [ ] loading screen
+- [ ] title screen
+- [ ] fade in audio puzzle
 
 #### stretch goals
 - [ ] make dialogue text appear incrementally

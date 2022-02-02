@@ -116,10 +116,6 @@ function handlePopularityAndSuspicion(
   if (suspicionAdjustment) {
     const newSuspicion = state.suspicion + suspicionAdjustment;
     state.suspicion = newSuspicion >= 0 ? newSuspicion : 0;
-    if (state.suspicion > 20) {
-      // TODO: determine actual threshold
-      gameOver();
-    }
   }
 }
 
@@ -200,22 +196,25 @@ function showGameStage() {
 }
 
 function showEpilogue() {
-  state.episode_music.pause();
-  state.gameStage = EPILOGUE;
-  showGameStage();
-  // NOTE: there's currently no error handling here. If an epilogue isn't set, there will be a blank screen.
-  $("#epilogue-result").text(
-    all_episodes[state.currentEpisode].possibleEpilogues.find(
-      (epilogue) => epilogue.id === state.episode_ending
-    ).text
-  );
+  if (state.suspicion > 5) {
+    gameOverSus();
+  } else {
+    state.episode_music.pause();
+    state.gameStage = EPILOGUE;
+    showGameStage();
+    // NOTE: there's no error handling here. If an epilogue isn't set, there will be a blank screen.
+    $("#epilogue-result").text(
+      all_episodes[state.currentEpisode].possibleEpilogues.find(
+        (epilogue) => epilogue.id === state.episode_ending
+      ).text
+    );
+  }
 }
 
 function nextEpisode() {
   $("#livestream-chat").empty();
   if (state.currentEpisode == all_episodes.length - 1) {
-    $("#epilogue-result").text("game over"); // TODO: customize final ending based on suspicion and popularity
-    $("#next-episode").addClass("hidden");
+    gameEpilogue();
   } else {
     state.finishedAudioPuzzle = false;
     state.currentEpisode++;
@@ -223,9 +222,23 @@ function nextEpisode() {
   }
 }
 
-function gameOver() {
+function gameOverSus() {
   state.gameStage = EPILOGUE;
   showGameStage();
   $("#epilogue-result").text("You raised suspicion too much! You lose!");
+  $("#next-episode").addClass("hidden");
+}
+
+function gameEpilogue() {
+  var gameEpilogueId = 0;
+  if (state.popularity >= 9 && state.popularity < 13) {
+    gameEpilogueId = 1;
+  } else if (state.popularity >= 13 && state.popularity < 20) {
+    gameEpilogueId = 2;
+  } else if (state.popularity >= 20 ) {
+    gameEpilogueId = 3;
+  }
+
+  $("#epilogue-result").text(GAME_EPILOGUES[gameEpilogueId].title);
   $("#next-episode").addClass("hidden");
 }

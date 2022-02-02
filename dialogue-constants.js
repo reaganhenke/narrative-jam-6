@@ -59,3 +59,18 @@ const GENERALMOOD_SUSPICION = [
     ]
   },
 ]
+
+const GAME_EPILOGUES = [
+  {
+    title: 'Failed Game Ending',
+  }, 
+  {
+    title: 'Trial Period Game Ending'
+  }, 
+  {
+    title: 'Sign In Game Ending'
+  },
+  {
+    title: 'Famous Game Ending'
+  }
+]
