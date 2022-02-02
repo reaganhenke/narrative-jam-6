@@ -1,7 +1,8 @@
-// Replace with characters
-// const GREG_ANGRY = "./assets/characters/greg_angry.png"
-// const GREG_DISGUSTED = "./assets/characters/greg_disgusted.png"
-// const GREG_GRUMPY = "./assets/characters/greg_grumpy.png"
+const ANGEL_ANGRY = "./assets/characters/angel_angry.png"
+const ANGEL_DETERMINED = "./assets/characters/angel_determined.png"
+const ANGEL_EXCITED = "./assets/characters/angel_excited.png"
+const ANGEL_LAUGHING = "./assets/characters/angel_laughing.png"
+const ANGEL_SAD = "./assets/characters/angel_sad.png"
 
 // This is just a placeholder example for episode specific moods
 const STARMOOD_SPECIFICMOOD = [

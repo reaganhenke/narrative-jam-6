@@ -2,6 +2,9 @@ const GREG_ANGRY = "./assets/characters/greg_angry.png"
 const GREG_DISGUSTED = "./assets/characters/greg_disgusted.png"
 const GREG_GRUMPY = "./assets/characters/greg_grumpy.png"
 
+const MARIA_SAD1 = "./assets/characters/maria_sad.png"
+const ANGEL_EXCITED1 = "./assets/characters/angel_excited.png"
+
 const HAUNTEDHOUSE_EXCITED = [
   {
     suspicion: LOWSUS,
@@ -53,7 +56,7 @@ const hauntedHouseDialogue1 = [
     id: 1,
     text: "Hello lovelies, today we've got a call from Greg, from Lovely Homes Real Estate!",
     speakerName: "MC",
-    characterImg: GREG_GRUMPY,
+    characterImg: MARIA_SAD1,
     chatMoods: [HAUNTEDHOUSE_EXCITED, GENERALMOOD_CUTE, GENERALMOOD_CUTE, GENERALMOOD_CUTE, GENERALMOOD_CUTE, HAUNTEDHOUSE_EXCITED,HAUNTEDHOUSE_EXCITED],
     next: 2
   },
@@ -61,7 +64,7 @@ const hauntedHouseDialogue1 = [
     id: 2,
     text: "Greg is trying to sell a very special house, but the previous owner isn't too happy about visitors...",
     speakerName: "MC",
-    characterImg: GREG_ANGRY,
+    characterImg: ANGEL_EXCITED1,
     options: [
       {
         text: "Let's go meet that ghost!",
@@ -114,8 +117,8 @@ const hauntedHouseDialogue1 = [
         nextText: START_PUZZLE,
       },
       {
-        text: "Now, now, you shouldn't speak bad of the dead!",
-        nextText: START_PUZZLE,
+        text: "REPEAT",
+        nextText: 1,
       },
     ],
   }
