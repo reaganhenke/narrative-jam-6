@@ -66,18 +66,14 @@
       </div>
       </div>
       <div id="audio-container" class="hidden">
-        <div class="audio-screen">
-          <img src="assets/soundwave.gif" alt>
-        </div>
         <div class="ghost-portrait-background">
           <div id="ghost-portrait"></div>
         </div>
-
-
+        <div class="translator-art"></div>
+        <div class="audio-screen">
+          <img src="assets/soundwave.gif" alt>
+        </div>
         <div id="caption"></div>
-
-
-        <!-- add aria labels -->
         <input
           type="range"
           min="0"
@@ -105,10 +101,9 @@
           id="slider3"
           oninput="updateStaticSlider(this.value)"
         />
-
         <div class="buttons">
-          <button onclick="playAudio()" aria-label="play"></button>
-          <button onclick="pauseAudio()" aria-label="pause"></button>
+          <button onclick="playAudio()" aria-label="play" id="play-button"></button>
+          <button onclick="pauseAudio()" aria-label="pause" id="pause-button"></button>
         </div>
         
         <button id="finish-audio-puzzle" onclick="finishAudioPuzzle()" aria-label="finish"></button>

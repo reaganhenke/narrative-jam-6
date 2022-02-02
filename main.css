@@ -188,65 +188,77 @@ main {
 /******* START AUDIO PUZZLE SCREEN STYLING *******/
 
 #audio-container:not(.hidden) {
-  background-image: url(./assets/UI/devicebody.png);
   display: flex;
-  flex-direction: column;
   position: relative;
   height: 100%;
   width: 100%;
-  justify-content: space-evenly;
-  align-items: center;
+}
+
+.translator-art {
+  height: 100%;
+  width: 100%;
+  background-image: url(./assets/UI/devicebody.png);
+  position: absolute;
 }
 
 #slider1 {
   position: absolute;
-  top: 499px;
-  left: 205px;
-  width: 265px;
+  top: 485px;
+  left: 196px;
+  width: 255px;
 }
 
 #slider2 {
   position: absolute;
-  top: 559px;
-  left: 205px;
-  width: 265px;
+  top: 554px;
+  left: 196px;
+  width: 255px;
 }
 
 #slider3 {
   position: absolute;
-  top: 531px;
-  left: 446px;
+  top: 513px;
+  left: 427px;
   width: 174px;
   transform: rotate(90deg);
 }
 
 .audio-screen {
   position: absolute;
-  top: 85px;
-  left: 90px;
-  width: 535px;
-  height: 244px;
+  top: 75px;
+  left: 84px;
+  width: 523px;
+  height: 237px;
   overflow: hidden;
 }
 
 .ghost-portrait-background {
   background-image: url("./assets/UI/device_ghostbg.png");
   position: absolute;
-  left: 705px;
-  top: 66px;
+  position: absolute;
+  left: 681px;
+  top: 49px;
   width: 231px;
   height: 273px;
+}
+
+#ghost-portrait {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
 
 #caption {
   opacity: 0;
   color: white;
   transition: all 0.2s;
-  left: 179px;
+  left: 168px;
   text-align: center;
   position: absolute;
-  top: 367px;
-  width: 632px;
+  top: 350px;
+  width: 622px;
 }
 
 #audio-container .buttons {
@@ -267,6 +279,10 @@ main {
   background-color: transparent;
 }
 
+#audio-container .buttons button.pressed {
+  background-image: url("./assets/UI/devicebutton_pressed.png");
+}
+
 #finish-audio-puzzle {
   position: absolute;
   top: 554px;
@@ -275,6 +291,49 @@ main {
   height: 57px;
   background-color: transparent;
   border: none;
+  cursor: pointer;
+}
+
+input[type=range] {
+  -webkit-appearance: none;
+  background: transparent; 
+  height: 10px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+input[type=range]::-ms-track {
+  width: 100%;
+  cursor: pointer;
+  background: transparent; 
+  border-color: transparent;
+  color: transparent;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 57px;
+  width: 36px;
+  background: url("./assets//UI/deviceslider.png");
+  cursor: pointer;
+  margin-top: -10px;
+}
+
+input[type=range]::-moz-range-thumb {
+  border: none;
+  height: 57px;
+  width: 36px;
+  margin-top: 10px; 
+  background: url("./assets//UI/deviceslider.png");
+  cursor: pointer;
+}
+
+input[type=range]::-ms-thumb {
+  height: 57px;
+  width: 36px;
+  background: url("./assets//UI/deviceslider.png");
   cursor: pointer;
 }
 
