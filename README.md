@@ -130,7 +130,7 @@ NOTE: if the "nextText" is "AUDIOGAME" (represented by the `START_PUZZLE` consta
 ![dialogue](./screenshots/dialogue.png)
 - [ ] episode background art (660x640px, could be adjusted if we shrink livestream section)
 - [x] "next" button or icon for user to click to progress (any size or shape)
-- [ ] character art (including emotion variants) (less than 660px wide and 490px tall, that's the absolute max of the space minus the dialogue space at the bottom)
+- [x] character art (including emotion variants) (less than 660px wide and 490px tall, that's the absolute max of the space minus the dialogue space at the bottom)
 - [x] livestream overlay background? (300 x 640px, and the inner white chat part can be whatever size, currently 270x576px)
 - [x] background for the dialogue box at the bottom 
 
@@ -139,17 +139,20 @@ NOTE: if the "nextText" is "AUDIOGAME" (represented by the `START_PUZZLE` consta
 
 #### audio puzzle screen
 ![audiopuzzle](./screenshots/audiopuzzle.png)
-- [ ] background art/translator art. this page can look however you want, should fit into the screen size of (960x640px). might vary per episode if we want to show the ghosts?
-- [ ] play/pause buttons
+- [x] background art/translator art. this page can look however you want, should fit into the screen size of (960x640px). 
+- [x] play/pause buttons
 - [ ] soundwave art for paused, bad, ok, and good. can be any size, but variants for showing how accurate the sliders are would be helpful.
-- [ ] slider design
+- [x] slider design
+- [x] continue button
+
+#### episode epilogue screens
+![epilogue](./screenshots/episode-epilogue.png)
+- [ ] I think we'll show a different illustration for each of the 4 episode endings
 - [ ] continue button
 
-#### epilogue screens
-![epilogue](./screenshots/epilogue.png)
-- [ ] I think we'll show a different illustration for each of the 4 episode endings?
-- [ ] continue button
-- there's also the game over screen for raising too much suspicion, and the final game ending. Unsure what those look like. 
+#### game ending screens
+![gameover](./screenshots/game-ending.png)
+
 
 NOTE: for all buttons with custom art, unsure if you want to draw the words on them, or leave the text to be written on top. Let me know.
 
