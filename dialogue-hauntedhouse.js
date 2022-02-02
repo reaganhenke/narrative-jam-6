@@ -66,7 +66,7 @@ const hauntedHouseDialogue1 = [
       {
         text: "Let's go meet that ghost!",
         chatMoods: [HAUNTEDHOUSE_EXCITED],
-        nextText: 3,
+        nextText: START_PUZZLE,
       },
       {
         text: "A very special house indeed, for it has legs to move around! (Popularity+, SUS+)",

@@ -85,7 +85,12 @@ function checkIfSolved() {
     volumeAccuracy > 0.5 && playbackAccuracy > 0.25 && staticAccuracy > 0.55
       ? (volumeAccuracy + playbackAccuracy + staticAccuracy) / 3
       : 0;
-  $("#caption").css("opacity", accuracy);
+
+      console.log('playbackAccuracy: ', playbackAccuracy);
+      console.log('staticAccuracy: ', staticAccuracy);
+      console.log('volumeAccuracy: ', volumeAccuracy);
+      console.log('accuracy: ', accuracy);
+      $("#caption").css("opacity", accuracy);
 }
 
 function finishAudioPuzzle() {

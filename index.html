@@ -67,40 +67,52 @@
       </div>
       <div id="audio-container" class="hidden">
         <div class="audio-screen">
-          <div class="buttons">
-            <button onclick="pauseAudio()">pause</button>
-            <button onclick="playAudio()">play</button>
-          </div>
-          <div>
-            <img src="assets/soundwave.gif" alt>
-            <div id="caption"></div>
-          </div>
+          <img src="assets/soundwave.gif" alt>
         </div>
-        <div class="sliders">
-          <!-- add aria labels -->
-          <input
-            type="range"
-            min="0"
-            max="10"
-            step="0.1"
-            oninput="updateVolumeSlider(this.value)"
-          />
-            <input
-            type="range"
-            min="0"
-            max="10"
-            step="0.1"
-            oninput="updateSpeedSlider(this.value)"
-          />
-          <input
-            type="range"
-            min="0"
-            max="10"
-            step="0.1"
-            oninput="updateStaticSlider(this.value)"
-          />
+        <div class="ghost-portrait-background">
+          <div id="ghost-portrait"></div>
         </div>
-        <button onclick="finishAudioPuzzle()">continue</button>
+
+
+        <div id="caption"></div>
+
+
+        <!-- add aria labels -->
+        <input
+          type="range"
+          min="0"
+          max="10"
+          step="0.1"
+          aria-label="signal slider"
+          id="slider1"
+          oninput="updateVolumeSlider(this.value)"
+        />
+          <input
+          type="range"
+          min="0"
+          max="10"
+          step="0.1"
+          aria-label="signal slider"
+          id="slider2"
+          oninput="updateSpeedSlider(this.value)"
+        />
+        <input
+          type="range"
+          min="0"
+          max="10"
+          step="0.1"
+          aria-label="signal slider"
+          id="slider3"
+          oninput="updateStaticSlider(this.value)"
+        />
+
+        <div class="buttons">
+          <button onclick="playAudio()" aria-label="play"></button>
+          <button onclick="pauseAudio()" aria-label="pause"></button>
+        </div>
+        
+        <button id="finish-audio-puzzle" onclick="finishAudioPuzzle()" aria-label="finish"></button>
+
       </div>
       <div id="episode-epilogue" class="hidden">
         <h2 id="epilogue-result"></h2>
