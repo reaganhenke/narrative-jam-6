@@ -1,6 +1,6 @@
-const GREG_ANGRY = "./assets/characters/greg_angry.png"
-const GREG_DISGUSTED = "./assets/characters/greg_disgusted.png"
-const GREG_GRUMPY = "./assets/characters/greg_grumpy.png"
+const GREG_ANGRY = "./assets/characters/greg_angry.png";
+const GREG_DISGUSTED = "./assets/characters/greg_disgusted.png";
+const GREG_GRUMPY = "./assets/characters/greg_grumpy.png";
 
 const HAUNTEDHOUSE_EXCITED = [
   {
@@ -8,45 +8,49 @@ const HAUNTEDHOUSE_EXCITED = [
     segments: [
       "noclue: i'm so excited 😅",
       "user123: that's crazy",
-      "user123: so special!!"
-    ]
+      "user123: so special!!",
+    ],
   },
   {
     suspicion: MEDSUS,
     segments: [
       "curious: huh... alright if you say so! ",
       "user123: that's kinda crazy, if you're telling the truth🤔 ",
-      "start2doubt: if you say so"
-    ]
+      "start2doubt: if you say so",
+    ],
   },
   {
     suspicion: HIGHSUS,
     segments: [
       "hateu: u r such a liar 🤬 ",
       "user123: stop lying! ",
-      "overit: this show sucks"
-    ]
-  }
-]
+      "overit: this show sucks",
+    ],
+  },
+];
 
 const HAUNTEDHOUSE_EPILOGUES = [
   {
     id: 1,
-    text: "Another great success!"
+    text: "Another great success!",
+    characterImg: GREG_DISGUSTED,
   },
   {
     id: 2,
-    text: "Not your best..."
+    text: "Not your best...",
+    characterImg: GREG_DISGUSTED,
   },
   {
     id: 3,
-    text: "What a lucky coincidence!"
+    text: "What a lucky coincidence!",
+    characterImg: GREG_DISGUSTED,
   },
   {
     id: 4,
-    text: "Oopsie!"
+    text: "Oopsie!",
+    characterImg: GREG_DISGUSTED,
   },
-]
+];
 
 const hauntedHouseDialogue1 = [
   {
@@ -54,8 +58,16 @@ const hauntedHouseDialogue1 = [
     text: "Hello lovelies, today we've got a call from Greg, from Lovely Homes Real Estate!",
     speakerName: "MC",
     characterImg: GREG_DISGUSTED,
-    chatMoods: [HAUNTEDHOUSE_EXCITED, GENERALMOOD_CUTE, GENERALMOOD_CUTE, GENERALMOOD_CUTE, GENERALMOOD_CUTE, HAUNTEDHOUSE_EXCITED,HAUNTEDHOUSE_EXCITED],
-    next: 2
+    chatMoods: [
+      HAUNTEDHOUSE_EXCITED,
+      GENERALMOOD_CUTE,
+      GENERALMOOD_CUTE,
+      GENERALMOOD_CUTE,
+      GENERALMOOD_CUTE,
+      HAUNTEDHOUSE_EXCITED,
+      HAUNTEDHOUSE_EXCITED,
+    ],
+    next: 2,
   },
   {
     id: 2,
@@ -73,7 +85,15 @@ const hauntedHouseDialogue1 = [
         popularity: 5,
         suspicion: 3,
         nextText: 3,
-        chatMoods: [HAUNTEDHOUSE_EXCITED, GENERALMOOD_CUTE, GENERALMOOD_CUTE, GENERALMOOD_CUTE, GENERALMOOD_CUTE, GENERALMOOD_CUTE, GENERALMOOD_CUTE]
+        chatMoods: [
+          HAUNTEDHOUSE_EXCITED,
+          GENERALMOOD_CUTE,
+          GENERALMOOD_CUTE,
+          GENERALMOOD_CUTE,
+          GENERALMOOD_CUTE,
+          GENERALMOOD_CUTE,
+          GENERALMOOD_CUTE,
+        ],
       },
       {
         text: "How is that house special, you ask me? Well, let's go and see! (Popularity+)",
@@ -85,17 +105,17 @@ const hauntedHouseDialogue1 = [
   },
   {
     id: 3,
-    text: "Hello Greg, so we're in the famed \"four-leg house\".",
+    text: 'Hello Greg, so we\'re in the famed "four-leg house".',
     speakerName: "MC",
     characterImg: GREG_DISGUSTED,
-    next: 4
+    next: 4,
   },
   {
     id: 4,
     text: "Yes, and it would be a perfect deal if not for that wailing ghost inside.",
     speakerName: "Greg",
     characterImg: GREG_GRUMPY,
-    next: 5
+    next: 5,
   },
   {
     id: 5,
@@ -118,7 +138,7 @@ const hauntedHouseDialogue1 = [
         nextText: 1,
       },
     ],
-  }
+  },
 ];
 
 const hauntedHouseDialogue2 = [
@@ -127,7 +147,7 @@ const hauntedHouseDialogue2 = [
     text: "this is after the audio puzzle",
     speakerName: "Greg",
     characterImg: GREG_GRUMPY,
-    next: 2
+    next: 2,
   },
   {
     id: 2,
@@ -147,7 +167,7 @@ const hauntedHouseDialogue2 = [
         suspicion: -10,
         setEpilogue: 4,
         nextText: 3,
-      }
+      },
     ],
   },
   {
@@ -155,6 +175,6 @@ const hauntedHouseDialogue2 = [
     text: "time to read the epilogue",
     speakerName: "Greg",
     characterImg: GREG_GRUMPY,
-    next: FINISHEPISODE
-  }
-]
+    next: FINISHEPISODE,
+  },
+];

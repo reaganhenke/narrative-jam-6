@@ -185,6 +185,30 @@ main {
   margin: 8px;
 }
 
+#episode-epilogue-result {
+  position: absolute;
+  width: 660px;
+  bottom: 68px;
+  text-align: center;
+}
+
+#next-episode {
+  position: absolute;
+  background-image: url(./assets/UI/smallbutton.png);
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-size: cover;
+  width: 119px;
+  height: 71px;
+  border: none;
+  cursor: pointer;
+  font: inherit;
+  letter-spacing: inherit;
+  bottom: 20px;
+  right: 320px;
+  z-index: 5;
+}
+
 /******* END DIALOGUE SCREEN STYLING *******/
 
 /******* START AUDIO PUZZLE SCREEN STYLING *******/

@@ -4,7 +4,7 @@ const TITLE = 1;
 const EPISODE_INTRO = 2;
 const DIALOGUE = 3;
 const AUDIO = 4;
-const EPILOGUE = 5;
+const GAMEEPILOGUE = 5;
 
 state = {
   gameStage: LOADING,
@@ -189,7 +189,7 @@ function showGameStage() {
     case AUDIO:
       $("#audio-container").removeClass("hidden");
       break;
-    case EPILOGUE:
+    case GAMEEPILOGUE:
       $("#episode-epilogue").removeClass("hidden");
       break;
   }
@@ -199,21 +199,37 @@ function showEpilogue() {
   if (state.suspicion > 5) {
     gameOverSus();
   } else {
-    state.episode_music.pause();
-    state.gameStage = EPILOGUE;
-    showGameStage();
-    // NOTE: there's no error handling here. If an epilogue isn't set, there will be a blank screen.
-    $("#epilogue-result").text(
-      all_episodes[state.currentEpisode].possibleEpilogues.find(
-        (epilogue) => epilogue.id === state.episode_ending
-      ).text
+    const epilogueObject = all_episodes[
+      state.currentEpisode
+    ].possibleEpilogues.find(
+      (epilogue) => epilogue.id === state.episode_ending
     );
+
+    $(".dialogue-wrapper").addClass("hidden");
+    $("#episode-epilogue-result").removeClass("hidden");
+    $("#next-episode").removeClass("hidden");
+    $("#character-portrait").css(
+      "background-image",
+      "url(" + epilogueObject.characterImg + ")"
+    );
+    // NOTE: there's no error handling here. If an epilogue isn't set, there will be a blank screen.
+
+    $("#episode-epilogue-result").text(epilogueObject.text);
   }
 }
 
 function nextEpisode() {
+  state.episode_music.pause();
+
+  $(".dialogue-wrapper").removeClass("hidden");
+  $("#episode-epilogue-result").addClass("hidden");
+  $("#next-episode").addClass("hidden");
+
   $("#livestream-chat").empty();
+  console.log(all_episodes.length - 1)
+  
   if (state.currentEpisode == all_episodes.length - 1) {
+    console.log('game over')
     gameEpilogue();
   } else {
     state.finishedAudioPuzzle = false;
@@ -223,22 +239,24 @@ function nextEpisode() {
 }
 
 function gameOverSus() {
-  state.gameStage = EPILOGUE;
+  state.gameStage = GAMEEPILOGUE;
   showGameStage();
   $("#epilogue-result").text("You raised suspicion too much! You lose!");
   $("#next-episode").addClass("hidden");
 }
 
 function gameEpilogue() {
+  state.gameStage = GAMEEPILOGUE;
+  showGameStage();
+
   var gameEpilogueId = 0;
   if (state.popularity >= 9 && state.popularity < 13) {
     gameEpilogueId = 1;
   } else if (state.popularity >= 13 && state.popularity < 20) {
     gameEpilogueId = 2;
-  } else if (state.popularity >= 20 ) {
+  } else if (state.popularity >= 20) {
     gameEpilogueId = 3;
   }
 
   $("#epilogue-result").text(GAME_EPILOGUES[gameEpilogueId].title);
-  $("#next-episode").addClass("hidden");
 }
