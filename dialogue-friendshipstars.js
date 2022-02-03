@@ -17,19 +17,26 @@ const STARMOOD_SPECIFICMOOD = [
 const STARS_EPILOGUES = [
   {
     id: 1,
-    text: "Another great success!"
+    text: "Another great success for Ghost Whisperer!",
+    popularity: 2,
+    suspicion: -1,
   },
   {
     id: 2,
-    text: "Not your best..."
+    text: "Sorry lovelies, not my best day!",
+    popularity: -2,
   },
   {
     id: 3,
-    text: "What a lucky coincidence!"
+    text: "What a lucky coincidence!",
+    popularity: -1,
+    suspicion: 1,
   },
   {
     id: 4,
-    text: "Oopsie!"
+    text: "Oopsie! Maybe I didn't hear our ghost's request right?",
+    popularity: -1,
+    suspicion: 2,
   },
 ]
 

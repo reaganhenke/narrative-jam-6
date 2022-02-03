@@ -35,19 +35,26 @@ const HAUNTEDHOUSE_EXCITED = [
 const HAUNTEDHOUSE_EPILOGUES = [
   {
     id: 1,
-    text: "Another great success!"
+    text: "Another great success for Ghost Whisperer!",
+    popularity: 2,
+    suspicion: -1,
   },
   {
     id: 2,
-    text: "Not your best..."
+    text: "Sorry lovelies, not my best day!",
+    popularity: -2,
   },
   {
     id: 3,
-    text: "What a lucky coincidence!"
+    text: "What a lucky coincidence!",
+    popularity: -1,
+    suspicion: 1,
   },
   {
     id: 4,
-    text: "Oopsie!"
+    text: "Oopsie!<br>Maybe I didn't hear our ghost's request right?",
+    popularity: -1,
+    suspicion: 2,
   },
 ]
 
@@ -140,8 +147,8 @@ const hauntedHouseDialogue1 = [
         nextText: START_PUZZLE,
       },
       {
-        text: "REPEAT",
-        nextText: 1,
+        text: "Now, now, you shouldn't speak bad of the dead!",
+        nextText: START_PUZZLE,
       },
     ],
   },
@@ -226,7 +233,7 @@ const hauntedHouseDialogue2 = [
         nextText: 12,
       },
       {
-        text: "You'd be responsible for the destruction of the last local wandering house. Bad for business, that...",
+        text: "You'd be wreck the last local wandering house? Bad for business, that...",
         setEpilogue: 1,
         nextText: 8,
       },
