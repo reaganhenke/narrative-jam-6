@@ -1,6 +1,6 @@
-const GREG_ANGRY = "./assets/characters/greg_angry.png"
-const GREG_DISGUSTED = "./assets/characters/greg_disgusted.png"
-const GREG_GRUMPY = "./assets/characters/greg_grumpy.png"
+const GREG_ANGRY = "./assets/characters/greg_angry.png";
+const GREG_DISGUSTED = "./assets/characters/greg_disgusted.png";
+const GREG_GRUMPY = "./assets/characters/greg_grumpy.png";
 
 const CATGRANDMA_SAD = "./assets/characters/greg_grumpy.png"
 const CATGRANDMA_ANGRY = "./assets/characters/greg_grumpy.png"
@@ -11,26 +11,26 @@ const HAUNTEDHOUSE_EXCITED = [
     segments: [
       "noclue: i'm so excited 😅",
       "user123: that's crazy",
-      "user123: so special!!"
-    ]
+      "user123: so special!!",
+    ],
   },
   {
     suspicion: MEDSUS,
     segments: [
       "curious: huh... alright if you say so! ",
       "user123: that's kinda crazy, if you're telling the truth🤔 ",
-      "start2doubt: if you say so"
-    ]
+      "start2doubt: if you say so",
+    ],
   },
   {
     suspicion: HIGHSUS,
     segments: [
       "hateu: u r such a liar 🤬 ",
       "user123: stop lying! ",
-      "overit: this show sucks"
-    ]
-  }
-]
+      "overit: this show sucks",
+    ],
+  },
+];
 
 const HAUNTEDHOUSE_EPILOGUES = [
   {
@@ -56,7 +56,7 @@ const HAUNTEDHOUSE_EPILOGUES = [
     popularity: -1,
     suspicion: 2,
   },
-]
+];
 
 const hauntedHouseDialogue1 = [
   {
@@ -160,7 +160,7 @@ const hauntedHouseDialogue2 = [
     text: "So, what does the lady wants?",
     speakerName: "Greg",
     characterImg: GREG_GRUMPY,
-    next: 2
+    next: 2,
   },
   {
     id: 2,

@@ -35,7 +35,7 @@ Created by
 
 Each episode has a js file to hold its dialogue, epilogues, and possible chat segments. [dialogue-hauntedhouse.js](./dialogue-hauntedhouse.js) is the file for the Haunted House episode. The file contains the following:
 
-- Constant `GREG_GRUMPY` with the url to the greg grumpy image. There should be one of these for each possible mood/image of the character. 
+- Constant `GREG_GRUMPY` with the url to the greg_grumpy image. There should be one of these for each possible mood/image of the character. 
 - Array `HAUNTEDHOUSE_EXCITED`, which is an array to represent chat moods. 
 - Array `HAUNTEDHOUSE_EPILOGUES`, the possible endings for the episode (currently, just the text to show. This could expand to have a final illustration)
 - Array `hauntedHouseDialogue1`, this is the dialogue before the audio puzzle
@@ -109,47 +109,50 @@ NOTE: if the "nextText" is "AUDIOGAME" (represented by the `START_PUZZLE` consta
 - [ ] favicon (for itch.io page)
 
 #### loading screen
-![loading](./screenshots/loading.png)
+![loading](./screenshots/loading1.png)
 - [ ] logo for loading screen (or decide on animation)
 - should also decide on a background color here
 
 #### title screen
-![title](./screenshots/title.png)
+![title](./screenshots/title1.png)
 - [ ] possible background art? this screen is 960x640px
 - [ ] possible illustrated title, or just use a font? 
 - [ ] start button (either just background, or background plus words and i can add discernible text with an aria label) any size
 - also should add content warning here
 
 #### episode intro screen (for each episode)
-![episode intro](./screenshots/epintro.png)
+![episode intro](./screenshots/epintro1.png)
 - [ ] possible background art, (960x640px) or just pick background color
 - [ ] possible illustrated title, or just use a font? 
 - [ ] start button (either just background, or background plus words and i can add discernible text with an aria label)
 
 #### dialogue screen (for each episode)
-![dialogue](./screenshots/dialogue.png)
+![dialogue](./screenshots/dialogue1.png)
 - [ ] episode background art (660x640px, could be adjusted if we shrink livestream section)
 - [x] "next" button or icon for user to click to progress (any size or shape)
-- [ ] character art (including emotion variants) (less than 660px wide and 490px tall, that's the absolute max of the space minus the dialogue space at the bottom)
+- [x] character art (including emotion variants) (less than 660px wide and 490px tall, that's the absolute max of the space minus the dialogue space at the bottom)
 - [x] livestream overlay background? (300 x 640px, and the inner white chat part can be whatever size, currently 270x576px)
 - [x] background for the dialogue box at the bottom 
 
-![dialogue2](./screenshots/dialogue2.png)
+![dialogue2](./screenshots/dialogue21.png)
 - [ ] possibly backgrounds for these response options? Tricky because they may vary in size, or we pick a max and limit them all. 
 
 #### audio puzzle screen
-![audiopuzzle](./screenshots/audiopuzzle.png)
-- [ ] background art/translator art. this page can look however you want, should fit into the screen size of (960x640px). might vary per episode if we want to show the ghosts?
-- [ ] play/pause buttons
+![audiopuzzle](./screenshots/audiopuzzleupdate.png)
+- [x] background art/translator art. this page can look however you want, should fit into the screen size of (960x640px). 
+- [x] play/pause buttons
 - [ ] soundwave art for paused, bad, ok, and good. can be any size, but variants for showing how accurate the sliders are would be helpful.
-- [ ] slider design
+- [x] slider design
+- [x] continue button
+
+#### episode epilogue screens
+![epilogue](./screenshots/episode-epilogue1.png)
+- [ ] I think we'll show a different illustration for each of the 4 episode endings
 - [ ] continue button
 
-#### epilogue screens
-![epilogue](./screenshots/epilogue.png)
-- [ ] I think we'll show a different illustration for each of the 4 episode endings?
-- [ ] continue button
-- there's also the game over screen for raising too much suspicion, and the final game ending. Unsure what those look like. 
+#### game ending screens
+![gameover](./screenshots/game-ending1.png)
+
 
 NOTE: for all buttons with custom art, unsure if you want to draw the words on them, or leave the text to be written on top. Let me know.
 
@@ -185,6 +188,9 @@ NOTE: for all buttons with custom art, unsure if you want to draw the words on t
 - [ ] add audio puzzle dynamic visual feedback
 - [ ] fix preloading assets, there's a delay in displaying background images
 - [ ] only trigger high suspicion ending at the end of an episode
+- [ ] loading screen
+- [ ] title screen
+- [ ] fade in audio puzzle
 
 #### stretch goals
 - [ ] make dialogue text appear incrementally
