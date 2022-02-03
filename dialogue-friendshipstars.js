@@ -238,12 +238,12 @@ const starsDialogue2 = [
         nextText: 3,
       },
       {
-        text: "She wants to be able to meet people without turning them into stone.",
+        text: "(Lie) She wants to be able to meet people without turning them into stone.",
         suspicion: 1,
         nextText: 8,
       },
       {
-        text: "She wants to be resurrected.",
+        text: "(Lie) She wants to be resurrected.",
         popularity: 2,
         suspicion: 1,
         nextText: 26,
