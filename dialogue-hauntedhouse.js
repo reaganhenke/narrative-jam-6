@@ -52,7 +52,7 @@ const HAUNTEDHOUSE_EPILOGUES = [
   },
   {
     id: 4,
-    text: "Oopsie!<br>Maybe I didn't hear our ghost's request right?",
+    text: "Oopsie! Maybe I didn't hear our ghost's request right?",
     popularity: -1,
     suspicion: 2,
   },
@@ -420,7 +420,7 @@ const hauntedHouseDialogue2 = [
         nextText: 25,
       },
       {
-        text: "Let's tell our lovely ghost here that her fluffy love-balls's future is all figured out then!",
+        text: "Let's tell our lovely ghost that her fluffy love-balls's future is all figured out then!",
         popularity: 1,
         nextText: 25,
       },
