@@ -4,6 +4,9 @@ const ANGEL_HAPPY = "./assets/characters/angel_excited.png"
 const ANGEL_LAUGHING = "./assets/characters/angel_laughing.png"
 const ANGEL_SAD = "./assets/characters/angel_sad.png"
 
+const GORGON_LONELY = "./assets/characters/gorgon_lonely.png"
+const GORGON_ANGRY = "./assets/characters/gorgon_lonely.png" // Placeholder
+
 // This is just a placeholder example for episode specific moods
 const STARMOOD_SPECIFICMOOD = [
   {
@@ -18,23 +21,27 @@ const STARS_EPILOGUES = [
   {
     id: 1,
     text: "Another great success for Ghost Whisperer!",
+    characterImg: MC_EXCITED,
     popularity: 2,
     suspicion: -1,
   },
   {
     id: 2,
     text: "Sorry lovelies, not my best day!",
+    characterImg: GORGON_LONELY,
     popularity: -2,
   },
   {
     id: 3,
     text: "What a lucky coincidence!",
+    characterImg: MC_EXCITED,
     popularity: -1,
     suspicion: 1,
   },
   {
     id: 4,
     text: "Oopsie! Maybe I didn't hear our ghost's request right?",
+    characterImg: GORGON_ANGRY,
     popularity: -1,
     suspicion: 2,
   },

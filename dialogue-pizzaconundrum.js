@@ -4,8 +4,8 @@ const MARIA_CRYING = "./assets/characters/maria_cry.png"
 const MARIA_BITTERSWEET = "./assets/characters/maria_happycry.png"
 const MARIA_SAD = "./assets/characters/maria_sad.png"
 
-const AMAL_SAD = "./assets/characters/greg_grumpy.png"
-const AMAL_ANGRY = "./assets/characters/greg_grumpy.png"
+const AMAL_SAD = "./assets/characters/amal_sad.png"
+const AMAL_ANGRY = "./assets/characters/greg_grumpy.png" // Placeholder
 
 // This is just a placeholder example for episode specific moods
 const PIZZAMOOD_SPECIFICMOOD = [
@@ -21,23 +21,27 @@ const PIZZA_EPILOGUES = [
   {
     id: 1,
     text: "Another great success for Ghost Whisperer!",
+    characterImg: MC_EXCITED,
     popularity: 2,
     suspicion: -1,
   },
   {
     id: 2,
     text: "Sorry lovelies, not my best day!",
+    characterImg: AMAL_SAD,
     popularity: -2,
   },
   {
     id: 3,
     text: "What a lucky coincidence!",
+    characterImg: MC_EXCITED,
     popularity: -1,
     suspicion: 1,
   },
   {
     id: 4,
     text: "Oopsie! Maybe I didn't hear our ghost's request right?",
+    characterImg: AMAL_ANGRY,
     popularity: -1,
     suspicion: 2,
   },

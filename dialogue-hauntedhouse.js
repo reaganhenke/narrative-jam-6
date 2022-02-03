@@ -2,8 +2,8 @@ const GREG_ANGRY = "./assets/characters/greg_angry.png";
 const GREG_DISGUSTED = "./assets/characters/greg_disgusted.png";
 const GREG_GRUMPY = "./assets/characters/greg_grumpy.png";
 
-const CATGRANDMA_SAD = "./assets/characters/greg_grumpy.png"
-const CATGRANDMA_ANGRY = "./assets/characters/greg_grumpy.png"
+const CATGRANDMA_SAD = "./assets/characters/greg_grumpy.png" // Placeholder
+const CATGRANDMA_ANGRY = "./assets/characters/greg_grumpy.png" // Placeholder
 
 const HAUNTEDHOUSE_EXCITED = [
   {
@@ -36,23 +36,27 @@ const HAUNTEDHOUSE_EPILOGUES = [
   {
     id: 1,
     text: "Another great success for Ghost Whisperer!",
+    characterImg: MC_EXCITED,
     popularity: 2,
     suspicion: -1,
   },
   {
     id: 2,
     text: "Sorry lovelies, not my best day!",
+    characterImg: CATGRANDMA_SAD,
     popularity: -2,
   },
   {
     id: 3,
     text: "What a lucky coincidence!",
+    characterImg: MC_EXCITED,
     popularity: -1,
     suspicion: 1,
   },
   {
     id: 4,
     text: "Oopsie! Maybe I didn't hear our ghost's request right?",
+    characterImg: CATGRANDMA_ANGRY,
     popularity: -1,
     suspicion: 2,
   },
