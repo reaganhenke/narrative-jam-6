@@ -185,7 +185,7 @@ const starsDialogue1 = [
     text: "Very well. Since you're a fan of mine, you can stay...",
     speakerName: "Me",
     characterImg: ANGEL_DETERMINED,
-    next: 2000
+    next: 17,
   },
   {
     id: 17,
