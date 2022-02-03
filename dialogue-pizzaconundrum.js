@@ -7,12 +7,50 @@ const MARIA_SAD = "./assets/characters/maria_sad.png"
 const AMAL_SAD = "./assets/characters/amal_sad.png"
 const AMAL_ANGRY = "./assets/characters/greg_grumpy.png" // Placeholder
 
-// This is just a placeholder example for episode specific moods
-const PIZZAMOOD_SPECIFICMOOD = [
+
+const PIZZAMOOD_CUTE = [
   {
     suspicion: ANYSUS,
     segments: [
-      "noclue: pizza episode",
+      "kk234: such a cute couple 💞",
+      "darkling: couple after my heart 💘 ❤️🧡💛💚💙💜",
+      "bibop: ❤️love❤️",
+    ]
+  }
+]
+
+const PIZZAMOOD_OMG = [
+  {
+    suspicion: ANYSUS,
+    segments: [
+      "coolio: 🍍🍕 🤮",
+      "77gus77: pizza toppings a bid deal! 🧐",
+      "bibop: 🍍 or not 🍍 that is the ❔",
+    ]
+  }
+]
+
+const PIZZAMOOD_SAD = [
+  {
+    suspicion: ANYSUS,
+    segments: [
+      "hes: #GiveMAriaAHug 🫂❤️",
+      "bibop: sad story... 😿",
+      "thelibrarian: No pizza for the brave ☹️",
+      "hes: Poor Maria 🌧️☹️☁️",
+      "coolio: till death do us part... and beyond 😢",
+    ]
+  }
+]
+
+const PIZZAMOOD_ANGRY = [
+  {
+    suspicion: ANYSUS,
+    segments: [
+      "hes: That's harsh ☹️",
+      "caty: 😾 Not Nice!!",
+      "77gus77: #heartless 🖤",
+      "noclue: Can't believe she said this... 😡",
     ]
   }
 ]
@@ -24,12 +62,14 @@ const PIZZA_EPILOGUES = [
     characterImg: MC_EXCITED,
     popularity: 2,
     suspicion: -1,
+    chatMoods: [GENERALMOOD_SUSPICION],
   },
   {
     id: 2,
     text: "Sorry lovelies, not my best day!",
     characterImg: AMAL_SAD,
     popularity: -2,
+    chatMoods: [GENERALMOOD_SUSPICION],
   },
   {
     id: 3,
@@ -37,6 +77,7 @@ const PIZZA_EPILOGUES = [
     characterImg: MC_EXCITED,
     popularity: -1,
     suspicion: 1,
+    chatMoods: [GENERALMOOD_SUSPICION],
   },
   {
     id: 4,
@@ -44,6 +85,7 @@ const PIZZA_EPILOGUES = [
     characterImg: AMAL_ANGRY,
     popularity: -1,
     suspicion: 2,
+    chatMoods: [GENERALMOOD_SUSPICION],
   },
 ]
 
@@ -60,6 +102,7 @@ const pizzaDialogue1 = [
     text: "It's always a heartbreak when your loved one cannot move on, and you cannot understand what tethers them to our living world.",
     speakerName: "Me",
     characterImg: MC_SAD,
+    chatMoods: [GENERALMOOD_SAD],
     next: 3,
   },
   {
@@ -72,6 +115,7 @@ const pizzaDialogue1 = [
         text: "Ghost Whisperer wraps up all unfinished business and mends those broken hearts!",
         popularity: 1,
         suspicion: 1,
+        chatMoods: [GENERALMOOD_SUSPICION],
         nextText: 4,
       },
       {
@@ -81,6 +125,7 @@ const pizzaDialogue1 = [
       {
         text: "I hope we can help both Amal and Maria find peace today.",
         popularity: 1,
+        chatMoods: [PIZZAMOOD_SAD],
         nextText: 4,
       },
     ],
@@ -111,6 +156,7 @@ const pizzaDialogue1 = [
     text: "I can't, I can't deal with them being gone but not really. So I called you. Please, I need them to move on.",
     speakerName: "Maria",
     characterImg: MARIA_CRYING,
+    chatMoods: [PIZZAMOOD_SAD, PIZZAMOOD_ANGRY],
     next: 8,
   },
   {
@@ -131,6 +177,7 @@ const pizzaDialogue1 = [
       {
         text: "I love a good challenge!",
         popularity: -1,
+        chatMoods: [GENERALMOOD_ANGRY, GENERALMOOD_ANGRY],
         nextText: START_PUZZLE,
       },
     ],
@@ -153,18 +200,21 @@ const pizzaDialogue2 = [
     options: [
       {
         text: "They just want one last pizza.",
+        chatMoods: [GENERALMOOD_SAD],
         nextText: 3,
       },
       {
         text: "(Lie) They just want one last pizza. A pineapple one.",
         popularity: 1,
         suspicion: 1,
+        chatMoods: [PIZZAMOOD_OMG],
         nextText: 15,
       },
       {
         text: "(Lie) They want you to swear you'll never eat pizza again.",
         popularity: 2,
         suspicion: 1,
+        chatMoods: [GENERALMOOD_OMG],
         nextText: 35,
       },
     ],
@@ -221,6 +271,7 @@ const pizzaDialogue2 = [
     text: "You're right. It was kind of our ritual, our Friday pizza night to unwind after the week.",
     speakerName: "Maria",
     characterImg: MARIA_SAD,
+    chatMoods: [PIZZAMOOD_CUTE],
     next: 8,
   },
   {
@@ -235,6 +286,7 @@ const pizzaDialogue2 = [
     text: "And it's Friday, perfect day for a pizza, aren't we lucky.",
     speakerName: "Maria",
     characterImg: MARIA_BITTERSWEET,
+    chatMoods: [GENERALMOOD_SAD, PIZZAMOOD_SAD],
     next: 10,
   },
   {
@@ -250,6 +302,7 @@ const pizzaDialogue2 = [
     text: "Does this... means I'm going to have to live with their ghost until all of Amal's essence has been exhausted?",
     speakerName: "Maria",
     characterImg: MARIA_SAD,
+    chatMoods: [GENERALMOOD_SAD],
     next: 12,
   },
   {
@@ -271,6 +324,7 @@ const pizzaDialogue2 = [
     text: "Ghosts are usually tied up to a relatively small location, they wouldn't be able to follow you.",
     speakerName: "Me",
     characterImg: MARIA_SAD,
+    chatMoods: [GENERALMOOD_SUSPICION],
     next: 14,
   },
   {
@@ -287,6 +341,7 @@ const pizzaDialogue2 = [
     text: "Pineapple... They up and died, left me all alone with a macabre shade of themselves...",
     speakerName: "Maria",
     characterImg: MARIA_ANGRY,
+    chatMoods: [PIZZAMOOD_ANGRY],
     next: 16
   },
   {
@@ -294,6 +349,7 @@ const pizzaDialogue2 = [
     text: "...and now they are fucking trolling me about pineapple pizza?!",
     speakerName: "Maria",
     characterImg: MARIA_ANGRY,
+    chatMoods: [PIZZAMOOD_OMG, PIZZAMOOD_OMG],
     next: 17,
   },
   {
@@ -320,6 +376,7 @@ const pizzaDialogue2 = [
         text: "Don't you think you're being a bit dramatic here? Pineapple pizza isn't that disgusting...",
         popularity: -1,
         setEpilogue: 2,
+        chatMoods: [GENERALMOOD_ANGRY, PIZZAMOOD_OMG],
         nextText: 32,
       },
       {
@@ -347,6 +404,7 @@ const pizzaDialogue2 = [
     text: "That's how we met, Amal and I. Bickering over whether pineapple was an acceptable pizza topping.",
     speakerName: "Maria",
     characterImg: MARIA_BITTERSWEET,
+    chatMoods: [PIZZAMOOD_CUTE, PIZZAMOOD_SAD, GENERALMOOD_CUTE],
     next: 22,
   },
   {
@@ -375,6 +433,7 @@ const pizzaDialogue2 = [
     text: "... before we felt like what we had was valid... In all that time we never missed Friday pizza night.",
     speakerName: "Maria",
     characterImg: MARIA_CRYING,
+    chatMoods: [GENERALMOOD_CUTE],
     next: 24
   },
   {
@@ -396,6 +455,7 @@ const pizzaDialogue2 = [
     text: "Not when they can't rib me about it, can't try to convince me to try it. And they won't do that ever again.",
     speakerName: "Maria",
     characterImg: MARIA_CRYING,
+    chatMoods: [GENERALMOOD_SAD],
     next: 27
   },
   {
@@ -446,6 +506,7 @@ const pizzaDialogue2 = [
     text: "They are dead, and I don't want to see one of their bloody pineapple pizza abominations ever again!",
     speakerName: "Maria",
     characterImg: MARIA_ANGRY,
+    chatMoods: [PIZZAMOOD_ANGRY],
     next: 34,
   },
   {
@@ -462,6 +523,7 @@ const pizzaDialogue2 = [
     text: "That doesn't sound like Amal at all...",
     speakerName: "Maria",
     characterImg: MARIA_CONFUSED,
+    chatMoods: [GENERALMOOD_SUSPICION],
     next: 36,
   },
   {
@@ -485,8 +547,9 @@ const pizzaDialogue2 = [
         text: "That's what it sounded like... The reception can be a bit scrambled sometimes.",
         popularity: -1,
         suspicion: 1,
-        nextText: 70,
         setEpilogue: 2,
+        chatMoods: [GENERALMOOD_SUSPICION],
+        nextText: 70,
       },
       {
         text: "There's probably some symbolic meaning hidden in there... Any idea?",
@@ -548,6 +611,7 @@ const pizzaDialogue2 = [
     text: "Well, pizza night was a pretty important part of our relationship, but I still don't see...",
     speakerName: "Maria",
     characterImg: MARIA_CONFUSED,
+    chatMoods: [PIZZAMOOD_SAD],
     next: 46,
   },
   {
@@ -564,11 +628,13 @@ const pizzaDialogue2 = [
       {
         text: "Do it matter though? If you have a choice between pizza or a ghost-free life...",
         setEpilogue: 4,
+        chatMoods: [PIZZAMOOD_ANGRY],
         nextText: 59,
       },
       {
         text: "Seriously, stop dithering! It sounds like you don't actually want them to move on!",
         setEpilogue: 2,
+        chatMoods: [GENERALMOOD_ANGRY],
         nextText: 79,
       },
     ],
@@ -579,6 +645,7 @@ const pizzaDialogue2 = [
     text: "As ridiculous as it sounds... We kind of had an agreement to keep pizza nights our thing.",
     speakerName: "Maria",
     characterImg: MARIA_BITTERSWEET,
+    chatMoods: [PIZZAMOOD_CUTE, GENERALMOOD_CUTE],
     next: 48,
   },
   {
@@ -593,6 +660,7 @@ const pizzaDialogue2 = [
     text: "They probably felt like it was too much of an imposition.",
     speakerName: "Me",
     characterImg: MARIA_SAD,
+    chatMoods: [GENERALMOOD_SAD],
     next: 50,
   },
   {
@@ -678,6 +746,7 @@ const pizzaDialogue2 = [
     text: "If something was so important to them that they'd refuse to move on, I want to understand!",
     speakerName: "Maria",
     characterImg: MARIA_ANGRY,
+    chatMoods: [PIZZAMOOD_CUTE],
     next: 62,
   },
   {
@@ -720,6 +789,7 @@ const pizzaDialogue2 = [
     text: "Well, in that case, I swear I won't eat another pizza ever again. There!",
     speakerName: "Maria",
     characterImg: MARIA_SAD,
+    chatMoods: [GENERALMOOD_SAD],
     next: 68,
   },
   {
@@ -756,6 +826,7 @@ const pizzaDialogue2 = [
     text: "I'm pretty sure they said...",
     speakerName: "Me",
     characterImg: MARIA_SAD,
+    chatMoods: [GENERALMOOD_SUSPICION],
     next: 73,
   },
   {
@@ -763,6 +834,7 @@ const pizzaDialogue2 = [
     text: "Doesn't matter. I wouldn't swear it anyway.",
     speakerName: "Maria",
     characterImg: MARIA_SAD,
+    chatMoods: [PIZZAMOOD_ANGRY],
     next: 74,
   },
   {
@@ -784,6 +856,7 @@ const pizzaDialogue2 = [
     text: "That's what they asked of me, their dying wish.",
     speakerName: "Maria",
     characterImg: MARIA_CRYING,
+    chatMoods: [PIZZAMOOD_SAD],
     next: 77,
   },
   {
@@ -834,6 +907,7 @@ const pizzaDialogue2 = [
     text: "Please go. I'll... I know what I need to do when I'm ready. If I'm ever ready...",
     speakerName: "Maria",
     characterImg: MARIA_CRYING,
+    chatMoods: [GENERALMOOD_SAD],
     next: FINISHEPISODE
   },
 ]

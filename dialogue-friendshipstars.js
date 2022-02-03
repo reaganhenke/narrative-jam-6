@@ -7,12 +7,47 @@ const ANGEL_SAD = "./assets/characters/angel_sad.png"
 const GORGON_LONELY = "./assets/characters/gorgon_lonely.png"
 const GORGON_ANGRY = "./assets/characters/gorgon_lonely.png" // Placeholder
 
-// This is just a placeholder example for episode specific moods
-const STARMOOD_SPECIFICMOOD = [
+const STARSMOOD_CUTE = [
   {
     suspicion: ANYSUS,
     segments: [
-      "noclue: star episode",
+      "hes: That kid's so precious ❤️",
+      "coolio: 🧒🏽 baby ghost whisperer 😍",
+      "kk234: where can i buy me the same angel 😍👼🏼",
+      "bibop: go kid!!!",
+      "noclue: Angel should take ove Joss, he's sooo cute ❤️",
+      "cotcot: ❤️ Angel ❤️",
+    ]
+  }
+]
+
+const STARSMOOD_OMG = [
+  {
+    suspicion: ANYSUS,
+    segments: [
+      "thelibrarian: Can't believe I'm seeing a Gorgon 😲",
+      "kk234: 🤩 that place's so sick <3<3",
+      "caty: OMG GORGON 🐍🐍😍",
+    ]
+  }
+]
+
+const STARSMOOD_SAD = [
+  {
+    suspicion: ANYSUS,
+    segments: [
+      "caty: bittersweet ending...",
+      "coolio: 🥲",
+    ]
+  }
+]
+
+const STARSMOOD_ANGRY = [
+  {
+    suspicion: ANYSUS,
+    segments: [
+      "caty: 😾 Not Nice!!",
+      "thelibrarian: Come on! Be nice to the kiddo!",
     ]
   }
 ]
@@ -24,12 +59,14 @@ const STARS_EPILOGUES = [
     characterImg: MC_EXCITED,
     popularity: 2,
     suspicion: -1,
+    chatMoods: [GENERALMOOD_SUSPICION],
   },
   {
     id: 2,
     text: "Sorry lovelies, not my best day!",
     characterImg: GORGON_LONELY,
     popularity: -2,
+    chatMoods: [GENERALMOOD_SUSPICION],
   },
   {
     id: 3,
@@ -37,6 +74,7 @@ const STARS_EPILOGUES = [
     characterImg: MC_EXCITED,
     popularity: -1,
     suspicion: 1,
+    chatMoods: [GENERALMOOD_SUSPICION],
   },
   {
     id: 4,
@@ -44,6 +82,7 @@ const STARS_EPILOGUES = [
     characterImg: GORGON_ANGRY,
     popularity: -1,
     suspicion: 2,
+    chatMoods: [GENERALMOOD_SUSPICION],
   },
 ]
 
@@ -53,6 +92,7 @@ const starsDialogue1 = [
     text: "Hello lovelies! Tonight we've been called by the Astronomer In Residence at the Acme Observatory!",
     speakerName: "Me",
     characterImg: MC_EXCITED,
+    chatMoods: [GENERALMOOD_OMG],
     next: 2,
   },
   {
@@ -105,6 +145,7 @@ const starsDialogue1 = [
     text: "You're silly! Of course I'm not the Astronomer!",
     speakerName: "??",
     characterImg: ANGEL_LAUGHING,
+    chatMoods: [STARSMOOD_CUTE],
     next: 7,
   },
   {
@@ -140,6 +181,7 @@ const starsDialogue1 = [
     text: "She's in the trunk over there.",
     speakerName: "Angle",
     characterImg: ANGEL_HAPPY,
+    chatMoods: [STARSMOOD_OMG, STARSMOOD_OMG],
     next: 12,
   },
   {
@@ -159,11 +201,13 @@ const starsDialogue1 = [
         text: "Thanks! I think you should go now, ghost-interpreting isn't for little kids...",
         popularity: -1,
         suspicion: 1,
+        chatMoods: [STARSMOOD_ANGRY],
         nextText: 14,
       },
       {
         text: "What do you say we team up to make her happy again?",
         popularity: 2,
+        chatMoods: [STARSMOOD_CUTE],
         nextText: 17,
       },
       {
@@ -178,6 +222,7 @@ const starsDialogue1 = [
     text: "I'm not leaving you alone in the observatory! I have a mission!",
     speakerName: "Angel",
     characterImg: ANGEL_ANGRY,
+    chatMoods: [GENERALMOOD_CUTE],
     next: 15,
   },
   {
@@ -199,6 +244,7 @@ const starsDialogue1 = [
     text: "I can help! I've watched her a lot!",
     speakerName: "Angel",
     characterImg: ANGEL_DETERMINED,
+    chatMoods: [STARSMOOD_CUTE],
     next: 18,
   },
   {
@@ -242,6 +288,7 @@ const starsDialogue2 = [
         text: "She wants a friend.",
         popularity: 1,
         setEpilogue: 1,
+        chatMoods: [GENERALMOOD_CUTE],
         nextText: 3,
       },
       {
@@ -253,6 +300,7 @@ const starsDialogue2 = [
         text: "(Lie) She wants to be resurrected.",
         popularity: 2,
         suspicion: 1,
+        chatMoods: [GENERALMOOD_SUSPICION],
         nextText: 26,
       },
     ],
@@ -264,6 +312,7 @@ const starsDialogue2 = [
     text: "I can be her friend!",
     speakerName: "Angel",
     characterImg: ANGEL_HAPPY,
+    chatMoods: [STARSMOOD_CUTE],
     next: 4,
   },
   {
@@ -271,6 +320,7 @@ const starsDialogue2 = [
     text: "Hi Ma'am Gorgon, I'm Angel. We can be friends if you want!",
     speakerName: "Angel",
     characterImg: ANGEL_HAPPY,
+    chatMoods: [GENERALMOOD_CUTE, GENERALMOOD_CUTE],
     next: 5,
   },
   {
@@ -292,6 +342,7 @@ const starsDialogue2 = [
     text: "Oh, she's disappeared...",
     speakerName: "Angel",
     characterImg: ANGEL_SAD,
+    chatMoods: [STARSMOOD_SAD],
     next: FINISHEPISODE
   },
 
@@ -388,6 +439,7 @@ const starsDialogue2 = [
     text: "Oh yes! I'll be her friend! She can't come out of the trunk but we can still do a lot of stuff!",
     speakerName: "Angel",
     characterImg: ANGEL_DETERMINED,
+    chatMoods: [STARSMOOD_CUTE, GENERALMOOD_CUTE],
     next: 19,
   },
   {
@@ -416,6 +468,7 @@ const starsDialogue2 = [
     text: "And the... Oh no! Where has she gone?",
     speakerName: "Angel",
     characterImg: ANGEL_SAD,
+    chatMoods: [STARSMOOD_SAD],
     next: FINISHEPISODE
   },
   // Gorfon Quest failure
@@ -424,6 +477,7 @@ const starsDialogue2 = [
     text: "How come that's what she wants, then?",
     speakerName: "Angel",
     characterImg: ANGEL_SAD,
+    chatMoods: [GENERALMOOD_SUSPICION],
     next: 24,
   },
   {
@@ -486,6 +540,7 @@ const starsDialogue2 = [
         popularity: -1,
         suspicion: 1,
         setEpilogue: 3,
+        chatMoods: [GENERALMOOD_SUSPICION],
         nextText: 34,
       },
     ],
@@ -496,6 +551,7 @@ const starsDialogue2 = [
     text: "I wish I could help her...",
     speakerName: "Angel",
     characterImg: ANGEL_SAD,
+    chatMoods: [GENERALMOOD_CUTE],
     next: 31
   },
   {
@@ -525,6 +581,7 @@ const starsDialogue2 = [
     text: "I'll find a way to rescue-rect her!",
     speakerName: "Angel",
     characterImg: ANGEL_DETERMINED,
+    chatMoods: [STARSMOOD_CUTE],
     next: 35,
   },
   {
@@ -539,6 +596,7 @@ const starsDialogue2 = [
     text: "And then the Gorgon and I will travel the world and help all the other ghosts!",
     speakerName: "Angel",
     characterImg: ANGEL_HAPPY,
+    chatMoods: [STARSMOOD_CUTE],
     next: 37,
   },
   {
@@ -559,6 +617,7 @@ const starsDialogue2 = [
       {
         text: "It's nice to have dreams...",
         popularity: -1,
+        chatMoods: [STARSMOOD_ANGRY],
         nextText: 39,
       },
     ],
@@ -568,6 +627,7 @@ const starsDialogue2 = [
     text: "That would be so cool! You could be our guest!",
     speakerName: "Angel",
     characterImg: ANGEL_HAPPY,
+    chatMoods: [STARSMOOD_CUTE],
     next: 39,
   },
   {
@@ -603,6 +663,7 @@ const starsDialogue2 = [
     text: "I think the Gorgon didn't like my plan... She's gone...",
     speakerName: "Angel",
     characterImg: ANGEL_SAD,
+    chatMoods: [STARSMOOD_SAD],
     next: FINISHEPISODE
   },
 ]

@@ -5,32 +5,48 @@ const GREG_GRUMPY = "./assets/characters/greg_grumpy.png";
 const CATGRANDMA_SAD = "./assets/characters/greg_grumpy.png" // Placeholder
 const CATGRANDMA_ANGRY = "./assets/characters/greg_grumpy.png" // Placeholder
 
-const HAUNTEDHOUSE_EXCITED = [
+const HAUNTEDHOUSEMOOD_CUTE = [
   {
-    suspicion: LOWSUS,
+    suspicion: ANYSUS,
     segments: [
-      "noclue: i'm so excited 😅",
-      "user123: that's crazy",
-      "user123: so special!!",
-    ],
-  },
+      "bibop: i ❤️ cats",
+      "coolio: 😻",
+      "kk234: that lady's such a sweetheart 👵 🐈 💖"
+    ]
+  }
+]
+
+const HAUNTEDHOUSEMOOD_OMG = [
   {
-    suspicion: MEDSUS,
+    suspicion: ANYSUS,
     segments: [
-      "curious: huh... alright if you say so! ",
-      "user123: that's kinda crazy, if you're telling the truth🤔 ",
-      "start2doubt: if you say so",
-    ],
-  },
+      "thelibrarian: Wandering houses are SO awesome!!",
+      "kk234: omg that guy's so grumpy..."
+    ]
+  }
+]
+
+const HAUNTEDHOUSEMOOD_SAD = [
   {
-    suspicion: HIGHSUS,
+    suspicion: ANYSUS,
     segments: [
-      "hateu: u r such a liar 🤬 ",
-      "user123: stop lying! ",
-      "overit: this show sucks",
-    ],
-  },
-];
+      "coolio: NOOOOooooooo 😿",
+    ]
+  }
+]
+
+const HAUNTEDHOUSEMOOD_ANGRY = [
+  {
+    suspicion: ANYSUS,
+    segments: [
+      "caty: that guy has no ❤️",
+      "freeSprite: Down with capitalism!!☠️🤑☠️",
+      "hes: #feedGregToTheCats 👿",
+      "coolio: greg rotten egg 🤢",
+      "freeSprite: 🤬 I hatz that guy!"
+    ]
+  }
+]
 
 const HAUNTEDHOUSE_EPILOGUES = [
   {
@@ -39,12 +55,14 @@ const HAUNTEDHOUSE_EPILOGUES = [
     characterImg: MC_EXCITED,
     popularity: 2,
     suspicion: -1,
+    chatMoods: [GENERALMOOD_SUSPICION],
   },
   {
     id: 2,
     text: "Sorry lovelies, not my best day!",
     characterImg: CATGRANDMA_SAD,
     popularity: -2,
+    chatMoods: [GENERALMOOD_SUSPICION],
   },
   {
     id: 3,
@@ -52,6 +70,7 @@ const HAUNTEDHOUSE_EPILOGUES = [
     characterImg: MC_EXCITED,
     popularity: -1,
     suspicion: 1,
+    chatMoods: [GENERALMOOD_SUSPICION],
   },
   {
     id: 4,
@@ -59,6 +78,7 @@ const HAUNTEDHOUSE_EPILOGUES = [
     characterImg: CATGRANDMA_ANGRY,
     popularity: -1,
     suspicion: 2,
+    chatMoods: [GENERALMOOD_SUSPICION],
   },
 ];
 
@@ -68,6 +88,7 @@ const hauntedHouseDialogue1 = [
     text: "Hello lovelies, today we've got a call from Greg, from Lovely Homes Real Estate!",
     speakerName: "Me",
     characterImg: MC_EXCITED,
+    chatMoods: [GENERALMOOD_SUSPICION],
     next: 2
   },
   {
@@ -90,6 +111,7 @@ const hauntedHouseDialogue1 = [
       {
         text: "A very special house indeed, for it has legs to move around!",
         popularity: 1,
+        chatMoods: [GENERALMOOD_OMG],
         nextText: 4,
       },
       {
@@ -118,6 +140,7 @@ const hauntedHouseDialogue1 = [
     text: "Families are lining up for a chance make the only remaining wandering house of the county their own.",
     speakerName: "Greg",
     characterImg: GREG_GRUMPY,
+    chatMoods: [GENERALMOOD_OMG, HAUNTEDHOUSEMOOD_OMG],
     next: 600,
   },
   {
@@ -125,6 +148,7 @@ const hauntedHouseDialogue1 = [
     text: "But that old hag has been sabotaging all of my visits so far!",
     speakerName: "Greg",
     characterImg: GREG_DISGUSTED,
+    chatMoods: [HAUNTEDHOUSEMOOD_ANGRY],
     next: 7,
   },
   {
@@ -180,12 +204,14 @@ const hauntedHouseDialogue2 = [
         text: "(Lie) She wants you to find a loving new home for her cats.",
         popularity: 1,
         suspicion: 1,
+        chatMoods: [HAUNTEDHOUSEMOOD_CUTE, HAUNTEDHOUSEMOOD_CUTE],
         nextText: 14,
       },
       {
         text: "(Lie) She wants you to find loving owners for the house, that will also adopt her cats.",
         popularity: 2,
         suspicion: 1,
+        chatMoods: [GENERALMOOD_CUTE, HAUNTEDHOUSEMOOD_CUTE],
         nextText: 28,
       },
     ],
@@ -197,6 +223,7 @@ const hauntedHouseDialogue2 = [
     text: "A loving owner?! I'm a real estate agent, not a bleeding-heart volunteer at the dog shelter.",
     speakerName: "Greg",
     characterImg: GREG_ANGRY,
+    chatMoods: [HAUNTEDHOUSEMOOD_ANGRY],
     next: 4
   },
   {
@@ -211,6 +238,7 @@ const hauntedHouseDialogue2 = [
     text: "I'll sell to whoever makes the highest offer and I couldn't care less if they trash the house before the end of the month!",
     speakerName: "Greg",
     characterImg: GREG_ANGRY,
+    chatMoods: [GENERALMOOD_ANGRY],
     next: 6,
   },
   {
@@ -299,6 +327,7 @@ const hauntedHouseDialogue2 = [
     text: "At least they know not to mix up business and feelings...",
     speakerName: "Greg",
     characterImg: GREG_DISGUSTED,
+    chatMoods: [HAUNTEDHOUSEMOOD_ANGRY],
     next: FINISHEPISODE,
   },
 
@@ -308,6 +337,7 @@ const hauntedHouseDialogue2 = [
     text: "Find a new home for her cats? I'm not coming anywhere near those devilish animals!",
     speakerName: "Greg",
     characterImg: GREG_ANGRY,
+    chatMoods: [HAUNTEDHOUSEMOOD_ANGRY],
     next: 15,
   },
   {
@@ -361,6 +391,7 @@ const hauntedHouseDialogue2 = [
     text: "The Animal Control Unit are picking them up tomorrow, and that's final.",
     speakerName: "Greg",
     characterImg: GREG_ANGRY,
+    chatMoods: [HAUNTEDHOUSEMOOD_SAD, GENERALMOOD_SAD, HAUNTEDHOUSEMOOD_ANGRY],
     next: 19,
   },
   {
@@ -368,6 +399,7 @@ const hauntedHouseDialogue2 = [
     text: "I guess I should have the exorcist come around too, since there's no getting rid of that banshee in a politically correct way...",
     speakerName: "Greg",
     characterImg: GREG_DISGUSTED,
+    chatMoods: [GENERALMOOD_OMG],
     next: FINISHEPISODE
   },
   // Cat Quest success
@@ -411,6 +443,7 @@ const hauntedHouseDialogue2 = [
     text: "He said kittens are too much work, too, so he probably won't mind that those are old.",
     speakerName: "Greg",
     characterImg: GREG_GRUMPY,
+    chatMoods: [HAUNTEDHOUSEMOOD_CUTE],
     next: 24,
   },
   {
@@ -426,6 +459,7 @@ const hauntedHouseDialogue2 = [
       {
         text: "Let's tell our lovely ghost that her fluffy love-balls's future is all figured out then!",
         popularity: 1,
+        chatMoods: [GENERALMOOD_CUTE],
         nextText: 25,
       },
       {
@@ -446,6 +480,7 @@ const hauntedHouseDialogue2 = [
     text: "...",
     speakerName: "Greg",
     characterImg: GREG_GRUMPY,
+    chatMoods: [GENERALMOOD_SUSPICION],
     next: 27,
   },
   {
@@ -469,6 +504,7 @@ const hauntedHouseDialogue2 = [
     text: "Oh, I never fool around when it comes to ghosts.",
     speakerName: "Me",
     characterImg: GREG_ANGRY,
+    chatMoods: [GENERALMOOD_SUSPICION],
     next: 2900,
   },
   {
@@ -483,6 +519,7 @@ const hauntedHouseDialogue2 = [
     text: "Find buyers who will take care of both the house and the cats.",
     speakerName: "Me",
     characterImg: GREG_ANGRY,
+    chatMoods: [GENERALMOOD_CUTE],
     next: 30,
   },
   {
@@ -490,6 +527,7 @@ const hauntedHouseDialogue2 = [
     text: "This is utterly ridiculous! You're probably a sham anyway, how do I know that this little gadget of yours is genuine?",
     speakerName: "Greg",
     characterImg: GREG_ANGRY,
+    chatMoods: [GENERALMOOD_ANGRY],
     next: 31,
   },
   {
@@ -525,6 +563,7 @@ const hauntedHouseDialogue2 = [
     text: "I thought it'd want a visit from some long-lost friend or something.",
     speakerName: "Greg",
     characterImg: GREG_DISGUSTED,
+    chatMoods: [HAUNTEDHOUSEMOOD_ANGRY],
     next: 33,
   },
   {
@@ -561,6 +600,7 @@ const hauntedHouseDialogue2 = [
         text: "I'd be happy to find buyers and pocket the commission...",
         setEpilogue: 1,
         suspicion: 1,
+        chatMoods: [GENERALMOOD_SUSPICION],
         nextText: 39,
       },
     ],
@@ -585,6 +625,7 @@ const hauntedHouseDialogue2 = [
     text: "Thank you for coming. I have to call my boss now, but feel free to grab a cat or two on your way out.",
     speakerName: "Greg",
     characterImg: GREG_GRUMPY,
+    chatMoods: [HAUNTEDHOUSEMOOD_ANGRY],
     next: FINISHEPISODE,
   },
   // Full Quest success
@@ -629,6 +670,7 @@ const hauntedHouseDialogue2 = [
     text: "If that ghost will not be reasonnable, then I'll have to deal with it like the pest it is, and have it exorcised.",
     speakerName: "Greg",
     characterImg: GREG_DISGUSTED,
+    chatMoods: [GENERALMOOD_OMG],
     next: FINISHEPISODE
   },
 ]
