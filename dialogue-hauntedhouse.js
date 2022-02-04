@@ -85,7 +85,7 @@ const HAUNTEDHOUSE_EPILOGUES = [
 const hauntedHouseDialogue1 = [
   {
     id: 1,
-    text: "Hello lovelies, today we've got a call from Greg, from Lovely Homes Real Estate!",
+    text: "Hello, lovelies! Today we've been called by Greg from Lovely Homes Real Estate!",
     speakerName: "Me",
     characterImg: MC_EXCITED,
     chatMoods: [GENERALMOOD_SUSPICION],
@@ -123,14 +123,14 @@ const hauntedHouseDialogue1 = [
   },
   {
     id: 4,
-    text: "Hello Greg, so we're in the famed \"four-leg house\".",
+    text: "Hello, Greg! So, we're in the famed \"four-leg house\".",
     speakerName: "Me",
     characterImg: GREG_GRUMPY,
     next: 5,
   },
   {
     id: 5,
-    text: "Yes, and it would be a perfect deal if not for that wailing ghost inside.",
+    text: "Yes, and it would be a perfect deal if not for the wailing ghost that comes with it.",
     speakerName: "Greg",
     characterImg: GREG_GRUMPY,
     next: 6,
@@ -169,13 +169,13 @@ const hauntedHouseDialogue1 = [
         nextText: START_PUZZLE,
       },
       {
-        text: "A dead hag in a witchy house, I love that!",
+        text: "A dead hag in a witchy house? I love that!",
         popularity: 1,
         suspicion: 1,
         nextText: START_PUZZLE,
       },
       {
-        text: "Now, now, you shouldn't speak bad of the dead!",
+        text: "Now, now, you shouldn't speak ill of the dead!",
         nextText: START_PUZZLE,
       },
     ],
@@ -185,7 +185,7 @@ const hauntedHouseDialogue1 = [
 const hauntedHouseDialogue2 = [
   {
     id: 1,
-    text: "So, what does the lady wants?",
+    text: "So, what does the lady want?",
     speakerName: "Greg",
     characterImg: GREG_GRUMPY,
     next: 2,
@@ -197,7 +197,7 @@ const hauntedHouseDialogue2 = [
     characterImg: GREG_GRUMPY,
     options: [
       {
-        text: "She wants you to find loving owners for the house.",
+        text: "She wants you to find a loving owner for the house.",
         nextText: 3,
       },
       {
@@ -208,7 +208,7 @@ const hauntedHouseDialogue2 = [
         nextText: 14,
       },
       {
-        text: "(Lie) She wants you to find loving owners for the house, that will also adopt her cats.",
+        text: "(Lie) She wants you to find a loving owner for the house, someone who will also adopt her cats.",
         popularity: 2,
         suspicion: 1,
         chatMoods: [GENERALMOOD_CUTE, HAUNTEDHOUSEMOOD_CUTE],
@@ -220,7 +220,7 @@ const hauntedHouseDialogue2 = [
   // House quest
   {
     id: 3,
-    text: "A loving owner?! I'm a real estate agent, not a bleeding-heart volunteer at the dog shelter.",
+    text: "A loving owner?! I'm a real estate agent, not a bleeding-heart volunteer at the animal shelter.",
     speakerName: "Greg",
     characterImg: GREG_ANGRY,
     chatMoods: [HAUNTEDHOUSEMOOD_ANGRY],
@@ -228,14 +228,14 @@ const hauntedHouseDialogue2 = [
   },
   {
     id: 4,
-    text: "Yes, but you get to pick who you sell to, don't you?",
+    text: "Yes, but you get to pick who you sell it to, don't you?",
     speakerName: "Me",
     characterImg: MC_EXCITED,
     next: 5,
   },
   {
     id: 5,
-    text: "I'll sell to whoever makes the highest offer and I couldn't care less if they trash the house before the end of the month!",
+    text: "I'll sell to whoever makes the highest offer. I couldn't care less if they trash the house before the end of the month!",
     speakerName: "Greg",
     characterImg: GREG_ANGRY,
     chatMoods: [GENERALMOOD_ANGRY],
@@ -243,7 +243,7 @@ const hauntedHouseDialogue2 = [
   },
   {
     id: 6,
-    text: "Actually, that would actually be good for me, because then they'd need another house...",
+    text: "Actually, that would be great for me, because then they'd need another house...",
     speakerName: "Greg",
     characterImg: GREG_GRUMPY,
     next: 7,
@@ -260,12 +260,12 @@ const hauntedHouseDialogue2 = [
         nextText: 8,
       },
       {
-        text: "Come on, she's dead, surely you can make an effort to give her some final peace!",
+        text: "Come on, she's dead, surely you can make an effort to let her rest easy!",
         setEpilogue: 2,
         nextText: 12,
       },
       {
-        text: "You'd be wreck the last local wandering house? Bad for business, that...",
+        text: "You'd wreck the last local wandering house? Sounds bad for business...",
         setEpilogue: 1,
         nextText: 8,
       },
@@ -274,28 +274,28 @@ const hauntedHouseDialogue2 = [
   // House Quest success
   {
     id: 8,
-    text: "Oh, well, I guess you are right. But can you at least convince her to stop wailing so I can do visits and open house days?",
+    text: "Oh, well, I guess you are right. But can you at least convince her to stop wailing so I can do visits and open houses?",
     speakerName: "Greg",
     characterImg: GREG_GRUMPY,
     next: 9,
   },
   {
     id: 9,
-    text: "That's not how it works, actually, ghosts don't have the cognitive abilities to be reasoned with...",
+    text: "That's not how it works, actually. Ghosts don't have the cognitive abilities to be reasoned with...",
     speakerName: "Me",
     characterImg: GREG_GRUMPY,
     next: 10,
   },
   {
     id: 10,
-    text: "But if you promise to fulfil her request, that should be enough for her to move on.",
+    text: "But if you promise to fulfill her request, that should be enough for her to move on.",
     speakerName: "Me",
     characterImg: GREG_DISGUSTED,
     next: 1000,
   },
   {
     id: 1000,
-    text: "You'll have to mean it though, ghosts can sense that kind of stuff...",
+    text: "You'll have to mean it though. Ghosts can sense that kind of stuff.",
     speakerName: "Me",
     characterImg: GREG_DISGUSTED,
     next: 11,
@@ -317,14 +317,14 @@ const hauntedHouseDialogue2 = [
   },
   {
     id: 13,
-    text: "You interpreter people should stick to helping greiving family members, and leave the serious stuff to exorcists.",
+    text: "You interpreter people should stick to helping grieving families. Leave the serious stuff to exorcists!",
     speakerName: "Greg",
     characterImg: GREG_DISGUSTED,
     next: 1300,
   },
   {
     id: 1300,
-    text: "At least they know not to mix up business and feelings...",
+    text: "At least they know not to mix up business and emotions...",
     speakerName: "Greg",
     characterImg: GREG_DISGUSTED,
     chatMoods: [HAUNTEDHOUSEMOOD_ANGRY],
@@ -334,7 +334,7 @@ const hauntedHouseDialogue2 = [
   // Cat Quest
   {
     id: 14,
-    text: "Find a new home for her cats? I'm not coming anywhere near those devilish animals!",
+    text: "Find a new home for her cats? I'm not going anywhere near those devilish creatures!",
     speakerName: "Greg",
     characterImg: GREG_ANGRY,
     chatMoods: [HAUNTEDHOUSEMOOD_ANGRY],
@@ -374,7 +374,7 @@ const hauntedHouseDialogue2 = [
   },
   {
     id: 1600,
-    text: "Cats leave hair everywhere, they are arrogant and volatile, and like to slice people to ribbons for fun.",
+    text: "Cats leave hair everywhere, they are arrogant and volatile, and like to shred people to ribbons for fun.",
     speakerName: "Greg",
     characterImg: GREG_ANGRY,
     next: 17,
@@ -433,14 +433,14 @@ const hauntedHouseDialogue2 = [
   },
   {
     id: 2300,
-    text: "The trio of siblings he had his heart set on got adopted before he made up his mind. He won't stop monaing about it.",
+    text: "The trio of siblings he had his heart set on got adopted before he made up his mind. He won't stop moaning about it.",
     speakerName: "Greg",
     characterImg: GREG_GRUMPY,
     next: 2301,
   },
   {
     id: 2301,
-    text: "He said kittens are too much work, too, so he probably won't mind that those are old.",
+    text: "He said kittens are too much work, too, so he probably won't mind that these cats are old.",
     speakerName: "Greg",
     characterImg: GREG_GRUMPY,
     chatMoods: [HAUNTEDHOUSEMOOD_CUTE],
@@ -457,13 +457,13 @@ const hauntedHouseDialogue2 = [
         nextText: 25,
       },
       {
-        text: "Let's tell our lovely ghost that her fluffy love-balls's future is all figured out then!",
+        text: "Let's tell our lovely ghost that her fluffy friends' future is all figured out, then!",
         popularity: 1,
         chatMoods: [GENERALMOOD_CUTE],
         nextText: 25,
       },
       {
-        text: "Guess that's settled then.",
+        text: "Guess that's settled, then.",
         nextText: 25,
       },
     ],
@@ -485,7 +485,7 @@ const hauntedHouseDialogue2 = [
   },
   {
     id: 27,
-    text: "Why's that ghost not moving on already??",
+    text: "Why is that ghost not moving on already?!",
     speakerName: "Greg",
     characterImg: GREG_ANGRY,
     next: FINISHEPISODE,
@@ -501,7 +501,7 @@ const hauntedHouseDialogue2 = [
   },
   {
     id: 29,
-    text: "Oh, I never fool around when it comes to ghosts.",
+    text: "Oh, I never joke around when it comes to ghosts.",
     speakerName: "Me",
     characterImg: GREG_ANGRY,
     chatMoods: [GENERALMOOD_SUSPICION],
@@ -524,7 +524,7 @@ const hauntedHouseDialogue2 = [
   },
   {
     id: 30,
-    text: "This is utterly ridiculous! You're probably a sham anyway, how do I know that this little gadget of yours is genuine?",
+    text: "This is utterly ridiculous! You're probably a sham anyway! How do I know that this little gadget of yours is genuine?",
     speakerName: "Greg",
     characterImg: GREG_ANGRY,
     chatMoods: [GENERALMOOD_ANGRY],
@@ -541,7 +541,7 @@ const hauntedHouseDialogue2 = [
         nextText: 32,
       },
       {
-        text: "So I'm guessing you won't do it then?",
+        text: "So I'm guessing you won't do it, then?",
         setEpilogue: 2,
         nextText: 42,
       },
@@ -568,14 +568,14 @@ const hauntedHouseDialogue2 = [
   },
   {
     id: 33,
-    text: "She! She'd want! And how would that be any easier?",
+    text: "She, not it! And how would that be any easier?",
     speakerName: "Me",
     characterImg: GREG_DISGUSTED,
     next: 34,
   },
   {
     id: 34,
-    text: "I assumed it would be your job, not mine.",
+    text: "I assumed that would be your job, not mine.",
     speakerName: "Greg",
     characterImg: GREG_GRUMPY,
     next: 35,
@@ -587,7 +587,7 @@ const hauntedHouseDialogue2 = [
     characterImg: GREG_GRUMPY,
     options: [
       {
-        text: "I guess someone could make great haunted wandering museum out of the house...",
+        text: "I guess someone could make a great haunted wandering museum out of the house...",
         setEpilogue: 2,
         nextText: 36,
       },
@@ -617,7 +617,7 @@ const hauntedHouseDialogue2 = [
   },
   {
     id: 37,
-    text: "Sorry, what? I was being sarcastic!",
+    text: "Err, what? I was being sarcastic!",
     speakerName: "Me",
     characterImg: GREG_GRUMPY,
     next: 38,
@@ -655,7 +655,7 @@ const hauntedHouseDialogue2 = [
   // Full Quest abandonned failure
   {
     id: 42,
-    text: "Definitively not.",
+    text: "Definitely not.",
     speakerName: "Greg",
     characterImg: GREG_GRUMPY,
     next: 43,
