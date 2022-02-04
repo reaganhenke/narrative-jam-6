@@ -96,7 +96,7 @@ main {
 /******* START TITLE SCREEN STYLING *******/
 
 #titlescreen {
-  background-image: url("assets/UI/title_PLACEHOLDER.png");
+  background-image: url("assets/UI/mainmenu.png");
   background-size: cover;
 }
 
@@ -106,9 +106,9 @@ main {
 
 #title-text {
   position: absolute;
-  left: 487px;
-  top: 361px;
-  width: 423px;
+  left: 457px;
+  top: 374px;
+  width: 477px;
   height: 244px;
   overflow-y: scroll;
   padding: 9px;
@@ -121,9 +121,9 @@ main {
 
 #titlescreen button {
   position: absolute;
-  top: 364px;
-  left: 83px;
-  height: 201px;
+  top: 376px;
+  left: 51px;
+  height: 251px;
   width: 357px;
   background: transparent;
 }
