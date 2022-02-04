@@ -18,7 +18,7 @@ state = {
 };
 
 function donePreloading() {
-  if (state.isLoading) {
+  if (!state.isLoading) {
     state.isLoading = false;
     state.gameStage = TITLE;
     // setTimeout(showGameStage, 5000); // This is just for testing purposes, to fake a loading time

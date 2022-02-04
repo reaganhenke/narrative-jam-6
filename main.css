@@ -53,6 +53,49 @@ main {
   display: none;
 }
 
+/******* START LOADING SCREEN STYLING *******/
+
+#loading {
+  background-color: #242424;
+}
+
+.loading-dots {
+  margin-right: -90px;
+  margin-top: 28px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: transparent;
+  box-shadow: -72px 0 0 0 #D2D8AF, -48px 0 0 0 #D2D8AF, -24px 0 0 0 #D2D8AF;
+  animation: bounce 1.5s infinite linear;
+}
+
+@keyframes bounce {
+  0% {
+    box-shadow: -72px 0 0 0 #D2D8AF, -48px 0 0 0 #D2D8AF, -24px 0 0 0 #D2D8AF;
+  }
+  16.667% {
+    box-shadow: -72px -10px 0 0 #D2D8AF, -48px 0 0 0 #D2D8AF, -24px 0 0 0 #D2D8AF;
+  }
+  33.333% {
+    box-shadow: -72px 0 0 0 #D2D8AF, -48px 0 0 0 #D2D8AF, -24px 0 0 0 #D2D8AF;
+  }
+  50% {
+    box-shadow: -72px 0 0 0 #D2D8AF, -48px -10px 0 0 #D2D8AF, -24px 0 0 0 #D2D8AF;
+  }
+  66.667% {
+    box-shadow: -72px 0 0 0 #D2D8AF, -48px 0 0 0 #D2D8AF, -24px 0 0 0 #D2D8AF;
+  }
+  83.333% {
+    box-shadow: -72px 0 0 0 #D2D8AF, -48px 0 0 0 #D2D8AF, -24px -10px 0 0 #D2D8AF;
+  }
+  100% {
+    box-shadow: -72px 0 0 0 #D2D8AF, -48px 0 0 0 #D2D8AF, -24px 0 0 0 #D2D8AF;
+  }
+}
+
+/******* END LOADING SCREEN STYLING *******/
+
 /******* START DIALOGUE SCREEN STYLING *******/
 
 #dialogue-container:not(.hidden) {

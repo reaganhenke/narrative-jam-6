@@ -109,9 +109,7 @@ NOTE: if the "nextText" is "AUDIOGAME" (represented by the `START_PUZZLE` consta
 - [ ] favicon (for itch.io page)
 
 #### loading screen
-![loading](./screenshots/loading1.png)
-- [ ] logo for loading screen (or decide on animation)
-- should also decide on a background color here
+![loading](./screenshots/loading.png)
 
 #### title screen
 ![title](./screenshots/title1.png)
@@ -188,7 +186,7 @@ NOTE: for all buttons with custom art, unsure if you want to draw the words on t
 - [ ] add audio puzzle dynamic visual feedback
 - [ ] fix preloading assets, there's a delay in displaying background images
 - [ ] only trigger high suspicion ending at the end of an episode
-- [ ] loading screen
+- [x] loading screen
 - [ ] title screen
 - [ ] fade in audio puzzle
 
