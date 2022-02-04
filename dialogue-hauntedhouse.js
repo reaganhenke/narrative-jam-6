@@ -2,8 +2,8 @@ const GREG_ANGRY = "./assets/characters/greg_angry.png";
 const GREG_DISGUSTED = "./assets/characters/greg_disgusted.png";
 const GREG_GRUMPY = "./assets/characters/greg_grumpy.png";
 
-const CATGRANDMA_SAD = "./assets/characters/greg_grumpy.png" // Placeholder
-const CATGRANDMA_ANGRY = "./assets/characters/greg_grumpy.png" // Placeholder
+const CATGRANDMA_SAD = "./assets/characters/cathouse_ghost_sad.png"
+const CATGRANDMA_ANGRY = "./assets/characters/cathouse_ghost_angry.png"
 
 const HAUNTEDHOUSEMOOD_CUTE = [
   {
@@ -546,7 +546,7 @@ const hauntedHouseDialogue2 = [
         nextText: 42,
       },
       {
-        text: "Hey, don't shoot the messenger because you don't like the message! I'm just trying to help you there",
+        text: "Hey, don't shoot the messenger because you don't like the message!",
         nextText: 32,
       },
     ],
@@ -587,18 +587,20 @@ const hauntedHouseDialogue2 = [
     characterImg: GREG_GRUMPY,
     options: [
       {
-        text: "Well, if you really hate the idea so much, I guess someone could make fantastic haunted wandering museum out of the house.",
+        text: "I guess someone could make great haunted wandering museum out of the house...",
         setEpilogue: 2,
         nextText: 36,
       },
       {
-        text: "Selling the house is your job, isn't it?",
+        text: "Selling the house is your job, not mine...",
+        popularity: -1,
         setEpilogue: 1,
         nextText: 39,
       },
       {
         text: "I'd be happy to find buyers and pocket the commission...",
         setEpilogue: 1,
+        popularity: -1,
         suspicion: 1,
         chatMoods: [GENERALMOOD_SUSPICION],
         nextText: 39,

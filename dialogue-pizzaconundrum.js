@@ -5,7 +5,7 @@ const MARIA_BITTERSWEET = "./assets/characters/maria_happycry.png"
 const MARIA_SAD = "./assets/characters/maria_sad.png"
 
 const AMAL_SAD = "./assets/characters/amal_sad.png"
-const AMAL_ANGRY = "./assets/characters/greg_grumpy.png" // Placeholder
+const AMAL_ANGRY = "./assets/characters/amal_angry.png"
 
 
 const PIZZAMOOD_CUTE = [
@@ -170,7 +170,7 @@ const pizzaDialogue1 = [
         nextText: START_PUZZLE,
       },
       {
-        text: "My dear, it's awful that you have to live through that! But I'm here for you now, and everything is going to be okay.",
+        text: "My dear, it's awful that you have to live through that! But I'm here for you now.",
         popularity: 1,
         nextText: START_PUZZLE,
       },

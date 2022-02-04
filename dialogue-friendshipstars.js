@@ -5,7 +5,7 @@ const ANGEL_LAUGHING = "./assets/characters/angel_laughing.png"
 const ANGEL_SAD = "./assets/characters/angel_sad.png"
 
 const GORGON_LONELY = "./assets/characters/gorgon_lonely.png"
-const GORGON_ANGRY = "./assets/characters/gorgon_lonely.png" // Placeholder
+const GORGON_ANGRY = "./assets/characters/gorgon_angry.png"
 
 const STARSMOOD_CUTE = [
   {
@@ -286,7 +286,6 @@ const starsDialogue2 = [
     options: [
       {
         text: "She wants a friend.",
-        popularity: 1,
         setEpilogue: 1,
         chatMoods: [GENERALMOOD_CUTE],
         nextText: 3,
@@ -298,7 +297,7 @@ const starsDialogue2 = [
       },
       {
         text: "(Lie) She wants to be resurrected.",
-        popularity: 2,
+        popularity: 1,
         suspicion: 1,
         chatMoods: [GENERALMOOD_SUSPICION],
         nextText: 26,
@@ -471,7 +470,7 @@ const starsDialogue2 = [
     chatMoods: [STARSMOOD_SAD],
     next: FINISHEPISODE
   },
-  // Gorfon Quest failure
+  // Gorgon Quest failure
   {
     id: 23,
     text: "How come that's what she wants, then?",
