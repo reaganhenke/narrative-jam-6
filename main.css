@@ -34,7 +34,6 @@ main {
 #titlescreen button,
 #episode-intro button,
 #episode-epilogue button {
-  background-image: url(./assets/UI/smallbutton.png);
   background-repeat: no-repeat;
   width: 100px;
   height: 60px;
@@ -42,11 +41,6 @@ main {
   cursor: pointer;
   font: inherit;
   letter-spacing: inherit;
-}
-
-#titlescreen p {
-  width: 60%;
-  text-align: center;
 }
 
 .hidden {
@@ -95,6 +89,44 @@ main {
 }
 
 /******* END LOADING SCREEN STYLING *******/
+
+/******* START TITLE SCREEN STYLING *******/
+
+#titlescreen {
+  background-image: url("assets/UI/title_PLACEHOLDER.png");
+  background-size: cover;
+  position: relative;
+}
+
+#titlescreen h1 {
+  opacity: 0;
+}
+
+#title-text {
+  position: absolute;
+  left: 487px;
+  top: 361px;
+  width: 423px;
+  height: 244px;
+  overflow-y: scroll;
+  padding: 9px;
+  box-sizing: border-box;
+}
+
+#title-text p {
+  margin-top: 0;
+}
+
+#titlescreen button {
+  position: absolute;
+  top: 364px;
+  left: 83px;
+  height: 201px;
+  width: 357px;
+  background: transparent;
+}
+
+/******* END TITLE SCREEN STYLING *******/
 
 /******* START DIALOGUE SCREEN STYLING *******/
 
