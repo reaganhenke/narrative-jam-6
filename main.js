@@ -200,26 +200,26 @@ function showGameStage() {
 }
 
 function showEpilogue() {
+  const epilogueObject = all_episodes[
+    state.currentEpisode
+  ].possibleEpilogues.find(
+    (epilogue) => epilogue.id === state.episode_ending
+  );
+  document.body.onkeyup = {}; // Else pressing Space/Enter will modify the pop/sus variables again
+  handlePopularityAndSuspicion(epilogueObject.popularity, epilogueObject.suspicion);
+  updateViews(); // Display the Popularity change
+  $(".dialogue-wrapper").addClass("hidden");
+  $(".epilogue-wrapper").removeClass("hidden");
+  $("#next-episode").removeClass("hidden");
+  $("#character-portrait").css(
+    "background-image",
+    "url(" + epilogueObject.characterImg + ")"
+  );
+  // NOTE: there's no error handling here. If an epilogue isn't set, there will be a blank screen.
+  $("#episode-epilogue-result").text(epilogueObject.text);
+
   if (state.suspicion > 6) {
     gameOverSus();
-  } else {
-    const epilogueObject = all_episodes[
-      state.currentEpisode
-    ].possibleEpilogues.find(
-      (epilogue) => epilogue.id === state.episode_ending
-    );
-    document.body.onkeyup = {}; // Else pressing Space/Enter will modify the pop/sus variables again
-    handlePopularityAndSuspicion(epilogueObject.popularity, epilogueObject.suspicion);
-    updateViews(); // Display the Popularity change
-    $(".dialogue-wrapper").addClass("hidden");
-    $(".epilogue-wrapper").removeClass("hidden");
-    $("#next-episode").removeClass("hidden");
-    $("#character-portrait").css(
-      "background-image",
-      "url(" + epilogueObject.characterImg + ")"
-    );
-    // NOTE: there's no error handling here. If an epilogue isn't set, there will be a blank screen.
-    $("#episode-epilogue-result").text(epilogueObject.text);
   }
 }
 
