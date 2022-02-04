@@ -6,8 +6,8 @@ const MEDSUS = "MEDSUS";
 const HIGHSUS = "HIGHSUS";
 const ANYSUS = "ANYSUS";
 
-const MC_EXCITED = "./assets/characters/greg_grumpy.png" // placeholder
-const MC_SAD = "./assets/characters/greg_grumpy.png" // placeholder
+const MC_EXCITED = "./assets/characters/mc_excited.png";
+const MC_SAD = "./assets/characters/mc_sad.png";
 
 const GENERALMOOD_CUTE = [
   {
