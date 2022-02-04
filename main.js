@@ -208,7 +208,9 @@ function showEpilogue() {
     ].possibleEpilogues.find(
       (epilogue) => epilogue.id === state.episode_ending
     );
-
+    document.body.onkeyup = {}; // Else pressing Space/Enter will modify the pop/sus variables again
+    handlePopularityAndSuspicion(epilogueObject.popularity, epilogueObject.suspicion);
+    updateViews(); // Display the Popularity change
     $(".dialogue-wrapper").addClass("hidden");
     $(".epilogue-wrapper").removeClass("hidden");
     $("#next-episode").removeClass("hidden");
