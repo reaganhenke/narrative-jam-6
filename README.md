@@ -120,14 +120,9 @@ NOTE: if the "nextText" is "AUDIOGAME" (represented by the `START_PUZZLE` consta
 
 #### dialogue screen (for each episode)
 ![dialogue](./screenshots/dialogue1.png)
-- [ ] episode background art (660x640px, could be adjusted if we shrink livestream section)
-- [x] "next" button or icon for user to click to progress (any size or shape)
-- [x] character art (including emotion variants) (less than 660px wide and 490px tall, that's the absolute max of the space minus the dialogue space at the bottom)
-- [x] livestream overlay background? (300 x 640px, and the inner white chat part can be whatever size, currently 270x576px)
-- [x] background for the dialogue box at the bottom 
 
-![dialogue2](./screenshots/dialogue21.png)
-- [ ] possibly backgrounds for these response options? Tricky because they may vary in size, or we pick a max and limit them all. 
+![dialogue2](./screenshots/dialogue2.png)
+- [ ] Final background for response questions (575px x 84px)
 
 #### audio puzzle screen
 ![audiopuzzle](./screenshots/audiopuzzleupdate.png)

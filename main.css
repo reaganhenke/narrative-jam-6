@@ -146,7 +146,6 @@ main {
   text-align: center;
 }
 
-
 #episode-intro button {
   z-index: 5;
 }
@@ -258,11 +257,17 @@ main {
 }
 
 #responses button {
+  background-image: url("assets/UI/responsebox.png");
+  height: 84px;
+  width: 575px;
   font: inherit;
   padding: 6px;
   word-spacing: 0.245rem;
   letter-spacing: 0.07em;
   max-width: 575px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }
 
 #progress-dialogue {
