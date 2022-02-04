@@ -290,6 +290,17 @@ main {
   margin: 8px;
 }
 
+.epilogue-wrapper {
+  background-image: url(./assets/UI/epilogue-dialogue.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  padding: 13px;
+  position: relative;
+  z-index: 5;
+  min-height: 171px;
+  box-sizing: border-box;
+}
+
 #episode-epilogue-result {
   position: absolute;
   width: 660px;
@@ -309,8 +320,8 @@ main {
   cursor: pointer;
   font: inherit;
   letter-spacing: inherit;
-  bottom: 20px;
-  right: 320px;
+  right: 15px;
+  bottom: 18px;
   z-index: 5;
 }
 

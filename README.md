@@ -126,16 +126,10 @@ NOTE: if the "nextText" is "AUDIOGAME" (represented by the `START_PUZZLE` consta
 
 #### audio puzzle screen
 ![audiopuzzle](./screenshots/audiopuzzleupdate.png)
-- [x] background art/translator art. this page can look however you want, should fit into the screen size of (960x640px). 
-- [x] play/pause buttons
-- [ ] soundwave art for paused, bad, ok, and good. can be any size, but variants for showing how accurate the sliders are would be helpful.
-- [x] slider design
-- [x] continue button
+- [ ] soundwave art for paused, bad, ok, and good. (523px x 237px)
 
 #### episode epilogue screens
-![epilogue](./screenshots/episode-epilogue1.png)
-- [ ] I think we'll show a different illustration for each of the 4 episode endings
-- [ ] continue button
+![epilogue](./screenshots/episode-epilogue.png)
 
 #### game ending screens
 ![gameover](./screenshots/game-ending1.png)

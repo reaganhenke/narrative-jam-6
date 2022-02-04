@@ -210,14 +210,13 @@ function showEpilogue() {
     );
 
     $(".dialogue-wrapper").addClass("hidden");
-    $("#episode-epilogue-result").removeClass("hidden");
+    $(".epilogue-wrapper").removeClass("hidden");
     $("#next-episode").removeClass("hidden");
     $("#character-portrait").css(
       "background-image",
       "url(" + epilogueObject.characterImg + ")"
     );
     // NOTE: there's no error handling here. If an epilogue isn't set, there will be a blank screen.
-
     $("#episode-epilogue-result").text(epilogueObject.text);
   }
 }
@@ -226,7 +225,7 @@ function nextEpisode() {
   state.episode_music.pause();
 
   $(".dialogue-wrapper").removeClass("hidden");
-  $("#episode-epilogue-result").addClass("hidden");
+  $(".epilogue-wrapper").addClass("hidden");
   $("#next-episode").addClass("hidden");
   $("#livestream-chat").empty();
   
