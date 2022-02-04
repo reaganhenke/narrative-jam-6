@@ -116,10 +116,7 @@ NOTE: if the "nextText" is "AUDIOGAME" (represented by the `START_PUZZLE` consta
 - [ ] Finalized title screen illustration (960x640px)
 
 #### episode intro screen (for each episode)
-![episode intro](./screenshots/epintro1.png)
-- [ ] possible background art, (960x640px) or just pick background color
-- [ ] possible illustrated title, or just use a font? 
-- [ ] start button (either just background, or background plus words and i can add discernible text with an aria label)
+![episode intro](./screenshots/episodeintro.png)
 
 #### dialogue screen (for each episode)
 ![dialogue](./screenshots/dialogue1.png)

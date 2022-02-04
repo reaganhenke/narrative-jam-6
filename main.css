@@ -29,11 +29,14 @@ main {
   align-items: center;
   justify-content: center;
   height: 100%;
+  position: relative;
 }
 
 #titlescreen button,
 #episode-intro button,
 #episode-epilogue button {
+  background-image: url("assets/UI/smallbutton.png");
+  background-color: transparent;
   background-repeat: no-repeat;
   width: 100px;
   height: 60px;
@@ -95,7 +98,6 @@ main {
 #titlescreen {
   background-image: url("assets/UI/title_PLACEHOLDER.png");
   background-size: cover;
-  position: relative;
 }
 
 #titlescreen h1 {
@@ -127,6 +129,29 @@ main {
 }
 
 /******* END TITLE SCREEN STYLING *******/
+
+/******* START EPISODE INTRO SCREEN STYLING *******/
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("assets/UI/overlay.png");
+}
+
+#episode-title {
+  z-index: 5;
+  font-size: 74px;
+  width: calc(100% - 54px);
+  text-align: center;
+}
+
+
+#episode-intro button {
+  z-index: 5;
+}
+
+/******* END EPISODE INTRO SCREEN STYLING *******/
 
 /******* START DIALOGUE SCREEN STYLING *******/
 

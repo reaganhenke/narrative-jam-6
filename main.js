@@ -30,6 +30,10 @@ function startGame() {
   state.gameStage = EPISODE_INTRO;
   showGameStage();
   $("#episode-title").text(all_episodes[state.currentEpisode].episodeTitle);
+  $("#episode-intro").css(
+    "background-image",
+    "url(" + all_episodes[state.currentEpisode].backgroundImg + ")"
+  );
 }
 
 function startEpisode() {
