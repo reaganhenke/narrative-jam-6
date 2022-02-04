@@ -1,15 +1,15 @@
 
 const HAUNTEDHOUSE_BACKGROUND = "./assets/backgrounds/cathouse.png";
 const HAUNTEDHOUSE_MUSIC = "./assets/sounds/music-placeholder.wav";
-const HAUNTEDHOUSE_AUDIO = "./assets/sounds/ghost-request-cat-placeholder.mp3";
+const HAUNTEDHOUSE_AUDIO = "./assets/sounds/cat-placeholder.mp3";
 const HAUNTEDHOUSE_GHOST = "./assets/characters/cathouse_ghost_happy.png";
 
 const PIZZA_BACKGROUND = "./assets/backgrounds/loft.png";
-const PIZZA_MUSIC = "./assets/sounds/music-placeholder.wav";
-const PIZZA_AUDIO = "./assets/sounds/pizza_music";
+const PIZZA_MUSIC = "./assets/sounds/pizza_music.mp3";
+const PIZZA_AUDIO = "./assets/sounds/pizza-placeholder.mp3";
 const PIZZA_GHOST = "./assets/characters/amal_sad.png";
 
-const STARS_BACKGROUND = "./assets/backgrounds/cathouse_shadow.png";
+const STARS_BACKGROUND = "./assets/backgrounds/observatory.png";
 const STARS_MUSIC = "./assets/sounds/music-placeholder.wav";
 const STARS_AUDIO = "./assets/sounds/ghost-request-placeholder.mp3";
 const STARS_GHOST = "./assets/characters/gorgon_lonely.png";
