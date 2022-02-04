@@ -27,6 +27,8 @@ Created by
 ### art assets needed
 - [ ] cover photo (for itch.io page)
 - [ ] favicon (for itch.io page)
+- [ ] main character sprite (excited)
+- [ ] main character sprite (sad)
 - [ ] Finalized title screen illustration (960x640px)
 - [ ] Final background for response questions (575px x 84px)
 - [ ] soundwave art for paused audio (523px x 237px)
