@@ -11,6 +11,8 @@ Created by
 # TODOs:
 
 ### tech
+- [x] allow epilogues to update pop/sus
+- [ ] add new assets
 - [ ] fix preloading assets, there's a delay in displaying background images
 
 ### audio needed

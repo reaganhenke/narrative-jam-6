@@ -51,10 +51,6 @@ function startEpisode() {
 }
 
 function showTextNode(textNodeIndex) {
-  document.body.onkeyup = {}; // clear keyup listener in case it was set previously
-  $("#progress-dialogue").off("click");
-  $(".dialogue-wrapper").off("click");
-
   const dialogue = state.finishedAudioPuzzle
     ? all_episodes[state.currentEpisode].textNodesAfterAudio
     : all_episodes[state.currentEpisode].textNodesBeforeAudio;
@@ -96,8 +92,15 @@ function showTextNode(textNodeIndex) {
   }
 }
 
+function clearListeners() {
+  document.body.onkeyup = {};
+  $("#progress-dialogue").off("click");
+  $(".dialogue-wrapper").off("click");
+}
+
 function advance(textNode) {
   handlePopularityAndSuspicion(textNode.popularity, textNode.suspicion);
+  clearListeners();
   if (textNode.next == FINISHEPISODE) {
     showEpilogue();
   } else if (textNode.next == START_PUZZLE) {
@@ -121,6 +124,7 @@ function handlePopularityAndSuspicion(
     const newSuspicion = state.suspicion + suspicionAdjustment;
     state.suspicion = newSuspicion >= 0 ? newSuspicion : 0;
   }
+  updateViews();
 }
 
 function selectOption(option) {
@@ -128,7 +132,6 @@ function selectOption(option) {
   if (option.setEpilogue) {
     state.episode_ending = option.setEpilogue;
   }
-  updateViews();
   option.chatMoods?.forEach((chatMood) => {
     showChat(chatMood);
   });
@@ -200,15 +203,15 @@ function showGameStage() {
 }
 
 function showEpilogue() {
+  const epilogueObject = all_episodes[
+    state.currentEpisode
+  ].possibleEpilogues.find(
+    (epilogue) => epilogue.id === state.episode_ending
+  );
+  handlePopularityAndSuspicion(epilogueObject.popularity, epilogueObject.suspicion);
   if (state.suspicion > 6) {
     gameOverSus();
   } else {
-    const epilogueObject = all_episodes[
-      state.currentEpisode
-    ].possibleEpilogues.find(
-      (epilogue) => epilogue.id === state.episode_ending
-    );
-
     $(".dialogue-wrapper").addClass("hidden");
     $(".epilogue-wrapper").removeClass("hidden");
     $("#next-episode").removeClass("hidden");
