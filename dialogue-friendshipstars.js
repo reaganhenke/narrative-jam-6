@@ -286,7 +286,6 @@ const starsDialogue2 = [
     options: [
       {
         text: "She wants a friend.",
-        popularity: 1,
         setEpilogue: 1,
         chatMoods: [GENERALMOOD_CUTE],
         nextText: 3,
@@ -298,7 +297,7 @@ const starsDialogue2 = [
       },
       {
         text: "(Lie) She wants to be resurrected.",
-        popularity: 2,
+        popularity: 1,
         suspicion: 1,
         chatMoods: [GENERALMOOD_SUSPICION],
         nextText: 26,
@@ -471,7 +470,7 @@ const starsDialogue2 = [
     chatMoods: [STARSMOOD_SAD],
     next: FINISHEPISODE
   },
-  // Gorfon Quest failure
+  // Gorgon Quest failure
   {
     id: 23,
     text: "How come that's what she wants, then?",

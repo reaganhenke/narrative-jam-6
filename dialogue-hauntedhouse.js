@@ -592,13 +592,15 @@ const hauntedHouseDialogue2 = [
         nextText: 36,
       },
       {
-        text: "Selling the house is your job, isn't it?",
+        text: "Selling the house is your job, not mine...",
+        popularity: -1,
         setEpilogue: 1,
         nextText: 39,
       },
       {
         text: "I'd be happy to find buyers and pocket the commission...",
         setEpilogue: 1,
+        popularity: -1,
         suspicion: 1,
         chatMoods: [GENERALMOOD_SUSPICION],
         nextText: 39,

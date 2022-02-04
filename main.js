@@ -200,7 +200,7 @@ function showGameStage() {
 }
 
 function showEpilogue() {
-  if (state.suspicion > 5) {
+  if (state.suspicion > 6) {
     gameOverSus();
   } else {
     const epilogueObject = all_episodes[
@@ -228,7 +228,7 @@ function nextEpisode() {
   $(".epilogue-wrapper").addClass("hidden");
   $("#next-episode").addClass("hidden");
   $("#livestream-chat").empty();
-  
+
   if (state.currentEpisode == all_episodes.length - 1) {
     gameEpilogue();
   } else {
@@ -251,7 +251,7 @@ function gameEpilogue() {
   showGameStage();
 
   var gameEpilogueId = 0;
-  if (state.popularity >= 9 && state.popularity < 13) {
+  if (state.popularity >= 8 && state.popularity < 13) {
     gameEpilogueId = 1;
   } else if (state.popularity >= 13 && state.popularity < 20) {
     gameEpilogueId = 2;
