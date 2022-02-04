@@ -8,6 +8,37 @@ Created by
 - Emma (LaChapeliere) narrative designer
 - Anni (Nightsparrow) graphics artist
 
+# TODOs:
+
+### tech
+- [ ] add audio puzzle dynamic visual feedback
+- [ ] fix preloading assets, there's a delay in displaying background images
+
+### audio needed
+- [ ] haunted house ghost request
+- [ ] haunted house music
+- [ ] pizza house ghost request
+- [ ] pizza house music
+- [ ] stars house ghost request
+- [ ] stars house music
+- [ ] static 1
+- [ ] static 2
+
+### art assets needed
+- [ ] cover photo (for itch.io page)
+- [ ] favicon (for itch.io page)
+- [ ] Finalized title screen illustration (960x640px)
+- [ ] Final background for response questions (575px x 84px)
+- [ ] soundwave art for paused audio (523px x 237px)
+- [ ] soundwave art for bad audio (523px x 237px)
+- [ ] soundwave art for ok audio (523px x 237px)
+- [ ] soundwave art for good audio (523px x 237px)
+
+#### stretch goals
+- [ ] make dialogue text appear incrementally
+- [ ] add settings menu
+- [ ] fade in audio puzzle
+
 # EPISODE WRITING:
 
 <p>There are two files that writing needs to be added to. <p>
@@ -102,18 +133,13 @@ These nodes have an `options` section instead of a `next`. The options array can
 
 NOTE: if the "nextText" is "AUDIOGAME" (represented by the `START_PUZZLE` constant), the audio puzzle will start once that option is selected. 
 
-# art assets 
-
-#### general
-- [ ] cover photo (for itch.io page)
-- [ ] favicon (for itch.io page)
+# screenshots
 
 #### loading screen
 ![loading](./screenshots/loading.png)
 
 #### title screen
 ![title](./screenshots/title.png)
-- [ ] Finalized title screen illustration (960x640px)
 
 #### episode intro screen (for each episode)
 ![episode intro](./screenshots/episodeintro.png)
@@ -122,73 +148,14 @@ NOTE: if the "nextText" is "AUDIOGAME" (represented by the `START_PUZZLE` consta
 ![dialogue](./screenshots/dialogue1.png)
 
 ![dialogue2](./screenshots/dialogue2.png)
-- [ ] Final background for response questions (575px x 84px)
 
 #### audio puzzle screen
 ![audiopuzzle](./screenshots/audiopuzzleupdate.png)
-- [ ] soundwave art for paused, bad, ok, and good. (523px x 237px)
 
 #### episode epilogue screens
 ![epilogue](./screenshots/episode-epilogue.png)
 
 #### game ending screens
 ![gameover](./screenshots/gameover.png)
-- this is what triggers when you raise the suspicion too much
 
 ![gameover](./screenshots/gameepilogue.png)
-
-
-# TODOs:
-
-### tech
-- [x] create loading screen
-- [x] create title screen
-- [x] create episode intro screen
-- [x] create dialogue screen
-- [x] add dialogue functionality to progress story by selecting a response
-- [x] add dialogue functionality to progress story by clicking next
-- [x] add dialogue functionality to progress story with space or click
-- [x] add livestream chat functionality to reflect a mood
-- [x] reflect livestream popularity in views
-- [x] add dialogue functionality to show character with different emotions
-- [x] add audio puzzle screen
-- [x] add audio puzzle slider functionality
-- [x] add audio puzzle caption
-- [x] create epilogue screens
-- [x] make epilogue screen dynamic
-- [x] play background music
-- [x] increment chat one at a time, based on mood and suspicion 
-- [x] allow increase/decrease popularity and suspicion when the epilogue happens
-- [x] replace cathouse background to full screen
-- [x] allow chat to be called without an option choice
-- [x] add blank episode files
-- [x] add shared chat moods
-- [x] add ANY suspicion to chat moods
-- [x] allow calling multiple chat segments
-- [ ] some text dialogue gets covered - responded on trello about this
-- [ ] no dialogue when options are being shown - responded on doc about this
-- [ ] add audio puzzle dynamic visual feedback
-- [ ] fix preloading assets, there's a delay in displaying background images
-- [ ] only trigger high suspicion ending at the end of an episode
-- [x] loading screen
-- [ ] title screen
-- [ ] fade in audio puzzle
-
-#### stretch goals
-- [ ] make dialogue text appear incrementally
-- [ ] add settings menu
-
-### integration
-- [x] pick font and sizing to determine max text length
-- [ ] finalize what loading screen should look like (add logo or animation)
-- [ ] finalize what title screen should look like (add credits and illustrations)
-- [ ] add visual assets to dialogue screen
-- [ ] add visual aseets to audio puzzle screen
-- [ ] add episode content
-- [ ] epilogue screens
-
-### audio needed
-- [ ] ghost tracks for each episode
-- [ ] static 1
-- [ ] static 2
-- [ ] background music for each episode 
