@@ -170,7 +170,7 @@ const pizzaDialogue1 = [
         nextText: START_PUZZLE,
       },
       {
-        text: "My dear, it's awful that you have to live through that! But I'm here for you now, and everything is going to be okay.",
+        text: "My dear, it's awful that you have to live through that! But I'm here for you now.",
         popularity: 1,
         nextText: START_PUZZLE,
       },

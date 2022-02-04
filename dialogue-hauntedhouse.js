@@ -546,7 +546,7 @@ const hauntedHouseDialogue2 = [
         nextText: 42,
       },
       {
-        text: "Hey, don't shoot the messenger because you don't like the message! I'm just trying to help you there",
+        text: "Hey, don't shoot the messenger because you don't like the message!",
         nextText: 32,
       },
     ],
@@ -587,7 +587,7 @@ const hauntedHouseDialogue2 = [
     characterImg: GREG_GRUMPY,
     options: [
       {
-        text: "Well, if you really hate the idea so much, I guess someone could make fantastic haunted wandering museum out of the house.",
+        text: "I guess someone could make great haunted wandering museum out of the house...",
         setEpilogue: 2,
         nextText: 36,
       },
