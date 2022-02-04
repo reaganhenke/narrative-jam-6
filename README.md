@@ -11,7 +11,6 @@ Created by
 # TODOs:
 
 ### tech
-- [ ] add audio puzzle dynamic visual feedback
 - [ ] fix preloading assets, there's a delay in displaying background images
 
 ### audio needed
