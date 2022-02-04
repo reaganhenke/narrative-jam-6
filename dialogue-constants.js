@@ -123,26 +123,26 @@ const GAME_EPILOGUES = [
     backgroundImg: TRIAL_BACKGROUND
   },
   {
-    content: `That's it, you've landed your first sponsorship contract! You're not too sure how 
+    content: `You've done it! You've landed your first sponsorship contract! You're not too sure how 
     effective a marketing strategy it is for a plumbing company to get their logo in your show, 
-    but all you have to do is wear their branded cap or tool belt, and drop a referral link with each video.
+    but all you have to do is wear their branded cap or tool belt and drop a referral link with each video.
     Take that, Spectral Self-Help!!`,
     backgroundImg: SIGNON_BACKGROUND
   },
   {
-    content: `Oh, dear! Oh, dear! This last month has been absolutely fantastic, with tons 
-    of new viewers and so much steaming love… and eighteen new sponsorship offers! 
-    Much better offers that the one you received from the plumbing company that had c
-    ontacted you a month ago. A sporting gear shop, a big herbal tea brand, a camera manufacturer... 
-    You're on the road to international success! You might have sold your soul and the ones 
-    of the ghosts you're supposed to help in the process, but really, who cares?`,
+    content: `Good work! This last month has been absolutely fantastic, with tons 
+    of new viewers and subscribers… and, better yet, eighteen new sponsorship offers 
+    much better than the one you received from that plumbing company! A sporting gear shop, 
+    a big herbal tea brand, a camera manufacturer... You're on the road to international success! 
+    You might have sold your soul and those of the ghosts you're supposed to help
+    in the process, but really, who cares?`,
     backgroundImg: FAMOUS_BACKGROUND
   },
   {
-    content: `Turns out lying about the ghosts's request wasn't such a good idea in the end... 
+    content: `Turns out lying about the ghosts's requests wasn't such a good idea after all... 
     Some of your competitors had been gathering proof of your regular dishonesty for months, 
-    and your last episode gave them just what they needed to go public with their accusations!
-    Your phone is ringing non-stop and a couple of recent guests are considering law suits. 
+    and your last episode gave them just what they needed to go public with their accusations.
+    Your phone is ringing non-stop and a couple of recent guests are considering suing you. 
     This is the end of Ghost Whisperer...`,
     backgroundImg: GAMEOVER_BACKGROUND
   }
