@@ -241,7 +241,8 @@ function nextEpisode() {
 function gameOverSus() {
   state.gameStage = GAMEEPILOGUE;
   showGameStage();
-  $("#epilogue-result").text("You raised suspicion too much! You lose!");
+  $("#epilogue-result").text(GAME_EPILOGUES[4].content);
+  $("#episode-epilogue").css("background-image", "url(" + GAME_EPILOGUES[4].backgroundImg + ")");
   $("#next-episode").addClass("hidden");
 }
 
@@ -258,5 +259,6 @@ function gameEpilogue() {
     gameEpilogueId = 3;
   }
 
-  $("#epilogue-result").text(GAME_EPILOGUES[gameEpilogueId].title);
+  $("#epilogue-result").text(GAME_EPILOGUES[gameEpilogueId].content);
+  $("#episode-epilogue").css("background-image", "url(" + GAME_EPILOGUES[gameEpilogueId].backgroundImg + ")");
 }

@@ -132,10 +132,11 @@ NOTE: if the "nextText" is "AUDIOGAME" (represented by the `START_PUZZLE` consta
 ![epilogue](./screenshots/episode-epilogue.png)
 
 #### game ending screens
-![gameover](./screenshots/game-ending1.png)
+![gameover](./screenshots/gameover.png)
+- this is what triggers when you raise the suspicion too much
 
+![gameover](./screenshots/gameepilogue.png)
 
-NOTE: for all buttons with custom art, unsure if you want to draw the words on them, or leave the text to be written on top. Let me know.
 
 # TODOs:
 

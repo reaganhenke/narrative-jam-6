@@ -483,4 +483,10 @@ input[type=range]::-ms-thumb {
 
 /******* START EPILOGUE SCREEN STYLING *******/
 
+#epilogue-result {
+  left: 363px;
+  position: absolute;
+  width: 518px;
+}
+
 /******* END EPILOGUE SCREEN STYLING *******/

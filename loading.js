@@ -69,7 +69,7 @@ const imageSrcs = [
 imagesLoaded = false;
 
 // sound assets
-snd1 = "./assets/sounds/ghost-request-placeholder.mp3";
+snd1 = "./assets/sounds/pizza-placeholder.mp3";
 snd2 = "./assets/sounds/radio-static-placeholder.mp3";
 snd3 = "./assets/sounds/radio-static-placeholder-two.wav";
 snd4 = "./assets/sounds/music-placeholder.wav";

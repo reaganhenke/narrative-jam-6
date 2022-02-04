@@ -11,7 +11,7 @@ const PIZZA_GHOST = "./assets/characters/amal_sad.png";
 
 const STARS_BACKGROUND = "./assets/backgrounds/observatory.png";
 const STARS_MUSIC = "./assets/sounds/music-placeholder.wav";
-const STARS_AUDIO = "./assets/sounds/ghost-request-placeholder.mp3";
+const STARS_AUDIO = "./assets/sounds/pizza-placeholder.mp3";
 const STARS_GHOST = "./assets/characters/gorgon_lonely.png";
 
 const all_episodes = [
