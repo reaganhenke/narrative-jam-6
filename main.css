@@ -365,7 +365,8 @@ main {
   transform: rotate(90deg);
 }
 
-.audio-screen {
+#audio-screen {
+  background-image: url("assets/soundwave.gif");
   position: absolute;
   top: 75px;
   left: 84px;

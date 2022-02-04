@@ -10,6 +10,8 @@ staticAudio2 = new Audio("./assets/sounds/radio-static-placeholder-two.wav");
 staticAudio2.loop = true;
 
 function startAudioPuzzle() {
+  $("input").val(5);
+
   state.episode_music.volume = 0.25; // Turn down episode music in the background
   $("#caption").text(all_episodes[state.currentEpisode].ghostAudioCaption);
   $("#ghost-portrait").css(
@@ -35,6 +37,8 @@ function pauseAudio() {
   staticAudio2.pause();
   $("#play-button").removeClass("pressed");
   $("#pause-button").addClass("pressed");
+  $("#audio-screen").css("background-image", "none");
+  $("#caption").css("opacity", 0);
 }
 
 function playAudio() {
@@ -43,6 +47,7 @@ function playAudio() {
   staticAudio2.play();
   $("#play-button").addClass("pressed");
   $("#pause-button").removeClass("pressed");
+  checkIfSolved();
 }
 
 function updateVolumeSlider(current) {
@@ -100,6 +105,15 @@ function checkIfSolved() {
     volumeAccuracy > 0.5 && playbackAccuracy > 0.25 && staticAccuracy > 0.55
       ? (volumeAccuracy + playbackAccuracy + staticAccuracy) / 3
       : 0;
+
+  if (accuracy < 0.25) {
+    $("#audio-screen").css("background-image", "url(assets/soundwave.gif)"); // bad
+  } else if (accuracy >= 0.25 && accuracy < 0.75) {
+    $("#audio-screen").css("background-image", "url(assets/soundwave.gif)"); // ok
+  } else {
+    $("#audio-screen").css("background-image", "url(assets/soundwave.gif)"); // good
+  }
+
   $("#caption").css("opacity", accuracy);
 }
 
