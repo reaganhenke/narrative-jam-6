@@ -5,7 +5,7 @@ const ANGEL_LAUGHING = "./assets/characters/angel_laughing.png"
 const ANGEL_SAD = "./assets/characters/angel_sad.png"
 
 const GORGON_LONELY = "./assets/characters/gorgon_lonely.png"
-const GORGON_ANGRY = "./assets/characters/gorgon_lonely.png" // Placeholder
+const GORGON_ANGRY = "./assets/characters/gorgon_angry.png"
 
 const STARSMOOD_CUTE = [
   {

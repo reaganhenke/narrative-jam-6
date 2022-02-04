@@ -2,8 +2,8 @@ const GREG_ANGRY = "./assets/characters/greg_angry.png";
 const GREG_DISGUSTED = "./assets/characters/greg_disgusted.png";
 const GREG_GRUMPY = "./assets/characters/greg_grumpy.png";
 
-const CATGRANDMA_SAD = "./assets/characters/greg_grumpy.png" // Placeholder
-const CATGRANDMA_ANGRY = "./assets/characters/greg_grumpy.png" // Placeholder
+const CATGRANDMA_SAD = "./assets/characters/cathouse_ghost_sad.png"
+const CATGRANDMA_ANGRY = "./assets/characters/cathouse_ghost_angry.png"
 
 const HAUNTEDHOUSEMOOD_CUTE = [
   {
