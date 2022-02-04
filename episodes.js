@@ -42,7 +42,7 @@ const all_episodes = [
     backgroundImg: STARS_BACKGROUND,
     episodeMusic: STARS_MUSIC,
     ghostAudio: STARS_AUDIO,
-    ghostAudioCaption: "??",
+    ghostAudioCaption: "I want a friend",
     ghostImg: STARS_GHOST,
     textNodesBeforeAudio: starsDialogue1,
     textNodesAfterAudio: starsDialogue2,
