@@ -25,7 +25,7 @@ const PIZZAMOOD_OMG = [
     segments: [
       "coolio: 🍍🍕 🤮",
       "77gus77: pizza toppings a bid deal! 🧐",
-      "bibop: 🍍 or not 🍍 that is the ❔",
+      "bibop: 🍍 or not 🍍 that is the ❓",
     ]
   }
 ]
@@ -34,10 +34,10 @@ const PIZZAMOOD_SAD = [
   {
     suspicion: ANYSUS,
     segments: [
-      "hes: #GiveMAriaAHug 🫂❤️",
+      "hes: #GiveMAriaAHug ❤️",
       "bibop: sad story... 😿",
-      "thelibrarian: No pizza for the brave ☹️",
-      "hes: Poor Maria 🌧️☹️☁️",
+      "thelibrarian: No pizza for the brave 🙁",
+      "hes: Poor Maria 🌧️🙁☁️",
       "coolio: till death do us part... and beyond 😢",
     ]
   }
@@ -47,7 +47,7 @@ const PIZZAMOOD_ANGRY = [
   {
     suspicion: ANYSUS,
     segments: [
-      "hes: That's harsh ☹️",
+      "hes: That's harsh 🙁",
       "caty: 😾 Not Nice!!",
       "77gus77: #heartless 🖤",
       "noclue: Can't believe she said this... 😡",

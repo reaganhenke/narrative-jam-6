@@ -16,7 +16,7 @@ const GENERALMOOD_CUTE = [
       "noclue: So cuuuuuuuute 💖",
       "bibop: #cute",
       "caty: this is so cute 😻",
-      "hes: Cute alert! 🚨🙈🐶🦝🐥🦦",
+      "hes: Cute alert! 🚨🙈🐶🦝🐥",
       "kk234: omg im gonna die this is so cute",
       "coolio: 🤗",
     ]
@@ -30,7 +30,7 @@ const GENERALMOOD_OMG = [
       "hes: OMG is this real 😲 ?!?!?",
       "noclue: This is so WILD! 🥴",
       "coolio: 😮 can't beleive they did that",
-      "cotcot: ‼️NO WAY‼️",
+      "cotcot: !!NO WAY!!",
       "thelibrarian: ✨ We get to see the most terrific places on the show 💖",
     ]
   }
