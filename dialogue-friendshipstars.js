@@ -107,7 +107,7 @@ const starsDialogue1 = [
         nextText: 3,
       },
       {
-        text: "I've made a night appointement, so we're in for a pretty light show!",
+        text: "I've made a night appointment, so we're in for a pretty light show!",
         popularity: 1,
         nextText: 3,
       },
@@ -535,7 +535,7 @@ const starsDialogue2 = [
         nextText: 34,
       },
       {
-        text: "She's your ghost now, your responsability! Are you going to give up so easily?",
+        text: "She's your ghost now, your responsibility! Are you going to give up so easily?",
         popularity: -1,
         suspicion: 1,
         setEpilogue: 3,
