@@ -158,7 +158,5 @@ NOTE: if the "nextText" is "AUDIOGAME" (represented by the `START_PUZZLE` consta
 #### episode epilogue screens
 ![epilogue](./screenshots/episode-epilogue.png)
 
-#### game ending screens
-![gameover](./screenshots/gameover.png)
-
+#### game ending screen
 ![gameover](./screenshots/gameepilogue.png)
