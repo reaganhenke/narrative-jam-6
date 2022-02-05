@@ -130,7 +130,7 @@ const GAME_EPILOGUES = [
     backgroundImg: SIGNON_BACKGROUND
   },
   {
-    content: `Good work! This last month has been absolutely fantastic, with tons 
+    content: `Oh, wow! This last month has been absolutely fantastic, with tons 
     of new viewers and subscribers… and, better yet, eighteen new sponsorship offers 
     much better than the one you received from that plumbing company! A sporting gear shop, 
     a big herbal tea brand, a camera manufacturer... You're on the road to international success! 
