@@ -14,7 +14,7 @@ paused = true;
 function startAudioPuzzle() {
   $("input").val(5);
 
-  state.episode_music.volume = 0.25; // Turn down episode music in the background
+  state.episode_music.volume = 0.1; // Turn down episode music in the background
   $("#caption").text(all_episodes[state.currentEpisode].ghostAudioCaption);
   $("#ghost-portrait").css(
     "background-image",
@@ -27,7 +27,7 @@ function startAudioPuzzle() {
   ghostAudio.src = all_episodes[state.currentEpisode].ghostAudio;
   ghostAudio.volume = 0;
   ghostAudio.playbackRate = 4;
-  playAudio();
+  pauseAudio();
   volumeSweetSpot = Math.random() * 10;
   staticSweetSpot = Math.random() * 10;
   speedSweetSpot = Math.random() * 10;
