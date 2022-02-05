@@ -37,7 +37,7 @@ const PIZZAMOOD_SAD = [
       "hes: #GiveMAriaAHug ❤️",
       "bibop: sad story... 😿",
       "thelibrarian: No pizza for the brave ☹️",
-      "hes: Poor Maria 🌧️☹️☁️",
+      "hes: Poor Maria 🌧️🙁☁️",
       "coolio: till death do us part... and beyond 😢",
     ]
   }
