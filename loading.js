@@ -25,8 +25,9 @@ imgUI10 = "./assets/UI/livestream.png";
 imgUI11 = "./assets/UI/mainmenu.png";
 imgUI12 = "./assets/UI/nextarrow.png";
 imgUI13 = "./assets/UI/overlay.png";
-imgUI14 = "./assets/UI/smallbutton.png";
-imgUI15 = "./assets/UI/viewers.png";
+imgUI14 = "./assets/UI/responsebox.png";
+imgUI15 = "./assets/UI/smallbutton.png";
+imgUI16 = "./assets/UI/viewers.png";
 
 imgChar1 = "./assets/characters/amal_angry.png";
 imgChar2 = "./assets/characters/amal_sad.png";
@@ -49,7 +50,7 @@ imgChar18 = "./assets/characters/maria_cry.png";
 imgChar19 = "./assets/characters/maria_happycry.png";
 imgChar20 = "./assets/characters/maria_sad.png";
 imgChar21 = "./assets/characters/mc_excited.png";
-imgChar22 = "./assets/characters/mc_excited.png";
+imgChar22 = "./assets/characters/mc_sad.png";
 
 const imageSrcs = [
   imgAud1,
@@ -78,6 +79,7 @@ const imageSrcs = [
   imgUI13,
   imgUI14,
   imgUI15,
+  imgUI16,
   imgChar1,
   imgChar2,
   imgChar3,
