@@ -25,7 +25,7 @@ const PIZZAMOOD_OMG = [
     segments: [
       "coolio: 🍍🍕 🤮",
       "77gus77: pizza toppings a bid deal! 🧐",
-      "bibop: 🍍 or not 🍍 that is the ❔",
+      "bibop: 🍍 or not 🍍 that is the ❓",
     ]
   }
 ]
@@ -34,7 +34,7 @@ const PIZZAMOOD_SAD = [
   {
     suspicion: ANYSUS,
     segments: [
-      "hes: #GiveMAriaAHug 🫂❤️",
+      "hes: #GiveMAriaAHug ❤️",
       "bibop: sad story... 😿",
       "thelibrarian: No pizza for the brave ☹️",
       "hes: Poor Maria 🌧️☹️☁️",
