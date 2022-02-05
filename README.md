@@ -12,8 +12,9 @@ Created by
 
 ### tech
 - [x] allow epilogues to update pop/sus
-- [ ] add new assets
+- [x] add new assets
 - [ ] fix preloading assets, there's a delay in displaying background images
+- [ ] add audio files
 
 ### audio needed
 - [ ] haunted house ghost request
@@ -26,16 +27,15 @@ Created by
 - [ ] static 2
 
 ### art assets needed
-- [ ] cover photo (for itch.io page)
-- [ ] favicon (for itch.io page)
+- [x] cover photo (for itch.io page)
+- [x] favicon (for itch.io page)
 - [x] main character sprite (excited)
 - [x] main character sprite (sad)
 - [x] Finalized title screen illustration (960x640px)
-- [ ] Final background for response questions (575px x 84px)
-- [ ] soundwave art for paused audio (523px x 237px)
-- [ ] soundwave art for bad audio (523px x 237px)
-- [ ] soundwave art for ok audio (523px x 237px)
-- [ ] soundwave art for good audio (523px x 237px)
+- [x] soundwave art for paused audio (523px x 237px)
+- [x] soundwave art for bad audio (523px x 237px)
+- [x] soundwave art for ok audio (523px x 237px)
+- [x] soundwave art for good audio (523px x 237px)
 
 #### stretch goals
 - [ ] make dialogue text appear incrementally

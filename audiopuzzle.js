@@ -37,7 +37,7 @@ function pauseAudio() {
   staticAudio2.pause();
   $("#play-button").removeClass("pressed");
   $("#pause-button").addClass("pressed");
-  $("#audio-screen").css("background-image", "none");
+  $("#audio-screen").css("background-image", "url(assets/audio/audio_paused.gif)");
   $("#caption").css("opacity", 0);
 }
 
@@ -107,11 +107,11 @@ function checkIfSolved() {
       : 0;
 
   if (accuracy < 0.25) {
-    $("#audio-screen").css("background-image", "url(assets/soundwave.gif)"); // bad
+    $("#audio-screen").css("background-image", "url(assets/audio/audio_bad.gif)");
   } else if (accuracy >= 0.25 && accuracy < 0.75) {
-    $("#audio-screen").css("background-image", "url(assets/soundwave.gif)"); // ok
+    $("#audio-screen").css("background-image", "url(assets/audio/audio_ok.gif)");
   } else {
-    $("#audio-screen").css("background-image", "url(assets/soundwave.gif)"); // good
+    $("#audio-screen").css("background-image", "url(assets/audio/audio_good.gif)");
   }
 
   $("#caption").css("opacity", accuracy);

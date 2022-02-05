@@ -33,7 +33,7 @@ img27 = "./assets/backgrounds/cathouse.png";
 img28 = "./assets/backgrounds/loft.png";
 img29 = "./assets/backgrounds/placeholder.jpg";
 
-img30 = "./assets/soundwave.gif";
+// img30 = "./assets/soundwave.gif";
 const imageSrcs = [
   img1,
   img2,
@@ -64,7 +64,7 @@ const imageSrcs = [
   img27,
   img28,
   img29,
-  img30,
+  // img30,
 ];
 imagesLoaded = false;
 
