@@ -15,6 +15,7 @@ state = {
   finishedAudioPuzzle: false,
   episode_ending: null,
   episode_music: new Audio(),
+  maintheme_music: new Audio()
 };
 
 function donePreloading() {
@@ -23,6 +24,9 @@ function donePreloading() {
     state.gameStage = TITLE;
     // setTimeout(showGameStage, 5000); // This is just for testing purposes, to fake a loading time
     showGameStage();
+    state.maintheme_music.src = "./assets/sounds/maintheme-music.mp3";
+    state.maintheme_music.loop = true;
+    state.maintheme_music.play();
   }
 }
 
@@ -38,6 +42,7 @@ function startGame() {
 
 function startEpisode() {
   state.gameStage = DIALOGUE;
+  state.maintheme_music.pause();
   state.episode_music.src = all_episodes[state.currentEpisode].episodeMusic;
   state.episode_music.loop = true;
   state.episode_music.play();
@@ -242,6 +247,7 @@ function nextEpisode() {
 }
 
 function gameOverSus() {
+  state.maintheme_music.play();
   state.gameStage = GAMEEPILOGUE;
   showGameStage();
   $("#epilogue-result").text(GAME_EPILOGUES[4].content);
@@ -250,6 +256,7 @@ function gameOverSus() {
 }
 
 function gameEpilogue() {
+  state.maintheme_music.play();
   state.gameStage = GAMEEPILOGUE;
   showGameStage();
 

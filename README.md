@@ -15,6 +15,8 @@ Created by
 - [x] add new assets
 - [x] fix preloading assets, there's a delay in displaying background images
 - [x] add audio files
+- [ ] fix main theme bug
+
 
 ### audio needed
 - [x] haunted house ghost request

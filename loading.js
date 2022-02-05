@@ -108,13 +108,14 @@ imagesLoaded = false;
 // sound assets
 snd1 = "./assets/sounds/hauntedhouse-ghost.mp3";
 snd2 = "./assets/sounds/hauntedhouse-music.mp3";
-snd3 = "./assets/sounds/pizza-ghost.mp3";
-snd4 = "./assets/sounds/pizza-music.mp3";
-snd5 = "./assets/sounds/stars-ghost.mp3";
-snd6 = "./assets/sounds/stars-music.mp3";
-snd7 = "./assets/sounds/static-1.mp3";
-snd8 = "./assets/sounds/static-2.mp3";
-const soundSrcs = [snd1, snd2, snd3, snd4, snd5, snd6, snd7, snd8];
+snd3 = "./assets/sounds/maintheme-music.mp3";
+snd4 = "./assets/sounds/pizza-ghost.mp3";
+snd5 = "./assets/sounds/pizza-music.mp3";
+snd6 = "./assets/sounds/stars-ghost.mp3";
+snd7 = "./assets/sounds/stars-music.mp3";
+snd8 = "./assets/sounds/static-1.mp3";
+snd9 = "./assets/sounds/static-2.mp3";
+const soundSrcs = [snd1, snd2, snd3, snd4, snd5, snd6, snd7, snd8, snd9];
 soundsLoaded = false;
 
 allAssetsLoaded = false;
