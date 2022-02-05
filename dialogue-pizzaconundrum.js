@@ -47,7 +47,7 @@ const PIZZAMOOD_ANGRY = [
   {
     suspicion: ANYSUS,
     segments: [
-      "hes: That's harsh ☹️",
+      "hes: That's harsh 🙁",
       "caty: 😾 Not Nice!!",
       "77gus77: #heartless 🖤",
       "noclue: Can't believe she said this... 😡",
