@@ -4,9 +4,9 @@ var staticSweetSpot;
 
 ghostAudio = new Audio();
 ghostAudio.loop = true;
-staticAudio = new Audio("./assets/sounds/radio-static-placeholder.mp3");
+staticAudio = new Audio("./assets/sounds/static-1.mp3");
 staticAudio.loop = true;
-staticAudio2 = new Audio("./assets/sounds/radio-static-placeholder-two.wav");
+staticAudio2 = new Audio("./assets/sounds/static-2.mp3");
 staticAudio2.loop = true;
 
 function startAudioPuzzle() {
