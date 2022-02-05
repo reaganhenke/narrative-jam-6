@@ -208,7 +208,7 @@ const hauntedHouseDialogue2 = [
         nextText: 14,
       },
       {
-        text: "(Lie) She wants you to find a loving owner for the house, someone who will also adopt her cats.",
+        text: "(Lie) She wants you to find a loving owner for the house, who will also adopt her cats.",
         popularity: 2,
         suspicion: 1,
         chatMoods: [GENERALMOOD_CUTE, HAUNTEDHOUSEMOOD_CUTE],
