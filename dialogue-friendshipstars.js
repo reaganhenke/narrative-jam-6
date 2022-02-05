@@ -37,7 +37,7 @@ const STARSMOOD_SAD = [
     suspicion: ANYSUS,
     segments: [
       "caty: bittersweet ending...",
-      "coolio: :(",
+      "coolio: 😿",
     ]
   }
 ]
