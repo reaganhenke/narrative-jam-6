@@ -9,6 +9,8 @@ staticAudio.loop = true;
 staticAudio2 = new Audio("./assets/sounds/static-2.mp3");
 staticAudio2.loop = true;
 
+paused = true;
+
 function startAudioPuzzle() {
   $("input").val(5);
 
@@ -32,6 +34,7 @@ function startAudioPuzzle() {
 }
 
 function pauseAudio() {
+  paused = true;
   ghostAudio.pause();
   staticAudio.pause();
   staticAudio2.pause();
@@ -42,6 +45,7 @@ function pauseAudio() {
 }
 
 function playAudio() {
+  paused = false;
   ghostAudio.play();
   staticAudio.play();
   staticAudio2.play();
@@ -93,28 +97,30 @@ function updateStaticSlider(current) {
 }
 
 function checkIfSolved() {
-  const volumeAccuracy = ghostAudio.volume;
-  const staticAccuracy = 1 - staticAudio2.volume;
-  const playbackAccuracy =
-    ghostAudio.playbackRate > 1
-      ? (3 - ghostAudio.playbackRate) / 2
-      : ghostAudio.playbackRate / 1;
+  if (!paused) {
+    const volumeAccuracy = ghostAudio.volume;
+    const staticAccuracy = 1 - staticAudio2.volume;
+    const playbackAccuracy =
+      ghostAudio.playbackRate > 1
+        ? (3 - ghostAudio.playbackRate) / 2
+        : ghostAudio.playbackRate / 1;
 
-  // If accuracies meet minimum limits, show average, else nothing
-  const accuracy =
-    volumeAccuracy > 0.5 && playbackAccuracy > 0.25 && staticAccuracy > 0.55
-      ? (volumeAccuracy + playbackAccuracy + staticAccuracy) / 3
-      : 0;
+    // If accuracies meet minimum limits, show average, else nothing
+    const accuracy =
+      volumeAccuracy > 0.5 && playbackAccuracy > 0.25 && staticAccuracy > 0.55
+        ? (volumeAccuracy + playbackAccuracy + staticAccuracy) / 3
+        : 0;
 
-  if (accuracy < 0.25) {
-    $("#audio-screen").css("background-image", "url(assets/audio/audio_bad.gif)");
-  } else if (accuracy >= 0.25 && accuracy < 0.75) {
-    $("#audio-screen").css("background-image", "url(assets/audio/audio_ok.gif)");
-  } else {
-    $("#audio-screen").css("background-image", "url(assets/audio/audio_good.gif)");
+    if (accuracy < 0.25) {
+      $("#audio-screen").css("background-image", "url(assets/audio/audio_bad.gif)");
+    } else if (accuracy >= 0.25 && accuracy < 0.75) {
+      $("#audio-screen").css("background-image", "url(assets/audio/audio_ok.gif)");
+    } else {
+      $("#audio-screen").css("background-image", "url(assets/audio/audio_good.gif)");
+    }
+
+    $("#caption").css("opacity", accuracy);      
   }
-
-  $("#caption").css("opacity", accuracy);
 }
 
 function finishAudioPuzzle() {
