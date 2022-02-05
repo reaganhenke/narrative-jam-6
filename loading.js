@@ -24,8 +24,9 @@ imgUI9 = "./assets/UI/live.png";
 imgUI10 = "./assets/UI/livestream.png";
 imgUI11 = "./assets/UI/mainmenu.png";
 imgUI12 = "./assets/UI/nextarrow.png";
-imgUI13 = "./assets/UI/smallbutton.png";
-imgUI14 = "./assets/UI/viewers.png";
+imgUI13 = "./assets/UI/overlay.png";
+imgUI14 = "./assets/UI/smallbutton.png";
+imgUI15 = "./assets/UI/viewers.png";
 
 imgChar1 = "./assets/characters/amal_angry.png";
 imgChar2 = "./assets/characters/amal_sad.png";
@@ -76,6 +77,7 @@ const imageSrcs = [
   imgUI12,
   imgUI13,
   imgUI14,
+  imgUI15,
   imgChar1,
   imgChar2,
   imgChar3,
