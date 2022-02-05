@@ -13,18 +13,18 @@ Created by
 ### tech
 - [x] allow epilogues to update pop/sus
 - [x] add new assets
-- [ ] fix preloading assets, there's a delay in displaying background images
-- [ ] add audio files
+- [x] fix preloading assets, there's a delay in displaying background images
+- [x] add audio files
 
 ### audio needed
-- [ ] haunted house ghost request
-- [ ] haunted house music
-- [ ] pizza house ghost request
-- [ ] pizza house music
-- [ ] stars house ghost request
-- [ ] stars house music
-- [ ] static 1
-- [ ] static 2
+- [x] haunted house ghost request
+- [x] haunted house music
+- [x] pizza house ghost request
+- [x] pizza house music
+- [x] stars house ghost request
+- [x] stars house music
+- [x] static 1
+- [x] static 2
 
 ### art assets needed
 - [x] cover photo (for itch.io page)
