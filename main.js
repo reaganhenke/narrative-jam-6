@@ -153,12 +153,12 @@ function showChat(chatMood) {
   if (chatMood[0].suspicion == ANYSUS) {
     chatOptions = chatMood[0];
   } else {
-    if (state.suspicion < 3) {
+    if (state.suspicion < 2) {
       // TODO: adjust thresholds for suspicion
       chatOptions = chatMood.find((segments) => segments.suspicion == LOWSUS);
-    } else if (state.suspicion >= 3 && state.suspicion < 5) {
+    } else if (state.suspicion >= 2 && state.suspicion < 4) {
       chatOptions = chatMood.find((segments) => segments.suspicion == MEDSUS);
-    } else if (state.suspicion >= 5) {
+    } else if (state.suspicion >= 4) {
       chatOptions = chatMood.find((segments) => segments.suspicion == HIGHSUS);
     }
   }
@@ -213,7 +213,7 @@ function showEpilogue() {
     (epilogue) => epilogue.id === state.episode_ending
   );
   handlePopularityAndSuspicion(epilogueObject.popularity, epilogueObject.suspicion);
-  if (state.suspicion > 6) {
+  if (state.suspicion > 5) {
     gameOverSus();
   } else {
     $(".dialogue-wrapper").addClass("hidden");
