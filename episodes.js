@@ -49,3 +49,40 @@ const all_episodes = [
     possibleEpilogues: STARS_EPILOGUES
   },
 ];
+
+
+const all_episodes_french = [
+  {
+    episodeTitle: "The Haunted House",
+    backgroundImg: HAUNTEDHOUSE_BACKGROUND,
+    episodeMusic: HAUNTEDHOUSE_MUSIC,
+    ghostAudio: HAUNTEDHOUSE_AUDIO,
+    ghostAudioCaption: "Find a loving owner for my house",
+    ghostImg: HAUNTEDHOUSE_GHOST,
+    textNodesBeforeAudio: hauntedHouseDialogue1_french,
+    textNodesAfterAudio: hauntedHouseDialogue2_french,
+    possibleEpilogues: HAUNTEDHOUSE_EPILOGUES_FRENCH
+  },
+  {
+    episodeTitle: "The Pizza Conundrum",
+    backgroundImg: PIZZA_BACKGROUND,
+    episodeMusic: PIZZA_MUSIC,
+    ghostAudio: PIZZA_AUDIO,
+    ghostAudioCaption: "One last pizza",
+    ghostImg: PIZZA_GHOST,
+    textNodesBeforeAudio: pizzaDialogue1_french,
+    textNodesAfterAudio: pizzaDialogue2_french,
+    possibleEpilogues: PIZZA_EPILOGUES_FRENCH
+  },
+  {
+    episodeTitle: "Friendship Under the Stars",
+    backgroundImg: STARS_BACKGROUND,
+    episodeMusic: STARS_MUSIC,
+    ghostAudio: STARS_AUDIO,
+    ghostAudioCaption: "I want a friend",
+    ghostImg: STARS_GHOST,
+    textNodesBeforeAudio: starsDialogue1_french,
+    textNodesAfterAudio: starsDialogue2_french,
+    possibleEpilogues: STARS_EPILOGUES_FRENCH
+  },
+];

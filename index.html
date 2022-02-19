@@ -14,6 +14,10 @@
   <script src="dialogue-hauntedhouse.js"></script>
   <script src="dialogue-pizzaconundrum.js"></script>
   <script src="dialogue-friendshipstars.js"></script>
+  <script src="dialogue-hauntedhouse-french.js"></script>
+  <script src="dialogue-pizzaconundrum-french.js"></script>
+  <script src="dialogue-friendshipstars-french.js"></script>
+  <script src="text-constants.js"></script>
   <script src="episodes.js"></script>
   <script src="audiopuzzle.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -29,46 +33,21 @@
     <div id="loading">
       <img alt="ghost signal" src="assets/UI/channellogo.png">
       <div class="loading-dots"></div>
+      <div class="language-buttons hidden">
+        <button onclick="selectLanguageAndStart('english')">english</button>
+        <button onclick="selectLanguageAndStart('french')">french</button>
+      </div>
+
     </div>
     <div id="titlescreen" class="hidden">
       <h1>GHOST INTERPRETER</h1>
-      <div id="title-text">
-        <p>
-          Ghost Whisperer is brought to you by the marvelous Joss!
-          FalseTrout (sound), IfThenCreate (tech), LaChapeliere (writing) and NightSparrow
-          (visual) make it work behind the scenes.
-        </p>
-        <p>Equipped with her trusted ghost interpreter, Joss travels across the country
-          to hear what ghosts have on their minds and assist in settling their unfinished business.
-          So if you have a ghost you'd like helped into the other side, give us a call!</p>
-        <p>
-          These are exciting times for Joss, as she's just been contacted by a big company
-          who wants to sponsor her show! Over the next month, she needs to rack up as many
-          viewers as possible in order to impress them. She'll have to up her game, because
-          we all know that the BooTube crowd isn't a forgiving one...
-        </p>
-        <p>
-          It’s a tricky balance to find: people want drama, drama, drama, until suddenly
-          they think you sound fake. And sometimes, the ghosts’ requests are just so boring…
-          So if Joss plays fast and loose with her interpretation, no one has to know, right?
-          Especially not that sucker from Spectral Self-Help who’s also sniffing around
-          trying to find something to bring Ghost Whisperer down...
-        </p>
-        <P>
-          Anyway, time to meet some ghosts!
-        </p>
-        <p>
-          Disclaimer: Please be aware that we do not censor the stories or vocabulary of our guests.
-          Some episodes might contain swearing. And obviously, all of them contain dead individuals.
-          We do not guarantee your ghost will move on.
-        </p>
-      </div>
+      <div id="title-text"></div>
       <button onclick="startGame()" aria-label="start"></button>
     </div>
     <div id="episode-intro" class="hidden">
       <div class="overlay"></div>
       <h2 id="episode-title"></h2>
-      <button onclick="startEpisode()">start</button>
+      <button onclick="startEpisode()" id="start-button"></button>
     </div>
     <div id="dialogue-container" class="hidden">
       <div class="dialogue-main">
@@ -87,7 +66,7 @@
         </div>
         <div class="epilogue-wrapper hidden">
           <p id="episode-epilogue-result"></p>
-          <button id="next-episode" onclick="nextEpisode()" class="hidden">continue</button>
+          <button id="next-episode" onclick="nextEpisode()" class="hidden"></button>
         </div>
       </div>
       <div class="livestream">
@@ -124,5 +103,4 @@
     </div>
   </main>
 </body>
-
 </html>

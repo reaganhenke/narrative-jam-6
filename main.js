@@ -15,34 +15,44 @@ state = {
   finishedAudioPuzzle: false,
   episode_ending: null,
   episode_music: new Audio(),
-  maintheme_music: new Audio()
+  maintheme_music: new Audio(),
+  english: true // if false, language is french
 };
 
 function donePreloading() {
+  // hide dots, show language buttons
   if (state.isLoading) {
     state.isLoading = false;
-    state.gameStage = TITLE;
-    showGameStage();
-    state.maintheme_music.src = "./assets/sounds/maintheme-music.mp3";
-    state.maintheme_music.loop = true;
-    state.maintheme_music.play();
+    $(".loading-dots").addClass("hidden");
+    $(".language-buttons").removeClass("hidden");
   }
+}
+
+function selectLanguageAndStart(language) {
+  state.english = language === "english"; 
+  this.loadLanguageConstants();
+  state.isLoading = false;
+  state.gameStage = TITLE;
+  showGameStage();
+  state.maintheme_music.src = "./assets/sounds/maintheme-music.mp3";
+  state.maintheme_music.loop = true;
+  state.maintheme_music.play();
 }
 
 function startGame() {
   state.gameStage = EPISODE_INTRO;
   showGameStage();
-  $("#episode-title").text(all_episodes[state.currentEpisode].episodeTitle);
+  $("#episode-title").text(this.getCurrentEpisode()[state.currentEpisode].episodeTitle);
   $("#episode-intro").css(
     "background-image",
-    "url(" + all_episodes[state.currentEpisode].backgroundImg + ")"
+    "url(" + this.getCurrentEpisode()[state.currentEpisode].backgroundImg + ")"
   );
 }
 
 function startEpisode() {
   state.gameStage = DIALOGUE;
   state.maintheme_music.pause();
-  state.episode_music.src = all_episodes[state.currentEpisode].episodeMusic;
+  state.episode_music.src = this.getCurrentEpisode()[state.currentEpisode].episodeMusic;
   state.episode_music.loop = true;
   state.episode_music.play();
   showGameStage();
@@ -50,14 +60,14 @@ function startEpisode() {
   updateViews();
   $("#dialogue-container").css(
     "background-image",
-    "url(" + all_episodes[state.currentEpisode].backgroundImg + ")"
+    "url(" + this.getCurrentEpisode()[state.currentEpisode].backgroundImg + ")"
   );
 }
 
 function showTextNode(textNodeIndex) {
   const dialogue = state.finishedAudioPuzzle
-    ? all_episodes[state.currentEpisode].textNodesAfterAudio
-    : all_episodes[state.currentEpisode].textNodesBeforeAudio;
+    ? this.getCurrentEpisode()[state.currentEpisode].textNodesAfterAudio
+    : this.getCurrentEpisode()[state.currentEpisode].textNodesBeforeAudio;
   const textNode = dialogue.find((textNode) => textNode.id === textNodeIndex);
 
   $("#character-portrait").css(
@@ -154,7 +164,6 @@ function showChat(chatMood) {
     chatOptions = chatMood[0];
   } else {
     if (state.suspicion < 2) {
-      // TODO: adjust thresholds for suspicion
       chatOptions = chatMood.find((segments) => segments.suspicion == LOWSUS);
     } else if (state.suspicion >= 2 && state.suspicion < 4) {
       chatOptions = chatMood.find((segments) => segments.suspicion == MEDSUS);
@@ -207,7 +216,7 @@ function showGameStage() {
 }
 
 function showEpilogue() {
-  const epilogueObject = all_episodes[
+  const epilogueObject = this.getCurrentEpisode()[
     state.currentEpisode
   ].possibleEpilogues.find(
     (epilogue) => epilogue.id === state.episode_ending
@@ -236,7 +245,7 @@ function nextEpisode() {
   $("#next-episode").addClass("hidden");
   $("#livestream-chat").empty();
 
-  if (state.currentEpisode == all_episodes.length - 1) {
+  if (state.currentEpisode == this.getCurrentEpisode().length - 1) {
     gameEpilogue();
   } else {
     state.finishedAudioPuzzle = false;
@@ -249,8 +258,8 @@ function gameOverSus() {
   state.maintheme_music.play();
   state.gameStage = GAMEEPILOGUE;
   showGameStage();
-  $("#epilogue-result").text(GAME_EPILOGUES[4].content);
-  $("#episode-epilogue").css("background-image", "url(" + GAME_EPILOGUES[4].backgroundImg + ")");
+  $("#epilogue-result").text(this.getGameEpilogues()[4].content);
+  $("#episode-epilogue").css("background-image", "url(" + this.getGameEpilogues()[4].backgroundImg + ")");
   $("#next-episode").addClass("hidden");
 }
 
@@ -267,7 +276,21 @@ function gameEpilogue() {
   } else if (state.popularity >= 20) {
     gameEpilogueId = 3;
   }
+  $("#epilogue-result").text(this.getGameEpilogues()[gameEpilogueId].content);
+  $("#episode-epilogue").css("background-image", "url(" + this.getGameEpilogues()[gameEpilogueId].backgroundImg + ")");
+}
 
-  $("#epilogue-result").text(GAME_EPILOGUES[gameEpilogueId].content);
-  $("#episode-epilogue").css("background-image", "url(" + GAME_EPILOGUES[gameEpilogueId].backgroundImg + ")");
+function loadLanguageConstants() {
+  const textConstants = state.english ? textConstantsEnglish : textConstantsFrench;
+  $("#title-text").html(textConstants.aboutText);
+  $("#start-button").text(textConstants.start);
+  $("#next-episode").text(textConstants.continue);
+}
+
+function getCurrentEpisode() {
+  return state.english ? all_episodes : all_episodes_french;
+}
+
+function getGameEpilogues() {
+  return state.english ? GAME_EPILOGUES : GAME_EPILOGUES_FRENCH;
 }

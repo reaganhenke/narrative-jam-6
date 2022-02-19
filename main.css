@@ -38,8 +38,9 @@ main {
   background-image: url("assets/UI/smallbutton.png");
   background-color: transparent;
   background-repeat: no-repeat;
-  width: 100px;
-  height: 60px;
+  background-size: 100%;
+  width: 124px;
+  height: 74px;
   border: none;
   cursor: pointer;
   font: inherit;
@@ -65,6 +66,22 @@ main {
   background-color: transparent;
   box-shadow: -72px 0 0 0 #D2D8AF, -48px 0 0 0 #D2D8AF, -24px 0 0 0 #D2D8AF;
   animation: bounce 1.5s infinite linear;
+}
+
+.language-buttons button {
+  font: inherit;
+  border: none;
+  border-radius: 3px;
+  margin: 10px;
+  margin-top: 20px;
+  cursor: pointer;
+  background-color: #D2D8AF;
+  transition: all 0.2s;
+}
+
+.language-buttons button:hover, 
+.language-buttons button:focus {
+  background-color: #f0f5d4;
 }
 
 @keyframes bounce {
