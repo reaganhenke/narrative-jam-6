@@ -2,9 +2,9 @@ const HAUNTEDHOUSEMOOD_CUTE_FRENCH = [
   {
     suspicion: ANYSUS,
     segments: [
-      "bibop: i ❤️ cats",
+      "bibop: j'❤️ les chats",
       "coolio: 😻",
-      "kk234: that lady's such a sweetheart 👵 🐈 💖"
+      "kk234: cette dame est un amour 👵 🐈 💖"
     ]
   }
 ]
@@ -13,8 +13,8 @@ const HAUNTEDHOUSEMOOD_OMG_FRENCH = [
   {
     suspicion: ANYSUS,
     segments: [
-      "thelibrarian: Wandering houses are SO awesome!!",
-      "kk234: omg that guy's so grumpy..."
+      "thelibrarian: Les maisons ambulantes sont tellement GENIALES !!",
+      "kk234: omg ce gars est tellement mal luné..."
     ]
   }
 ]
@@ -23,7 +23,7 @@ const HAUNTEDHOUSEMOOD_SAD_FRENCH = [
   {
     suspicion: ANYSUS,
     segments: [
-      "coolio: NOOOOooooooo 😿",
+      "coolio: NOOOooonnn 😿",
     ]
   }
 ]
@@ -32,11 +32,11 @@ const HAUNTEDHOUSEMOOD_ANGRY_FRENCH = [
   {
     suspicion: ANYSUS,
     segments: [
-      "caty: that guy has no ❤️",
-      "freeSprite: Down with capitalism!!☠️🤑☠️",
+      "caty: ce mec n'a pas de ❤️",
+      "freeSprite: Mort au capitalisme !!☠️🤑☠️",
       "hes: #feedGregToTheCats 👿",
-      "coolio: greg rotten egg 🤢",
-      "freeSprite: 🤬 I hatz that guy!"
+      "coolio: greg tout moisi 🤢",
+      "freeSprite: 🤬 je deteste se mec !"
     ]
   }
 ]
@@ -44,71 +44,71 @@ const HAUNTEDHOUSEMOOD_ANGRY_FRENCH = [
 const HAUNTEDHOUSE_EPILOGUES_FRENCH = [
   {
     id: 1,
-    text: "Another great success for Ghost Whisperer!",
+    text: "Une autre réussite pour Ghost Whisperer !",
     characterImg: MC_EXCITED,
     popularity: 2,
     suspicion: -1,
-    chatMoods: [GENERALMOOD_SUSPICION],
+    chatMoods: [GENERALMOOD_SUSPICION_FRENCH],
   },
   {
     id: 2,
-    text: "Sorry lovelies, not my best day!",
+    text: "Désolée mes chéris, c'est pas mon meilleur jour !",
     characterImg: CATGRANDMA_SAD,
     popularity: -2,
-    chatMoods: [GENERALMOOD_SUSPICION],
+    chatMoods: [GENERALMOOD_SUSPICION_FRENCH],
   },
   {
     id: 3,
-    text: "What a lucky coincidence!",
+    text: "Quelle heureuse coïncidence !",
     characterImg: MC_EXCITED,
     popularity: -1,
     suspicion: 1,
-    chatMoods: [GENERALMOOD_SUSPICION],
+    chatMoods: [GENERALMOOD_SUSPICION_FRENCH],
   },
   {
     id: 4,
-    text: "Oopsie! Maybe I didn't hear our ghost's request right?",
+    text: "Oupsie ! J'avais peut-être mal entendu la demande de notre fantôme ?",
     characterImg: CATGRANDMA_ANGRY,
     popularity: -1,
     suspicion: 2,
-    chatMoods: [GENERALMOOD_SUSPICION],
+    chatMoods: [GENERALMOOD_SUSPICION_FRENCH],
   },
 ];
 
 const hauntedHouseDialogue1_french = [
   {
     id: 1,
-    text: "Hello, lovelies! Today we've been called by Greg from Lovely Homes Real Estate!",
-    speakerName: "Me",
+    text: "Salut les chéris ! Aujourd'hui on a reçu un appel de Greg, de l'agence immobilière Belles Maisons !",
+    speakerName: "Moi",
     characterImg: MC_EXCITED,
-    chatMoods: [GENERALMOOD_SUSPICION],
+    chatMoods: [GENERALMOOD_SUSPICION_FRENCH],
     next: 2
   },
   {
     id: 2,
-    text: "Greg is trying to sell a very special house, but the previous owner isn't too happy about visitors...",
-    speakerName: "Me",
+    text: "Greg a une maison plutôt spéciale en vente, mais l'ancienne propriétaire n'apprécie pas les visiteurs...",
+    speakerName: "Moi",
     characterImg: MC_EXCITED,
     next: 3
   },
   {
     id: 3,
-    text: "What should I say?",
-    speakerName: "Me",
+    text: "Que dire ?",
+    speakerName: "Moi",
     characterImg: MC_EXCITED,
     options: [
       {
-        text: "Let's go meet that ghost!",
+        text: "Allons voir ce fantôme !",
         nextText: 4,
       },
       {
-        text: "A very special house indeed, for it has legs to move around!",
+        text: "Une maison vraiment très spéciale, car elle a des jambes pour se promener !",
         popularity: 1,
-        chatMoods: [GENERALMOOD_OMG],
+        chatMoods: [GENERALMOOD_OMG_FRENCH],
         nextText: 4,
       },
       {
-        text: "How is that house special, you ask me? Well, let's go and see!",
+        text: "Qu'est-ce qui rend cette maison spéciale ? Je vous emmène voir !",
         popularity: 1,
         nextText: 4,
       },
@@ -116,59 +116,59 @@ const hauntedHouseDialogue1_french = [
   },
   {
     id: 4,
-    text: "Hello, Greg! So, we're in the famed \"four-leg house\".",
-    speakerName: "Me",
+    text: "Hello, Greg ! Alors, nous sommes dans la célèbre \"maison-aux-quatre-jambes\".",
+    speakerName: "Moi",
     characterImg: GREG_GRUMPY,
     next: 5,
   },
   {
     id: 5,
-    text: "Yes, and it would be a perfect deal if not for the wailing ghost that comes with it.",
+    text: "Oui, et ça serait une super affaire, si ce n'est le fantôme qui gémit sans arrêt à l'intérieur.",
     speakerName: "Greg",
     characterImg: GREG_GRUMPY,
     next: 6,
   },
   {
     id: 6,
-    text: "Families are lining up for a chance make the only remaining wandering house of the county their own.",
+    text: "J'ai une liste d'attente de familles qui veulent s'installer dans la seule maison ambulante qui reste dans la région.",
     speakerName: "Greg",
     characterImg: GREG_GRUMPY,
-    chatMoods: [GENERALMOOD_OMG, HAUNTEDHOUSEMOOD_OMG],
+    chatMoods: [GENERALMOOD_OMG_FRENCH, HAUNTEDHOUSEMOOD_OMG_FRENCH],
     next: 600,
   },
   {
     id: 600,
-    text: "But that old hag has been sabotaging all of my visits so far!",
+    text: "Mais cette vieille peau s'obstine à saboter toutes mes visites !",
     speakerName: "Greg",
     characterImg: GREG_DISGUSTED,
-    chatMoods: [HAUNTEDHOUSEMOOD_ANGRY],
+    chatMoods: [HAUNTEDHOUSEMOOD_ANGRY_FRENCH],
     next: 7,
   },
   {
     id: 7,
-    text: "Please convince her to move on...",
+    text: "Je vous en prie, débarassez-moi d'elle...",
     speakerName: "Greg",
     characterImg: GREG_GRUMPY,
     next: 8,
   },
   {
     id: 8,
-    text: "What should I say?",
-    speakerName: "Me",
+    text: "Que dire ?",
+    speakerName: "Moi",
     characterImg: GREG_GRUMPY,
     options: [
       {
-        text: "Let's meet her then...",
+        text: "Tu nous la présentes ?",
         nextText: START_PUZZLE,
       },
       {
-        text: "A dead hag in a witchy house? I love that!",
+        text: "Une vieille sorcière dans une maison magique ? J'adore !",
         popularity: 1,
         suspicion: 1,
         nextText: START_PUZZLE,
       },
       {
-        text: "Now, now, you shouldn't speak ill of the dead!",
+        text: "Oh, tu ne devrais pas dire du mal des morts.",
         nextText: START_PUZZLE,
       },
     ],
@@ -178,30 +178,30 @@ const hauntedHouseDialogue1_french = [
 const hauntedHouseDialogue2_french = [
   {
     id: 1,
-    text: "So, what does the lady want?",
+    text: "Alors, qu'est-ce qu'elle veut ?",
     speakerName: "Greg",
     characterImg: GREG_GRUMPY,
     next: 2,
   },
   {
     id: 2,
-    text: "What should I say?",
-    speakerName: "Me",
+    text: "Que dire ?",
+    speakerName: "Moi",
     characterImg: GREG_GRUMPY,
     options: [
       {
-        text: "She wants you to find a loving owner for the house.",
+        text: "Elle veut que tu trouves des proprios aimants pour la maison.",
         nextText: 3,
       },
       {
-        text: "(Lie) She wants you to find a loving new home for her cats.",
+        text: "(Mentir) Elle veut que tu trouves une famille aimante pour ses chats.",
         popularity: 1,
         suspicion: 1,
         chatMoods: [HAUNTEDHOUSEMOOD_CUTE_FRENCH, HAUNTEDHOUSEMOOD_CUTE_FRENCH],
         nextText: 14,
       },
       {
-        text: "(Lie) She wants you to find a loving owner for the house, who will also adopt her cats.",
+        text: "(Mentir) Elle veut qu'une famille aimante achète la maison et adopte les chats.",
         popularity: 2,
         suspicion: 1,
         chatMoods: [GENERALMOOD_CUTE_FRENCH, HAUNTEDHOUSEMOOD_CUTE_FRENCH],
@@ -213,7 +213,7 @@ const hauntedHouseDialogue2_french = [
   // House quest
   {
     id: 3,
-    text: "A loving owner?! I'm a real estate agent, not a bleeding-heart volunteer at the animal shelter.",
+    text: "Des propriétaires aimants ?! Je suis un agent immobilier, pas un bon samaritain.",
     speakerName: "Greg",
     characterImg: GREG_ANGRY,
     chatMoods: [HAUNTEDHOUSEMOOD_ANGRY_FRENCH],
@@ -221,14 +221,14 @@ const hauntedHouseDialogue2_french = [
   },
   {
     id: 4,
-    text: "Yes, but you get to pick who you sell it to, don't you?",
-    speakerName: "Me",
+    text: "Mais c'est bien toi qui choisis à qui tu vends la maison, non ?",
+    speakerName: "Moi",
     characterImg: MC_EXCITED,
     next: 5,
   },
   {
     id: 5,
-    text: "I'll sell to whoever makes the highest offer. I couldn't care less if they trash the house before the end of the month!",
+    text: "La meilleure offre l'emportera... Je me fiche totalement s'ils démolissent tout avant la fin du mois !",
     speakerName: "Greg",
     characterImg: GREG_ANGRY,
     chatMoods: [GENERALMOOD_ANGRY_FRENCH],
@@ -236,29 +236,29 @@ const hauntedHouseDialogue2_french = [
   },
   {
     id: 6,
-    text: "Actually, that would be great for me, because then they'd need another house...",
+    text: "Même, ça m'arrangerait, étant donné qu'ils auraient besoin de racheter une autre maison...",
     speakerName: "Greg",
     characterImg: GREG_GRUMPY,
     next: 7,
   },
   {
     id: 7,
-    text: "What should I say?",
-    speakerName: "Me",
+    text: "Que dire ?",
+    speakerName: "Moi",
     characterImg: GREG_GRUMPY,
     options: [
       {
-        text: "Surely you can find someone who'll make a good offer AND take care of the place?",
+        text: "Tu peux trouver quelqu'un qui fasse une bonne offre ET qui prenne soin de la maison ?",
         setEpilogue: 1,
         nextText: 8,
       },
       {
-        text: "Come on, she's dead, surely you can make an effort to let her rest easy!",
+        text: "Allez, elle est morte, tu pourrais faire un effort pour l'aider à reposer en paix !",
         setEpilogue: 2,
         nextText: 12,
       },
       {
-        text: "You'd wreck the last local wandering house? Sounds bad for business...",
+        text: "Mauvais pour le business, ça, détruire la dernière maison ambulante du coin...",
         setEpilogue: 1,
         nextText: 8,
       },
@@ -267,35 +267,35 @@ const hauntedHouseDialogue2_french = [
   // House Quest success
   {
     id: 8,
-    text: "Oh, well, I guess you are right. But can you at least convince her to stop wailing so I can do visits and open houses?",
+    text: "Bon, oui, vous avez raison. Mais au moins vous pourriez la convaincre d'arrêter de gémir pour que je puisse faire des visites ?",
     speakerName: "Greg",
     characterImg: GREG_GRUMPY,
     next: 9,
   },
   {
     id: 9,
-    text: "That's not how it works, actually. Ghosts don't have the cognitive abilities to be reasoned with...",
-    speakerName: "Me",
+    text: "C'est pas comme ça que ça fonctionne, en fait. Les fantômes n'ont pas les capacités cognitives pour qu'on négocie avec...",
+    speakerName: "Moi",
     characterImg: GREG_GRUMPY,
     next: 10,
   },
   {
     id: 10,
-    text: "But if you promise to fulfill her request, that should be enough for her to move on.",
-    speakerName: "Me",
+    text: "Mais si tu promets de satisfaire sa demande, ça devrait suffire pour qu'elle passe dans l'au-delà.",
+    speakerName: "Moi",
     characterImg: GREG_DISGUSTED,
     next: 1000,
   },
   {
     id: 1000,
-    text: "You'll have to mean it though. Ghosts can sense that kind of stuff.",
-    speakerName: "Me",
+    text: "Faut que tu sois sincère, par contre. Les fantômes sentent ce genre de choses.",
+    speakerName: "Moi",
     characterImg: GREG_DISGUSTED,
     next: 11,
   },
   {
     id: 11,
-    text: "*sigh* Madam, I promise I will only sell this house to people who will appreciate it and care for it properly.",
+    text: "*soupire* Madame, je promets que je vendrais cette maison à des personnes qui l'apprécieront et en prendront soin.",
     speakerName: "Greg",
     characterImg: GREG_DISGUSTED,
     next: FINISHEPISODE
@@ -303,21 +303,21 @@ const hauntedHouseDialogue2_french = [
   // House Quest failure
   {
     id: 12,
-    text: "I knew this would be a waste of time...",
+    text: "Je savais que ce serait une perte de temps...",
     speakerName: "Greg",
     characterImg: GREG_DISGUSTED,
     next: 13
   },
   {
     id: 13,
-    text: "You interpreter people should stick to helping grieving families. Leave the serious stuff to exorcists!",
+    text: "Les interprètes comme vous devriez vous contenter d'aider les familles en deuil. Laissez les choses sérieuses aux exorcistes !",
     speakerName: "Greg",
     characterImg: GREG_DISGUSTED,
     next: 1300,
   },
   {
     id: 1300,
-    text: "At least they know not to mix up business and emotions...",
+    text: "Au moins ils savent qu'on ne mélange pas le business et les émotions, eux...",
     speakerName: "Greg",
     characterImg: GREG_DISGUSTED,
     chatMoods: [HAUNTEDHOUSEMOOD_ANGRY_FRENCH],
@@ -327,7 +327,7 @@ const hauntedHouseDialogue2_french = [
   // Cat Quest
   {
     id: 14,
-    text: "Find a new home for her cats? I'm not going anywhere near those devilish creatures!",
+    text: "Une famille pour ses chats ? Hors de question que je m'approche de ces créatures démoniaques !",
     speakerName: "Greg",
     characterImg: GREG_ANGRY,
     chatMoods: [HAUNTEDHOUSEMOOD_ANGRY_FRENCH],
@@ -335,23 +335,23 @@ const hauntedHouseDialogue2_french = [
   },
   {
     id: 15,
-    text: "What should I say?",
-    speakerName: "Me",
+    text: "Que dire ?",
+    speakerName: "Moi",
     characterImg: GREG_ANGRY,
     options: [
       {
-        text: "But, cats... How can you not like cats?",
+        text: "Mais, les chats...  Comment est-ce que tu peux ne pas aimer les chats ?",
         popularity: 1,
         setEpilogue: 2,
         nextText: 16,
       },
       {
-        text: "Seriously? Are you that much of a coward?",
+        text: "Sérieusement ? T'es lâche à ce point ?",
         setEpilogue: 2,
         nextText: 16,
       },
       {
-        text: "It's a simple enough request, considering this sale will bring you a huge bonus...",
+        text: "C'est une demande plutôt simple, vu l'énorme commission que tu recevras...",
         setEpilogue: 4,
         nextText: 20,
       },
@@ -360,28 +360,28 @@ const hauntedHouseDialogue2_french = [
   // Cat Quest failure
   {
     id: 16,
-    text: "I'll never understand how people can be that blind when they think something is cute!",
+    text: "Je ne comprendrais jamais à quel point les gens peuvent être aveugles quand ils trouvent quelque chose mignon !",
     speakerName: "Greg",
     characterImg: GREG_ANGRY,
     next: 1600,
   },
   {
     id: 1600,
-    text: "Cats leave hair everywhere, they are arrogant and volatile, and like to shred people to ribbons for fun.",
+    text: "Les chats laissent des poils partout, ils sont arrogants et lunatiques, et découpent les gens en lambeaux pour le plaisir.",
     speakerName: "Greg",
     characterImg: GREG_ANGRY,
     next: 17,
   },
   {
     id: 17,
-    text: "That's...",
-    speakerName: "Me",
+    text: "C'est...",
+    speakerName: "Moi",
     characterImg: GREG_ANGRY,
     next: 18,
   },
   {
     id: 18,
-    text: "The Animal Control Unit are picking them up tomorrow, and that's final.",
+    text: "La SPA doit passer les récupérer demain, fin de la discussion.",
     speakerName: "Greg",
     characterImg: GREG_ANGRY,
     chatMoods: [HAUNTEDHOUSEMOOD_SAD_FRENCH, GENERALMOOD_SAD_FRENCH, HAUNTEDHOUSEMOOD_ANGRY_FRENCH],
@@ -389,51 +389,58 @@ const hauntedHouseDialogue2_french = [
   },
   {
     id: 19,
-    text: "I guess I should have the exorcist come around too, since there's no getting rid of that banshee in a politically correct way...",
+    text: "Je suppose que je devrais faire venir l'exorciste en même temps...",
+    speakerName: "Greg",
+    characterImg: GREG_DISGUSTED,
+    next: 1900,
+  },
+  {
+    id: 1900,
+    text: "Puisqu'il n'y a pas moyen de se débarasser de cette sorcière de manière politiquement correcte...",
     speakerName: "Greg",
     characterImg: GREG_DISGUSTED,
     chatMoods: [GENERALMOOD_OMG_FRENCH],
-    next: FINISHEPISODE
+    next: FINISHEPISODE,
   },
   // Cat Quest success
   {
     id: 20,
-    text: "Humph!",
+    text: "Humph !",
     speakerName: "Greg",
     characterImg: GREG_DISGUSTED,
     next: 21,
   },
   {
     id: 21,
-    text: "You're not wrong.",
+    text: "Vous n'avez pas tort.",
     speakerName: "Greg",
     characterImg: GREG_GRUMPY,
     next: 22,
   },
   {
     id: 22,
-    text: "Any ideas?",
-    speakerName: "Me",
+    text: "Des idées ?",
+    speakerName: "Moi",
     characterImg: GREG_GRUMPY,
     next: 23,
   },
   {
     id: 23,
-    text: "I do have a cousin who might be interested...",
+    text: "J'ai bien un cousin qui pourrait être intéressé...",
     speakerName: "Greg",
     characterImg: GREG_GRUMPY,
     next: 2300,
   },
   {
     id: 2300,
-    text: "The trio of siblings he had his heart set on got adopted before he made up his mind. He won't stop moaning about it.",
+    text: "Les trois soeurs sur lesquelles il avait jeté son dévolu ont été adopté avant qu'il ne se décide. Il n'arrête pas de s'en plaindre.",
     speakerName: "Greg",
     characterImg: GREG_GRUMPY,
     next: 2301,
   },
   {
     id: 2301,
-    text: "He said kittens are too much work, too, so he probably won't mind that these cats are old.",
+    text: "Il dit qu'avoir un chaton c'est trop de travail, donc ça ne devrait pas le déranger que ces chats soient plutôt vieux.",
     speakerName: "Greg",
     characterImg: GREG_GRUMPY,
     chatMoods: [HAUNTEDHOUSEMOOD_CUTE_FRENCH],
@@ -441,29 +448,29 @@ const hauntedHouseDialogue2_french = [
   },
   {
     id: 24,
-    text: "What should I say?",
-    speakerName: "Me",
+    text: "Que dire ?",
+    speakerName: "Moi",
     characterImg: GREG_GRUMPY,
     options: [
       {
-        text: "Fantastic! We'll make a cat lover out of you!",
+        text: "Fantastique ! On arrivera à faire de toi un amoureux des chats !",
         nextText: 25,
       },
       {
-        text: "Let's tell our lovely ghost that her fluffy friends' future is all figured out, then!",
+        text: "Allons lui dire que ses boules de poils adorées auront une chouette famille, alors !",
         popularity: 1,
         chatMoods: [GENERALMOOD_CUTE_FRENCH],
         nextText: 25,
       },
       {
-        text: "Guess that's settled, then.",
+        text: "Tout est arrangé, alors.",
         nextText: 25,
       },
     ],
   },
   {
     id: 25,
-    text: "What you said...",
+    text: "C'est ça...",
     speakerName: "Greg",
     characterImg: GREG_GRUMPY,
     next: 26,
@@ -478,7 +485,7 @@ const hauntedHouseDialogue2_french = [
   },
   {
     id: 27,
-    text: "Why is that ghost not moving on already?!",
+    text: "Qu'est-ce qu'elle fait encore là ?!",
     speakerName: "Greg",
     characterImg: GREG_ANGRY,
     next: FINISHEPISODE,
@@ -487,37 +494,37 @@ const hauntedHouseDialogue2_french = [
   // Full Quest
   {
     id: 28,
-    text: "You can't be serious?",
+    text: "Vous n'êtes pas sérieuse ?",
     speakerName: "Greg",
     characterImg: GREG_ANGRY,
     next: 29,
   },
   {
     id: 29,
-    text: "Oh, I never joke around when it comes to ghosts.",
-    speakerName: "Me",
+    text: "Oh, je ne plaisante jamais quand il s'agit de fantômes.",
+    speakerName: "Moi",
     characterImg: GREG_ANGRY,
     chatMoods: [GENERALMOOD_SUSPICION_FRENCH],
     next: 2900,
   },
   {
     id: 2900,
-    text: "You wanted to know what it would take for this one here to leave, and that's her demand.",
-    speakerName: "Me",
+    text: "Tu voulais savoir quoi faire pour qu'elle passe à autre chose, et c'est ce qu'elle veut.",
+    speakerName: "Moi",
     characterImg: GREG_ANGRY,
     next: 2901,
   },
   {
     id: 2901,
-    text: "Find buyers who will take care of both the house and the cats.",
-    speakerName: "Me",
+    text: "Trouve des acheteurs qui proendront soit de la maison ET des chats.",
+    speakerName: "Moi",
     characterImg: GREG_ANGRY,
     chatMoods: [GENERALMOOD_CUTE_FRENCH],
     next: 30,
   },
   {
     id: 30,
-    text: "This is utterly ridiculous! You're probably a sham anyway! How do I know that this little gadget of yours is genuine?",
+    text: "C'est complètement ridicule ! Vous êtes probablement une charlatan de toute façon ! Est-ce que votre machine fonctionne, déjà ?!",
     speakerName: "Greg",
     characterImg: GREG_ANGRY,
     chatMoods: [GENERALMOOD_ANGRY_FRENCH],
@@ -525,35 +532,35 @@ const hauntedHouseDialogue2_french = [
   },
   {
     id: 31,
-    text: "What should I say?",
-    speakerName: "Me",
+    text: "Que dire ?",
+    speakerName: "Moi",
     characterImg: GREG_ANGRY,
     options: [
       {
-        text: "I'm sure you checked my credentials before making the appointment.",
+        text: "Je suis sûre que tu as vérifié mes références avec de prendre le rendez-vous.",
         nextText: 32,
       },
       {
-        text: "So I'm guessing you won't do it, then?",
+        text: "Je suppose que tu ne vas pas t'en occuper, alors ?",
         setEpilogue: 2,
         nextText: 42,
       },
       {
-        text: "Hey, don't shoot the messenger because you don't like the message!",
+        text: "He, ne tire pas sur la messagère parce que le message n'est pas à ton goût !",
         nextText: 32,
       },
     ],
   },
   {
     id: 32,
-    text: "Yes, well, maybe you know what you're talking about, but that ghost is so much trouble.",
+    text: "Oui, bon, peut-être que vous savez de quoi vous parlez, mais ce fantôme est un désastre.",
     speakerName: "Greg",
     characterImg: GREG_DISGUSTED,
     next: 3200,
   },
   {
     id: 3200,
-    text: "I thought it'd want a visit from some long-lost friend or something.",
+    text: "Je pensais qu'elle voudrait juste une visite d'une vieille amie ou quelque chose comme ça.",
     speakerName: "Greg",
     characterImg: GREG_DISGUSTED,
     chatMoods: [HAUNTEDHOUSEMOOD_ANGRY_FRENCH],
@@ -561,37 +568,37 @@ const hauntedHouseDialogue2_french = [
   },
   {
     id: 33,
-    text: "She, not it! And how would that be any easier?",
-    speakerName: "Me",
+    text: "En quoi est-ce que ça aurait été plus facile ?",
+    speakerName: "Moi",
     characterImg: GREG_DISGUSTED,
     next: 34,
   },
   {
     id: 34,
-    text: "I assumed that would be your job, not mine.",
+    text: "J'ai supposé que vous vous débrouilleriez avec, pas que ça me retomberait dessus.",
     speakerName: "Greg",
     characterImg: GREG_GRUMPY,
     next: 35,
   },
   {
     id: 35,
-    text: "What should I say?",
-    speakerName: "Me",
+    text: "Que dire ?",
+    speakerName: "Moi",
     characterImg: GREG_GRUMPY,
     options: [
       {
-        text: "I guess someone could make a great haunted wandering museum out of the house...",
+        text: "Quelqu'un pourrait sûrement faire de la maison un super musée ambulant hanté...",
         setEpilogue: 2,
         nextText: 36,
       },
       {
-        text: "Selling the house is your job, not mine...",
+        text: "Vendre cette maison, c'est ton boulot, pas le mien...",
         popularity: -1,
         setEpilogue: 1,
         nextText: 39,
       },
       {
-        text: "I'd be happy to find buyers and pocket the commission...",
+        text: "Je me ferais un plaisir de trouver des acheteurs et empocher la commission...",
         setEpilogue: 1,
         popularity: -1,
         suspicion: 1,
@@ -603,21 +610,21 @@ const hauntedHouseDialogue2_french = [
   // Full Quest museum failure
   {
     id: 36,
-    text: "That's actually not a bad idea...",
+    text: "Ce n'est pas une mauvaise idée...",
     speakerName: "Greg",
     characterImg: GREG_GRUMPY,
     next: 37,
   },
   {
     id: 37,
-    text: "Err, what? I was being sarcastic!",
-    speakerName: "Me",
+    text: "Hein, quoi ? C'était du sacarsme !",
+    speakerName: "Moi",
     characterImg: GREG_GRUMPY,
     next: 38,
   },
   {
     id: 38,
-    text: "Thank you for coming. I have to call my boss now, but feel free to grab a cat or two on your way out.",
+    text: "Merci d'être venue, je dois aller parler à ma chef, prennez donc un chat ou deux en partant...",
     speakerName: "Greg",
     characterImg: GREG_GRUMPY,
     chatMoods: [HAUNTEDHOUSEMOOD_ANGRY_FRENCH],
@@ -626,21 +633,21 @@ const hauntedHouseDialogue2_french = [
   // Full Quest success
   {
     id: 39,
-    text: "I suppose I could just look at it like a particularly tricky sell. It was already unusual, after all...",
+    text: "J'imagine que je pourrais voir la chose comme une vente particulièrement délicate. L'affaire était déjà inhabituelle, après tout...",
     speakerName: "Greg",
     characterImg: GREG_GRUMPY,
     next: 40,
   },
   {
     id: 40,
-    text: "So you'll take care of it?",
-    speakerName: "Me",
+    text: "Tu vas t'en occuper alors ?",
+    speakerName: "Moi",
     characterImg: GREG_GRUMPY,
     next: 41,
   },
   {
     id: 41,
-    text: "Yes, yes, if only to be free of that terrible noise and the white hairs on my suit.",
+    text: "Oui, oui, ne serait-ce que pour être débarassé de ce bruit abominable et des poils blancs sur mon costume.",
     speakerName: "Greg",
     characterImg: GREG_GRUMPY,
     next: FINISHEPISODE,
@@ -648,21 +655,21 @@ const hauntedHouseDialogue2_french = [
   // Full Quest abandonned failure
   {
     id: 42,
-    text: "Definitely not.",
+    text: "Certainement pas.",
     speakerName: "Greg",
     characterImg: GREG_GRUMPY,
     next: 43,
   },
   {
     id: 43,
-    text: "Thank you for your... service.",
+    text: "Merci pour votre... contribution.",
     speakerName: "Greg",
     characterImg: GREG_DISGUSTED,
     next: 44,
   },
   {
     id: 44,
-    text: "If that ghost will not be reasonnable, then I'll have to deal with it like the pest it is, and have it exorcised.",
+    text: "Si ce fantôme refuse d'être raisonnable, je n'ai plus que le traiter comme le nuisible qu'il est, et le faire exorciser.",
     speakerName: "Greg",
     characterImg: GREG_DISGUSTED,
     chatMoods: [GENERALMOOD_OMG_FRENCH],

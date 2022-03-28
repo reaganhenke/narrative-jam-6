@@ -53,33 +53,33 @@ const all_episodes = [
 
 const all_episodes_french = [
   {
-    episodeTitle: "The Haunted House",
+    episodeTitle: "La Maison Hantée",
     backgroundImg: HAUNTEDHOUSE_BACKGROUND,
     episodeMusic: HAUNTEDHOUSE_MUSIC,
     ghostAudio: HAUNTEDHOUSE_AUDIO,
-    ghostAudioCaption: "Find a loving owner for my house",
+    ghostAudioCaption: "Trouve un propriétaire aimant pour ma maison",
     ghostImg: HAUNTEDHOUSE_GHOST,
     textNodesBeforeAudio: hauntedHouseDialogue1_french,
     textNodesAfterAudio: hauntedHouseDialogue2_french,
     possibleEpilogues: HAUNTEDHOUSE_EPILOGUES_FRENCH
   },
   {
-    episodeTitle: "The Pizza Conundrum",
+    episodeTitle: "Le Dilemne De La Pizza",
     backgroundImg: PIZZA_BACKGROUND,
     episodeMusic: PIZZA_MUSIC,
     ghostAudio: PIZZA_AUDIO,
-    ghostAudioCaption: "One last pizza",
+    ghostAudioCaption: "Une dernière pizza",
     ghostImg: PIZZA_GHOST,
     textNodesBeforeAudio: pizzaDialogue1_french,
     textNodesAfterAudio: pizzaDialogue2_french,
     possibleEpilogues: PIZZA_EPILOGUES_FRENCH
   },
   {
-    episodeTitle: "Friendship Under the Stars",
+    episodeTitle: "Amitié Sous Les Etoiles",
     backgroundImg: STARS_BACKGROUND,
     episodeMusic: STARS_MUSIC,
     ghostAudio: STARS_AUDIO,
-    ghostAudioCaption: "I want a friend",
+    ghostAudioCaption: "Je veux un ami",
     ghostImg: STARS_GHOST,
     textNodesBeforeAudio: starsDialogue1_french,
     textNodesAfterAudio: starsDialogue2_french,

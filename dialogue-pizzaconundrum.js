@@ -13,7 +13,7 @@ const PIZZAMOOD_CUTE = [
     suspicion: ANYSUS,
     segments: [
       "kk234: such a cute couple 💞",
-      "darkling: couple after my heart 💘 ❤️🧡💛💚💙💜",
+      "darkling: couple after my own heart 💘 ❤️🧡💛💚💙💜",
       "bibop: ❤️love❤️",
     ]
   }
@@ -24,7 +24,7 @@ const PIZZAMOOD_OMG = [
     suspicion: ANYSUS,
     segments: [
       "coolio: 🍍🍕 🤮",
-      "77gus77: pizza toppings a bid deal! 🧐",
+      "77gus77: pizza toppings a big deal! 🧐",
       "bibop: 🍍 or not 🍍 that is the ❓",
     ]
   }
@@ -488,7 +488,7 @@ const pizzaDialogue2 = [
   },
   {
     id: 31,
-    text: "SO let's get them some bloody pineapple pizza peace.",
+    text: "So let's get them some bloody pineapple pizza peace.",
     speakerName: "Maria",
     characterImg: MARIA_BITTERSWEET,
     next: FINISHEPISODE
@@ -601,7 +601,7 @@ const pizzaDialogue2 = [
   },
   {
     id: 44,
-    text: "But it's always something that would have made sense and been important to their alive self. Even if the never dared to act on it.",
+    text: "But it's always something that would have made sense and been important to their alive self. Even if they never dared to act on it.",
     speakerName: "Me",
     characterImg: MARIA_CONFUSED,
     next: 45,
@@ -626,7 +626,7 @@ const pizzaDialogue2 = [
         nextText: 47,
       },
       {
-        text: "Do it matter though? If you have a choice between pizza or a ghost-free life...",
+        text: "Does it matter though? If you have a choice between pizza or a ghost-free life...",
         setEpilogue: 4,
         chatMoods: [PIZZAMOOD_ANGRY],
         nextText: 59,
