@@ -15,16 +15,16 @@ function startAudioPuzzle() {
   $("input").val(5);
 
   state.episode_music.volume = 0.1; // Turn down episode music in the background
-  $("#caption").text(all_episodes[state.currentEpisode].ghostAudioCaption);
+  $("#caption").text(getCurrentEpisode()[state.currentEpisode].ghostAudioCaption);
   $("#ghost-portrait").css(
     "background-image",
-    "url(" + all_episodes[state.currentEpisode].ghostImg + ")"
+    "url(" + getCurrentEpisode()[state.currentEpisode].ghostImg + ")"
   );
   $("#audio-container").css(
     "background-image",
-    "url(" + all_episodes[state.currentEpisode].backgroundImg + ")"
+    "url(" + getCurrentEpisode()[state.currentEpisode].backgroundImg + ")"
   );
-  ghostAudio.src = all_episodes[state.currentEpisode].ghostAudio;
+  ghostAudio.src = getCurrentEpisode()[state.currentEpisode].ghostAudio;
   ghostAudio.volume = 0;
   ghostAudio.playbackRate = 4;
   pauseAudio();
